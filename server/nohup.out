@@ -1,0 +1,3 @@
+Watching for file changes with StatReloader
+[08/Jul/2023 16:22:35] "GET / HTTP/1.1" 200 2233
+[08/Jul/2023 16:22:35] "GET /static/css/style.css HTTP/1.1" 200 2150

@@ -1,6 +1,6 @@
 @font-face { 
   font-family: "SF-Pro";
-  src: url("font/SF-Pro.ttf") format("truetype");
+  src: url("../font/SF-Pro.ttf") format("truetype");
   font-weight: normal;
 }
 
@@ -15,20 +15,28 @@
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
 }
 
 .footer-bar {
     height: 40px;
     width: 100%;
     flex-shrink: 0;
-    border: 1px solid #000;
-    position:fixed;
+    /* border: 1px solid #000;*/
+    position: fixed;
     bottom: 0px;
+    left:0px;
+    right:0px;
     padding-top: 16px;
     padding-bottom: 16px;
     display: flex;
     align-items: center;
+    background: #fff;
     justify-content: space-evenly;
 }
 

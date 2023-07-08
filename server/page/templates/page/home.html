@@ -1,12 +1,14 @@
+{% load static %}
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>COARR GUIDE</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <link rel="shortcut icon" href="" type="image/x-icon">
 </head>
 
@@ -20,10 +22,10 @@
         </div>
         <div class="header-button-group">
             <div id="noti-button" class="btn btn-header pointer">
-                <img src="./img/noti.png">
+		<img src="http://117.16.136.174:9000/media/websrc/noti.png">
             </div>
             <div id="search-button" class="btn btn-header pointer">
-                <img src="./img/search.png">
+		<img src="http://117.16.136.174:9000/media/websrc/search.png">
             </div>
         </div>
     </div>
@@ -36,11 +38,11 @@
 		<div class="hscroll-view">
 
 			<div>
-				<img style="margin-left:16px;" src="./data/rest-1.png">
+				<img style="margin-left:16px;" src="http://117.16.136.174:9000/media/websrc/rest-1.png">
 			</div>
 
 			<div>
-				<img style="margin-left:16px;" src="./data/rest-1.png">
+				<img style="margin-left:16px;" src="http://117.16.136.174:9000/media/websrc/rest-1.png">
 			</div>
 
 		</div>
@@ -59,10 +61,10 @@
 
 	<!-- Footer Bar -->
     <div class="footer-bar">
-        <img class="pointer" src="./img/home_active.png">
-        <img class="pointer" src="./img/restaurant_deactive.png">
-        <img class="pointer" src="./img/gift_deactive.png">
-        <img class="pointer" src="./img/user_deactive.png">
+        <img class="pointer" src="http://117.16.136.174:9000/media/websrc/home_active.png">
+        <img class="pointer" src="http://117.16.136.174:9000/media/websrc/restaurant_deactive.png">
+        <img class="pointer" src="http://117.16.136.174:9000/media/websrc/gift_deactive.png">
+        <img class="pointer" src="http://117.16.136.174:9000/media/websrc/user_deactive.png">
     </div>
 </body>
 </html>

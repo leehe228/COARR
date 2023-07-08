@@ -1,0 +1,114 @@
+@font-face { 
+  font-family: "SF-Pro";
+  src: url("font/SF-Pro.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.header-bar {
+    display: flex;
+    height: 30px;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border: 1px solid #000;
+}
+
+.footer-bar {
+    height: 40px;
+    width: 100%;
+    flex-shrink: 0;
+    border: 1px solid #000;
+    position:fixed;
+    bottom: 0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-button-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+}
+
+.header-text-button-group {
+    width: 117px;
+    height: 28px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-button {
+    color: var(--grey-900, #212121);
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    font-family: SF-Pro;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+}
+
+.header-button-disable {
+    color: var(--grey-500, #9E9E9E);
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-family: SF-Pro;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+}
+
+.title-text-group1 {
+  font-family: SF-Pro;
+  margin-top: 18px;
+  margin-left: 16px;
+}
+
+.title-text-group2 {
+  font-family: SF-Pro;
+  margin-top: 52px;
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-t3 {
+  color: var(--grey-900, #212121);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 590;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+}
+
+.main-page {
+  
+}
+
+.hscroll-view {
+  margin-top: 20px;
+  height: 416px;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.hscroll-view::-webkit-scrollbar {
+  display: none;
+}

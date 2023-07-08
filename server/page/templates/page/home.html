@@ -1,0 +1,74 @@
+<!--{% load static %}
+{% load random_numbers %} -->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>COARR GUIDE</title>
+    <!-- mobile -->
+    <!-- <link rel="stylesheet" href="{% static 'css/home_m.css' %}" media="(max-width:1200px)"> -->
+    <!-- web -->
+    <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}" media="(min-width:1200px)"> -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+</head>
+
+<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false' style="overflow-x:hidden; overflow-y:auto; margin: 0px;">
+    
+	<!-- Header -->
+	<div class="header-bar">
+        <div class="header-text-button-group">
+            <div class="header-button pointer">추천</div>
+            <div class="header-button-disable pointer">팔로잉</div>
+        </div>
+        <div class="header-button-group">
+            <div id="noti-button" class="btn btn-header pointer">
+                <img src="./img/noti.png">
+            </div>
+            <div id="search-button" class="btn btn-header pointer">
+                <img src="./img/search.png">
+            </div>
+        </div>
+    </div>
+
+	<div class="main-page">
+		<div class="title-text-group1 title-t3">
+			오늘의 레스토랑
+		</div>
+
+		<div class="hscroll-view">
+
+			<div>
+				<img style="margin-left:16px;" src="./data/rest-1.png">
+			</div>
+
+			<div>
+				<img style="margin-left:16px;" src="./data/rest-1.png">
+			</div>
+
+		</div>
+
+		<div class="title-text-group2">
+			<div class="title-t3">
+				신규 오픈 레스토랑
+			</div>
+
+			<div class="">
+				전체보기
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Footer Bar -->
+    <div class="footer-bar">
+        <img class="pointer" src="./img/home_active.png">
+        <img class="pointer" src="./img/restaurant_deactive.png">
+        <img class="pointer" src="./img/gift_deactive.png">
+        <img class="pointer" src="./img/user_deactive.png">
+    </div>
+</body>
+</html>

@@ -16,15 +16,17 @@ class User(models.Model):
         return self.UID
 
 
-class Review(models.Model):
-    RID = models.IntegerField()
+class Content(models.Model):
+    CID = models.IntegerField()
+    CTYPE = models.CharField(max_length=10)
     WRITER = models.IntegerField()
     APPROVER = models.IntegerField()
     DELETED = models.IntegerField()
     STATUS = models.IntegerField()
-    TITLE = models.CharField(max_length=100)
     CONTENT = models.TextField()
-    SCORE = models.IntegerField()
+    NUM_LIKE = models.IntegerField(default=0)
+    NUM_SAVED = models.IntegerField(default=0)
+    NUM_SHARE = models.IntegerField(default=0)
     CREATED = models.DateTimeField(
             default=timezone.now)
     UPDATED = models.DateTimeField(

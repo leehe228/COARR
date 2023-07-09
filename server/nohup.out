@@ -115,3 +115,172 @@ Not Found: /favicon.ico
 [09/Jul/2023 14:31:37] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 304 0
 [09/Jul/2023 14:31:37] "GET /static/font/SF-Pro.ttf HTTP/1.1" 304 0
 [09/Jul/2023 14:31:37] "GET /media/websrc/gift_deactive.png HTTP/1.1" 304 0
+/home/dmsai2/Desktop/COARR/server/api/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 08, 2023 - 16:22:33
+Django version 3.2.20, using settings 'project.settings'
+Starting development server at http://117.16.136.174:9000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/dmsai2/anaconda3/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "/dmsai2/anaconda3/lib/python3.7/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 110, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/core/management/__init__.py", line 375, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/contrib/admin/apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/contrib/admin/__init__.py", line 24, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/dmsai2/anaconda3/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/dmsai2/Desktop/COARR/server/api/admin.py", line 2, in <module>
+    from .models import Review, User
+ImportError: cannot import name 'Review' from 'api.models' (/home/dmsai2/Desktop/COARR/server/api/models.py)
+
+/home/dmsai2/Desktop/COARR/server/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/dmsai2/anaconda3/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "/dmsai2/anaconda3/lib/python3.7/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 110, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/core/management/__init__.py", line 375, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/contrib/admin/apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/contrib/admin/__init__.py", line 24, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/dmsai2/anaconda3/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/dmsai2/Desktop/COARR/server/api/admin.py", line 2, in <module>
+    from .models import Review, User
+ImportError: cannot import name 'Review' from 'api.models' (/home/dmsai2/Desktop/COARR/server/api/models.py)
+
+/home/dmsai2/Desktop/COARR/server/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/dmsai2/anaconda3/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "/dmsai2/anaconda3/lib/python3.7/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 110, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/core/management/__init__.py", line 375, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/contrib/admin/apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/contrib/admin/__init__.py", line 24, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/dmsai2/anaconda3/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/dmsai2/Desktop/COARR/server/api/admin.py", line 2, in <module>
+    from .models import Review, User
+ImportError: cannot import name 'Review' from 'api.models' (/home/dmsai2/Desktop/COARR/server/api/models.py)
+
+/home/dmsai2/Desktop/COARR/server/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/dmsai2/anaconda3/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "/dmsai2/anaconda3/lib/python3.7/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 110, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/core/management/__init__.py", line 375, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/contrib/admin/apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/contrib/admin/__init__.py", line 24, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/dmsai2/Desktop/COARR/server/venv/lib/python3.7/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/dmsai2/anaconda3/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/dmsai2/Desktop/COARR/server/api/admin.py", line 2, in <module>
+    from .models import Review, User
+ImportError: cannot import name 'Review' from 'api.models' (/home/dmsai2/Desktop/COARR/server/api/models.py)
+
+/home/dmsai2/Desktop/COARR/server/api/admin.py changed, reloading.
+Watching for file changes with StatReloader

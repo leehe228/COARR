@@ -1,12 +1,14 @@
-<!-- {% load static %} -->
+<!--{% load static %}-->
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>COARR GUIDE</title>
     <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- js -->
-    <script src="main.js"> </script>
+    <!-- <script src="{% static 'js/main.js' %}"> </script> -->
+    <script src="./main.js"></script>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap" rel="stylesheet">
@@ -40,9 +42,9 @@
     </div>
     <!-- float button -->
     <div class="float-button">
-        <img src="./websrc/floatbutton.png">
+        <img src="./websrc/floatbutton.png" >
     </div>
-
+    
     <!-- main page recommend -->
     <div id="main-page-recommend" class="main-page-recommend" style="margin-top:90px; margin-bottom:72px;">
         <div class="title-text-group1 title-t3">
@@ -50,10 +52,10 @@
         </div>
         <div class="hscroll-view1">
             <div class="home-restaurant-view">
-                <img src="./websrc/rest-1.png">
+                <img src="./websrc/home-rest-1.png">
             </div>
-            <div class="home-restaurant-view">
-                <img src="./websrc/rest-1.png">
+            <div class="home-restaurant-view" style="margin-right: 16px;">
+                <img src="./websrc/home-rest-2.png">
             </div>
         </div>
         <div class="title-text-group2">
@@ -83,7 +85,8 @@
         </div>
         <div class="title-text-group2">
             <div class="title-t3">
-                <img src="./websrc/t2.png">
+<!--                 <img src="./websrc/t2.png"> -->
+                지금 관심받는 리뷰
             </div>
             <div class="">
                 <img src="./websrc/see_all.png">
@@ -112,6 +115,57 @@
 
     <!-- following page -->
     <div id="main-page-follow" class="main-page-follow" style="margin-top:90px; margin-bottom:72px; ">
+
+        <!-- follwer head -->
+        <div class="follower-header">
+
+            <div class="follower-header-right"></div>
+
+            <div class="follower-block">
+                <div class="follower-profile">
+                    <img src="./websrc/home-profile-1.png" style="width: 56px; height: 56px;" >
+                    <img src="./websrc/home-profile-t1.png" style="margin-top: 10px;">
+                </div>
+
+                <div class="follower-profile">
+                    <img src="./websrc/home-profile-1.png" style="width: 56px; height: 56px;" >
+                    <img src="./websrc/home-profile-t1.png" style="margin-top: 10px;">
+                </div>
+
+                <div class="follower-profile">
+                    <img src="./websrc/home-profile-1.png" style="width: 56px; height: 56px;" >
+                    <img src="./websrc/home-profile-t1.png" style="margin-top: 10px;">
+                </div>
+
+                <div class="follower-profile">
+                    <img src="./websrc/home-profile-1.png" style="width: 56px; height: 56px;" >
+                    <img src="./websrc/home-profile-t1.png" style="margin-top: 10px;">
+                </div>
+
+                <div class="follower-profile">
+                    <img src="./websrc/home-profile-1.png" style="width: 56px; height: 56px;" >
+                    <img src="./websrc/home-profile-t1.png" style="margin-top: 10px;">
+                </div>
+
+                <div class="follower-profile">
+                    <img src="./websrc/home-profile-1.png" style="width: 56px; height: 56px;" >
+                    <img src="./websrc/home-profile-t1.png" style="margin-top: 10px;">
+                </div>
+
+                <div class="follower-profile">
+                    <img src="./websrc/home-profile-1.png" style="width: 56px; height: 56px;" >
+                    <img src="./websrc/home-profile-t1.png" style="margin-top: 10px;">
+                </div>
+
+                <div class="follower-profile">
+                    <img src="./websrc/home-profile-1.png" style="width: 56px; height: 56px;" >
+                    <img src="./websrc/home-profile-t1.png" style="margin-top: 10px;">
+                </div>
+            </div>
+            
+        </div>
+
+        
         
     </div>
 </div>

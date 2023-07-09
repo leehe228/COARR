@@ -1,7 +1,12 @@
 @font-face { 
   font-family: 'SF-Pro';
-  src: url('./fonts/SF-Pro-Text-Regular.woff') format("woff");
+  src: url('./SF-Pro-Text-Regular.woff');
 }
+
+/* * {
+  font-family: 'SF-Pro';
+  user-select: none;
+} */
 
 .pointer {
   cursor: pointer;
@@ -24,7 +29,6 @@
 
 .footer-bar {
     height: 40px;
-    width: 100%;
     flex-shrink: 0;
     /* border: 1px solid #000;*/
     position: fixed;
@@ -100,10 +104,7 @@
   font-weight: 590;
   line-height: 22px;
   letter-spacing: -0.4px;
-}
-
-.main-page {
-  
+  font-family: 'SF Pro';
 }
 
 .hscroll-view1 {
@@ -121,7 +122,7 @@
 }
 
 .home-restaurant-view {
-  height: 416px
+  height: 416px;
   width: 311px;
   margin-left: 16px;
 }
@@ -213,4 +214,40 @@
 
 .hscroll-view-dummy::-webkit-scrollbar {
   display: none;
+}
+
+.follower-header {
+  height: 110px;
+  border: 1px solid #000;
+}
+
+.follower-header-right {
+  z-index: 2px;
+  width: 80px;
+  height: 110px;
+  float: right;
+  background: linear-gradient(to right, #0000, #ffffff80 20%, #ffffffd6 30%, #fffffff0 75%, #fff 100%);
+  flex-shrink: 0;
+}
+
+.follower-block {
+  border: 1px solid #0f0;
+  background: #ffffff;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  overflow-x:scroll;
+  overflow-y:hidden;
+}
+
+.follower-profile {
+  width: 80px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

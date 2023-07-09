@@ -102,10 +102,6 @@
   letter-spacing: -0.4px;
 }
 
-.main-page {
-  
-}
-
 .hscroll-view1 {
   margin-top: 20px;
   height: 416px;
@@ -121,7 +117,7 @@
 }
 
 .home-restaurant-view {
-  height: 416px
+  height: 416px;
   width: 311px;
   margin-left: 16px;
 }

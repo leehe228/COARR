@@ -1,0 +1,161 @@
+@font-face { 
+  font-family: 'SF-Pro';
+  src: url('./fonts/SF-Pro-Text-Regular.woff') format("woff");
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.header-bar {
+    display: flex;
+    height: 48px;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    /* border: 1px solid #000; */
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.footer-bar {
+    height: 40px;
+    width: 100%;
+    flex-shrink: 0;
+    /* border: 1px solid #000;*/
+    position: fixed;
+    bottom: 0px;
+    left:0px;
+    right:0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    justify-content: space-evenly;
+}
+
+.header-button-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+}
+
+.header-text-button-group {
+    width: 117px;
+    height: 28px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-button {
+    color: var(--grey-900, #212121);
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    font-family: SF-Pro;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+}
+
+.header-button-disable {
+    color: var(--grey-500, #9E9E9E);
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-family: SF-Pro;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+}
+
+.title-text-group1 {
+  font-family: SF-Pro;
+  margin-top: 18px;
+  margin-left: 16px;
+}
+
+.title-text-group2 {
+  font-family: SF-Pro;
+  margin-top: 52px;
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-t3 {
+  color: var(--grey-900, #212121);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 590;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+}
+
+.main-page {
+  
+}
+
+.hscroll-view1 {
+  margin-top: 20px;
+  height: 416px;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.hscroll-view1::-webkit-scrollbar {
+  display: none;
+}
+
+.home-restaurant-view {
+  height: 416px
+  width: 311px;
+  margin-left: 16px;
+}
+
+.home-restaurant-view > img {
+  height: 416px;
+  width: 311px;
+}
+
+.hscroll-view2 {
+  margin-top: 20px;
+  height: 390px;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.hscroll-view2::-webkit-scrollbar {
+  display: none;
+}
+
+.new-restaurant-view {
+  height: 280px;
+  width: 165px;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.new-restaurant-view > title-img {
+  height: 243px;
+  width: 165px;
+}

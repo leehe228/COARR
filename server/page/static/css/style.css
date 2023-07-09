@@ -1,7 +1,6 @@
 @font-face { 
-  font-family: "SF-Pro";
-  src: url("../font/SF-Pro.ttf") format("truetype");
-  font-weight: normal;
+  font-family: 'SF-Pro';
+  src: url('./fonts/SF-Pro-Text-Regular.woff') format("woff");
 }
 
 .pointer {
@@ -10,7 +9,7 @@
 
 .header-bar {
     display: flex;
-    height: 30px;
+    height: 48px;
     padding: 16px;
     justify-content: space-between;
     align-items: center;
@@ -107,7 +106,7 @@
   
 }
 
-.hscroll-view {
+.hscroll-view1 {
   margin-top: 20px;
   height: 416px;
   overflow-x:scroll;
@@ -117,6 +116,46 @@
   flex-direction: row;
 }
 
-.hscroll-view::-webkit-scrollbar {
+.hscroll-view1::-webkit-scrollbar {
   display: none;
+}
+
+.home-restaurant-view {
+  height: 416px
+  width: 311px;
+  margin-left: 16px;
+}
+
+.home-restaurant-view > img {
+  height: 416px;
+  width: 311px;
+}
+
+.hscroll-view2 {
+  margin-top: 20px;
+  height: 390px;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.hscroll-view2::-webkit-scrollbar {
+  display: none;
+}
+
+.new-restaurant-view {
+  height: 280px;
+  width: 165px;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.new-restaurant-view > title-img {
+  height: 243px;
+  width: 165px;
 }

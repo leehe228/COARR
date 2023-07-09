@@ -1,3 +1,117 @@
 Watching for file changes with StatReloader
 [08/Jul/2023 16:22:35] "GET / HTTP/1.1" 200 2233
 [08/Jul/2023 16:22:35] "GET /static/css/style.css HTTP/1.1" 200 2150
+[08/Jul/2023 16:24:08] "GET / HTTP/1.1" 200 2233
+[08/Jul/2023 16:24:08] "GET /static/css/style.css HTTP/1.1" 200 2150
+[08/Jul/2023 16:24:08] "GET /media/websrc/noti.png HTTP/1.1" 200 401
+[08/Jul/2023 16:24:09] "GET /media/websrc/rest-1.png HTTP/1.1" 200 188122
+[08/Jul/2023 16:24:09] "GET /media/websrc/home_active.png HTTP/1.1" 200 825
+[08/Jul/2023 16:24:09] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 200 1018
+[08/Jul/2023 16:24:09] "GET /static/font/SF-Pro.ttf HTTP/1.1" 200 6110460
+[08/Jul/2023 16:24:09] "GET /media/websrc/search.png HTTP/1.1" 200 487
+[08/Jul/2023 16:24:09] "GET /media/websrc/gift_deactive.png HTTP/1.1" 200 849
+[08/Jul/2023 16:24:10] "GET /media/websrc/user_deactive.png HTTP/1.1" 200 915
+[08/Jul/2023 16:26:17] "GET / HTTP/1.1" 200 2233
+[08/Jul/2023 16:26:18] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[08/Jul/2023 16:26:18] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[08/Jul/2023 16:26:18] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[08/Jul/2023 16:26:18] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[08/Jul/2023 16:26:18] "GET /static/css/style.css HTTP/1.1" 200 2150
+[08/Jul/2023 16:26:26] "GET /media/websrc/search.png HTTP/1.1" 200 487
+[08/Jul/2023 16:26:26] "GET /media/websrc/noti.png HTTP/1.1" 200 401
+[08/Jul/2023 16:26:29] "GET /media/websrc/rest-1.png HTTP/1.1" 200 188122
+[08/Jul/2023 16:26:29] "GET /media/websrc/home_active.png HTTP/1.1" 200 825
+[08/Jul/2023 16:26:29] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 200 1018
+[08/Jul/2023 16:26:31] "GET /media/websrc/gift_deactive.png HTTP/1.1" 200 849
+[08/Jul/2023 16:26:32] "GET /media/websrc/user_deactive.png HTTP/1.1" 200 915
+[08/Jul/2023 16:26:39] "GET /static/font/SF-Pro.ttf HTTP/1.1" 200 6110460
+[08/Jul/2023 16:27:06] "GET / HTTP/1.1" 200 2233
+[08/Jul/2023 16:27:06] "GET /static/css/style.css HTTP/1.1" 304 0
+[08/Jul/2023 16:27:40] "GET / HTTP/1.1" 200 2233
+[08/Jul/2023 16:27:40] "GET /static/css/style.css HTTP/1.1" 304 0
+[08/Jul/2023 16:27:40] "GET /media/websrc/noti.png HTTP/1.1" 304 0
+[08/Jul/2023 16:27:40] "GET /media/websrc/user_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:27:40] "GET /media/websrc/search.png HTTP/1.1" 304 0
+[08/Jul/2023 16:27:40] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:27:40] "GET /media/websrc/home_active.png HTTP/1.1" 304 0
+[08/Jul/2023 16:27:40] "GET /media/websrc/gift_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:27:40] "GET /static/font/SF-Pro.ttf HTTP/1.1" 304 0
+[08/Jul/2023 16:27:40] "GET /media/websrc/rest-1.png HTTP/1.1" 304 0
+[08/Jul/2023 16:29:37] "GET / HTTP/1.1" 200 2233
+[08/Jul/2023 16:29:38] "GET /static/css/style.css HTTP/1.1" 304 0
+[08/Jul/2023 16:29:54] "GET / HTTP/1.1" 200 2233
+[08/Jul/2023 16:29:54] "GET /static/css/style.css HTTP/1.1" 200 2150
+[08/Jul/2023 16:29:54] "GET /media/websrc/noti.png HTTP/1.1" 200 401
+[08/Jul/2023 16:29:54] "GET /media/websrc/search.png HTTP/1.1" 200 487
+[08/Jul/2023 16:29:54] "GET /media/websrc/home_active.png HTTP/1.1" 200 825
+[08/Jul/2023 16:29:54] "GET /media/websrc/rest-1.png HTTP/1.1" 200 188122
+[08/Jul/2023 16:29:54] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 200 1018
+[08/Jul/2023 16:29:54] "GET /media/websrc/gift_deactive.png HTTP/1.1" 200 849
+[08/Jul/2023 16:29:54] "GET /media/websrc/user_deactive.png HTTP/1.1" 200 915
+[08/Jul/2023 16:29:55] "GET /static/font/SF-Pro.ttf HTTP/1.1" 200 6110460
+[08/Jul/2023 16:32:48] "GET / HTTP/1.1" 200 2233
+[08/Jul/2023 16:32:48] "GET /static/css/style.css HTTP/1.1" 304 0
+[08/Jul/2023 16:32:48] "GET /media/websrc/search.png HTTP/1.1" 304 0
+[08/Jul/2023 16:32:48] "GET /media/websrc/noti.png HTTP/1.1" 304 0
+[08/Jul/2023 16:32:48] "GET /media/websrc/home_active.png HTTP/1.1" 304 0
+[08/Jul/2023 16:32:48] "GET /media/websrc/user_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:32:48] "GET /static/font/SF-Pro.ttf HTTP/1.1" 304 0
+[08/Jul/2023 16:32:48] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:32:48] "GET /media/websrc/gift_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:32:48] "GET /media/websrc/rest-1.png HTTP/1.1" 304 0
+[08/Jul/2023 16:33:59] "GET / HTTP/1.1" 200 2233
+[08/Jul/2023 16:33:59] "GET /static/css/style.css HTTP/1.1" 304 0
+[08/Jul/2023 16:33:59] "GET /media/websrc/noti.png HTTP/1.1" 304 0
+[08/Jul/2023 16:33:59] "GET /media/websrc/home_active.png HTTP/1.1" 304 0
+[08/Jul/2023 16:33:59] "GET /media/websrc/gift_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:33:59] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:33:59] "GET /media/websrc/search.png HTTP/1.1" 304 0
+[08/Jul/2023 16:33:59] "GET /media/websrc/rest-1.png HTTP/1.1" 304 0
+[08/Jul/2023 16:33:59] "GET /media/websrc/user_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:33:59] "GET /static/font/SF-Pro.ttf HTTP/1.1" 304 0
+[08/Jul/2023 16:53:50] "GET / HTTP/1.1" 200 2233
+[08/Jul/2023 16:53:50] "GET /static/css/style.css HTTP/1.1" 304 0
+[08/Jul/2023 16:53:50] "GET /media/websrc/noti.png HTTP/1.1" 304 0
+[08/Jul/2023 16:53:50] "GET /media/websrc/search.png HTTP/1.1" 304 0
+[08/Jul/2023 16:53:50] "GET /media/websrc/rest-1.png HTTP/1.1" 304 0
+[08/Jul/2023 16:53:50] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:53:50] "GET /media/websrc/home_active.png HTTP/1.1" 304 0
+[08/Jul/2023 16:53:50] "GET /media/websrc/gift_deactive.png HTTP/1.1" 304 0
+[08/Jul/2023 16:53:50] "GET /static/font/SF-Pro.ttf HTTP/1.1" 304 0
+[08/Jul/2023 16:53:50] "GET /media/websrc/user_deactive.png HTTP/1.1" 304 0
+[09/Jul/2023 06:00:00] code 400, message Bad request version ('À(À$À\x14À')
+[09/Jul/2023 06:00:00] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Jul/2023 13:03:54,708] - Broken pipe from ('167.94.145.57', 60298)
+
+[09/Jul/2023 13:03:55] code 400, message Bad request version ('À\x14À')
+[09/Jul/2023 13:03:55] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Jul/2023 13:03:56] "GET / HTTP/1.1" 200 2233
+[09/Jul/2023 13:03:56,847] - Broken pipe from ('167.94.145.57', 60910)
+
+[09/Jul/2023 13:03:57] "GET / HTTP/1.1" 200 2233
+[09/Jul/2023 13:03:57] code 505, message Invalid HTTP version (2.0)
+[09/Jul/2023 13:03:57] "PRI * HTTP/2.0" 505 -
+Not Found: /favicon.ico
+[09/Jul/2023 13:03:58] "GET /favicon.ico HTTP/1.1" 404 2665
+[09/Jul/2023 14:07:14] "GET / HTTP/1.1" 200 2233
+[09/Jul/2023 14:07:15] "GET /media/websrc/home_active.png HTTP/1.1" 304 0
+[09/Jul/2023 14:07:15] "GET /media/websrc/user_deactive.png HTTP/1.1" 304 0
+[09/Jul/2023 14:07:15] "GET /media/websrc/rest-1.png HTTP/1.1" 304 0
+[09/Jul/2023 14:07:15] "GET /media/websrc/search.png HTTP/1.1" 304 0
+[09/Jul/2023 14:07:15] "GET /media/websrc/gift_deactive.png HTTP/1.1" 304 0
+[09/Jul/2023 14:07:15] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 304 0
+[09/Jul/2023 14:07:15] "GET /media/websrc/noti.png HTTP/1.1" 304 0
+[09/Jul/2023 14:07:15] "GET /static/css/style.css HTTP/1.1" 304 0
+[09/Jul/2023 14:07:15] "GET /static/font/SF-Pro.ttf HTTP/1.1" 304 0
+[09/Jul/2023 14:31:36] "GET / HTTP/1.1" 200 2233
+[09/Jul/2023 14:31:37] "GET /static/css/style.css HTTP/1.1" 304 0
+[09/Jul/2023 14:31:37] "GET /media/websrc/noti.png HTTP/1.1" 304 0
+[09/Jul/2023 14:31:37] "GET /media/websrc/search.png HTTP/1.1" 304 0
+[09/Jul/2023 14:31:37] "GET /media/websrc/user_deactive.png HTTP/1.1" 304 0
+[09/Jul/2023 14:31:37] "GET /media/websrc/rest-1.png HTTP/1.1" 304 0
+[09/Jul/2023 14:31:37] "GET /media/websrc/home_active.png HTTP/1.1" 304 0
+[09/Jul/2023 14:31:37] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 304 0
+[09/Jul/2023 14:31:37] "GET /static/font/SF-Pro.ttf HTTP/1.1" 304 0
+[09/Jul/2023 14:31:37] "GET /media/websrc/gift_deactive.png HTTP/1.1" 304 0

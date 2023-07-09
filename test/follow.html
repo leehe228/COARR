@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>COARR GUIDE</title>
     <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <!-- js -->
-    <script src="main.js"> </script>
+    <link rel="stylesheet" href="./css/style.css">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap" rel="stylesheet">
@@ -17,11 +15,11 @@
     <!-- Header -->
     <div class="header-bar">
         <div class="header-text-button-group">
-            <div class="header-button pointer" onclick="to_recomm();">
-                <img id="header-text-b1" src="./websrc/home-h1.png">
+            <div class="header-button pointer">
+                <img src="./websrc/home-h1.png">
             </div>
-            <div class="header-button-disable pointer" onclick="to_follow();">
-                <img id="header-text-b2" src="./websrc/home-h2.png">
+            <div class="header-button-disable pointer">
+                <img src="./websrc/home-h2.png">
             </div>
         </div>
         <div class="header-button-group">
@@ -35,16 +33,14 @@
     </div>
     <!-- Header Underline Bar -->
     <div class="header-linebar">
-        <div id="hline-left" class="header-line-left" style="background: #000;"></div>
-        <div id="hline-right" class="header-line-right"></div>
+        <div class="header-line-left"></div>
+        <div class="header-line-right"></div>
     </div>
     <!-- float button -->
     <div class="float-button">
         <img src="./websrc/floatbutton.png">
     </div>
-
-    <!-- main page recommend -->
-    <div id="main-page-recommend" class="main-page-recommend" style="margin-top:90px; margin-bottom:72px;">
+    <div class="main-page" style="margin-top:90px; margin-bottom:72px; display:none;">
         <div class="title-text-group1 title-t3">
             <img src="./websrc/t0.png">
         </div>
@@ -108,11 +104,6 @@
             </div>
         </div>
         <div class="hscroll-view-dummy"></div>
-    </div>
-
-    <!-- following page -->
-    <div id="main-page-follow" class="main-page-follow" style="margin-top:90px; margin-bottom:72px; ">
-        
     </div>
 </div>
 <!-- Footer Bar -->

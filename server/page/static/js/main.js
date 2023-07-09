@@ -13,10 +13,10 @@ function to_follow() {
     hline1.removeAttribute('style');
 
     let htbutton1 = document.getElementById('header-text-b1');
-    htbutton1.setAttribute('src', './websrc/follow-h1.png');
+    htbutton1.setAttribute('src', 'http://117.16.136.174:5000/media/websrc/follow-h1.png');
 
     let htbutton2 = document.getElementById('header-text-b2');
-    htbutton2.setAttribute('src', './websrc/follow-h2.png');
+    htbutton2.setAttribute('src', 'http://117.16.136.174:5000/media/websrc/follow-h2.png');
 }
 
 function to_recomm() {
@@ -34,8 +34,8 @@ function to_recomm() {
     hline2.removeAttribute('style');
 
     let htbutton1 = document.getElementById('header-text-b1');
-    htbutton1.setAttribute('src', './websrc/home-h1.png');
+    htbutton1.setAttribute('src', 'http://117.16.136.174:5000/media/websrc/home-h1.png');
 
     let htbutton2 = document.getElementById('header-text-b2');
-    htbutton2.setAttribute('src', './websrc/home-h2.png');
+    htbutton2.setAttribute('src', 'http://117.16.136.174:5000/media/websrc/home-h2.png');
 }

@@ -85,7 +85,7 @@
 
 .title-text-group2 {
   font-family: SF-Pro;
-  margin-top: 52px;
+  margin-top: 48px;
   margin-left: 16px;
   margin-right: 16px;
   display: flex;
@@ -133,13 +133,14 @@
 
 .hscroll-view2 {
   margin-top: 20px;
-  height: 390px;
+  height: 294px;
   overflow-x:scroll;
   overflow-y:hidden;
   display: flex;
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
+  border: 1px solid #fff;
 }
 
 .hscroll-view2::-webkit-scrollbar {
@@ -158,4 +159,58 @@
 .new-restaurant-view > title-img {
   height: 243px;
   width: 165px;
+}
+
+.header-linebar {
+  height: 3px;
+  width: 100%;
+  border: 1px solid #fff;
+  position: fixed;
+  top: 64px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  left: 0px;
+  right: 0px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-line-left {
+  width: 43px;
+  height: 3px;
+  border: 1px soild #fff;
+/*   background: #000; */
+  margin-left: 13px;
+}
+
+.header-line-right {
+  width: 59px;
+  height: 3px;
+  border: 1px soild #fff;
+/*   background: #ffffff; */
+  margin-left: 18px;
+}
+
+.float-button {
+  position: fixed;
+  bottom: 66px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.hscroll-view-dummy {
+  margin-top: 20px;
+  height: 200px;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background: #d9d9d9;
+}
+
+.hscroll-view-dummy::-webkit-scrollbar {
+  display: none;
 }

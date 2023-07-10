@@ -15,7 +15,6 @@
 
 * {
     font-family: AppleSDGothicNeoR;
-    user-select: none;
 }
 
 body {
@@ -135,12 +134,18 @@ body {
 }
 
 .text-input-l::-webkit-scrollbar {
-/*     display:none; */
+    /*     display:none; */
 }
 
 .text-input-l > input:focus {
     outline: none;
     border: none;
+}
+
+/* placeholder */
+.text-input-l:empty:before {
+    content: attr(placeholder);
+    color: #808080;
 }
 
 .text-input-s {
@@ -160,12 +165,18 @@ body {
 }
 
 .text-input-s::-webkit-scrollbar {
-/*     display:none; */
+    /*     display:none; */
 }
 
 .text-input-s > input:focus {
     outline: none;
     border: none;
+}
+
+/* placeholder */
+.text-input-s:empty:before {
+    content: attr(placeholder);
+    color: #808080;
 }
 
 .bar-button {
@@ -221,6 +232,7 @@ body {
     font-family: AppleSDGothicNeoR;
     font-size: 15px;
     cursor: pointer;
+    padding-top: 2px;
 }
 
 .r-active {
@@ -298,13 +310,14 @@ body {
     margin-left: 6px;
     align-items: center;
     justify-content: center;
-    pointer: cursor;
+    cursor: pointer;
 }
 
 .cb > img {
     width: 15px;
     height: 15px;
-    object-fit:cover;
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .checked {
@@ -321,10 +334,33 @@ body {
     line-height : 50px;
     background: #A21E31;
     cursor: pointer;
-
     color: #FFF;
     font-family: AppleSDGothicNeoR;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: -0.4px;
+}
+
+#img-selector {
+    display: none;
+}
+
+#editor1 > img {
+}
+
+.style-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+    text-align: center;
+    font-family:AppleSDGothicNeoR;
+    border: 1px solid #f0f0f0;
+    border-radius: 15px;
+    background: #fff;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.style-btn:hover {
+    background: #f3f3f3;
 }

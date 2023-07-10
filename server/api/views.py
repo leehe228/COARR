@@ -12,8 +12,12 @@ op = os.path.join
 @csrf_exempt
 def test(request):
     
-    data = request.GET.get('q')
+    print(request.GET)
+    print(request.POST)
 
-    print(data)
+    # data = request.GET.get('q')
 
-    return HttpResponse(f"200: {data}")
+    # print(data)
+
+    return HttpResponse(f"200")
+

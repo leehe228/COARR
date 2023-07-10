@@ -1,0 +1,59 @@
+<!--{% load static %}-->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>COARR GUIDE</title>
+        <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+        <link rel="stylesheet" href="./css/review.css">
+        <!-- js -->
+        <!-- <script src="{% static 'js/main.js' %}"> </script> -->
+        <script src="./main.js"></script>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <link rel="shortcut icon" href="" type="image/x-icon">
+    </head>
+    <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+        
+        <!-- Header -->
+        <div class="header">
+            <div class="btn">
+                <img class="btn" src="./websrc/btn_back.png"/>
+            </div>
+            <a>
+                리뷰작성
+            </a>
+            <div style="width:11px;">
+            </div>
+        </div>
+
+        <!-- Tool Header -->
+        <div class="tool-header">
+            <div class="btn">
+                <img src="./websrc/btn_photo.png"/>
+            </div>
+
+            <div class="btn">
+                <img src="./websrc/btn_style.png"/>
+            </div>
+
+            <div class="btn">
+                <img src="./websrc/btn_array.png"/>
+            </div>
+        </div>
+
+        <div class="title-input">
+            <input type="text" placeholder="제목">
+        </div>
+    
+        <!-- Text Input 1 -->
+        <div id="editor1" class="text-input-l" contenteditable="true">
+        </div>
+
+        <!-- Text Input 2 -->
+        <div id="editor2" class="text-input-s" contenteditable="true">
+        </div>
+    </body>
+</html>

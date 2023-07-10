@@ -12,3 +12,7 @@ import sys
 @csrf_exempt
 def home(request):
     return render(request, 'page/home.html', {})
+
+@csrf_exempt
+def review(request):
+    return render(request, 'page/review.html', {})

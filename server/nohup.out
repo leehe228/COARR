@@ -391,3 +391,160 @@ Watching for file changes with StatReloader
 [09/Jul/2023 21:30:35] "GET /media/websrc/t3.png HTTP/1.1" 200 657
 [09/Jul/2023 21:30:35] "GET /media/websrc/t4.png HTTP/1.1" 200 1072
 [09/Jul/2023 21:30:35] "GET /static/css/fonts/SF-Pro-Text-Regular.woff HTTP/1.1" 200 2815828
+[09/Jul/2023 22:36:20] "GET / HTTP/1.1" 200 5745
+[09/Jul/2023 22:36:20] "GET /static/css/style.css HTTP/1.1" 200 3629
+[09/Jul/2023 22:36:20] "GET /static/js/main.js HTTP/1.1" 200 1653
+[09/Jul/2023 22:36:20] "GET / HTTP/1.1" 200 5745
+[09/Jul/2023 22:36:20] "GET /media/websrc/home-h1.png HTTP/1.1" 200 657
+[09/Jul/2023 22:36:20] "GET /media/websrc/home-h2.png HTTP/1.1" 200 950
+[09/Jul/2023 22:36:20] "GET /media/websrc/noti.png HTTP/1.1" 200 401
+[09/Jul/2023 22:36:20] "GET /media/websrc/floatbutton.png HTTP/1.1" 200 2355
+[09/Jul/2023 22:36:20] "GET /media/websrc/search.png HTTP/1.1" 200 487
+[09/Jul/2023 22:36:20] "GET /media/websrc/t0.png HTTP/1.1" 200 1373
+[09/Jul/2023 22:36:20] "GET /media/websrc/t1.png HTTP/1.1" 200 1547
+[09/Jul/2023 22:36:20] "GET /media/websrc/see_all.png HTTP/1.1" 200 717
+[09/Jul/2023 22:36:20] "GET /media/websrc/rest-1.png HTTP/1.1" 200 913662
+[09/Jul/2023 22:36:20] "GET /media/websrc/new_r_h2.png HTTP/1.1" 200 577
+[09/Jul/2023 22:36:20] "GET /media/websrc/new_r_h1.png HTTP/1.1" 200 476
+[09/Jul/2023 22:36:20] "GET /media/websrc/new_rest-2.png HTTP/1.1" 200 68518
+[09/Jul/2023 22:36:20] "GET /media/websrc/user_deactive.png HTTP/1.1" 200 915
+[09/Jul/2023 22:36:20] "GET /media/websrc/home_active.png HTTP/1.1" 200 825
+[09/Jul/2023 22:36:20] "GET /media/websrc/new_rest-1.png HTTP/1.1" 200 58681
+[09/Jul/2023 22:36:20] "GET /media/websrc/new_r_t2.png HTTP/1.1" 200 853
+[09/Jul/2023 22:36:20] "GET /media/websrc/gift_deactive.png HTTP/1.1" 200 849
+[09/Jul/2023 22:36:20] "GET /media/websrc/new_r_t1.png HTTP/1.1" 200 905
+[09/Jul/2023 22:36:20] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 200 1018
+[09/Jul/2023 22:36:20] "GET /media/websrc/t2.png HTTP/1.1" 200 1402
+[09/Jul/2023 22:36:20] "GET /media/websrc/t3.png HTTP/1.1" 200 657
+[09/Jul/2023 22:36:21] "GET /media/websrc/t4.png HTTP/1.1" 200 1072
+[09/Jul/2023 22:36:21] "GET /static/css/fonts/SF-Pro-Text-Regular.woff HTTP/1.1" 200 2815828
+Not Found: /favicon.ico
+[09/Jul/2023 22:36:21] "GET /favicon.ico HTTP/1.1" 404 2668
+[09/Jul/2023 22:36:21] "GET / HTTP/1.1" 200 5745
+[09/Jul/2023 22:36:21] "GET /static/css/style.css HTTP/1.1" 200 3629
+[09/Jul/2023 22:36:21] "GET /static/js/main.js HTTP/1.1" 200 1653
+[09/Jul/2023 22:36:21,977] - Broken pipe from ('59.5.229.240', 53247)
+
+[09/Jul/2023 22:36:21,978] - Broken pipe from ('59.5.229.240', 53246)
+
+[09/Jul/2023 23:56:15,478] - Broken pipe from ('162.142.125.11', 48742)
+
+[09/Jul/2023 23:56:15] code 400, message Bad request version ('À\x14À')
+[09/Jul/2023 23:56:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[09/Jul/2023 23:56:17] "GET / HTTP/1.1" 200 5745
+[09/Jul/2023 23:56:17,241] - Broken pipe from ('162.142.125.11', 54906)
+
+[09/Jul/2023 23:56:17] "GET / HTTP/1.1" 200 5745
+[09/Jul/2023 23:56:18] code 505, message Invalid HTTP version (2.0)
+[09/Jul/2023 23:56:18] "PRI * HTTP/2.0" 505 -
+Not Found: /favicon.ico
+[09/Jul/2023 23:56:18] "GET /favicon.ico HTTP/1.1" 404 2665
+Watching for file changes with StatReloader
+[10/Jul/2023 00:03:55] "GET / HTTP/1.1" 200 5745
+[10/Jul/2023 00:03:57] "GET /static/css/style.css HTTP/1.1" 200 3611
+[10/Jul/2023 00:03:57] "GET /static/js/main.js HTTP/1.1" 200 1653
+[10/Jul/2023 00:03:57] "GET /media/websrc/home-h1.png HTTP/1.1" 200 657
+[10/Jul/2023 00:03:57] "GET /media/websrc/home-h2.png HTTP/1.1" 200 950
+[10/Jul/2023 00:03:59] "GET /media/websrc/noti.png HTTP/1.1" 200 401
+[10/Jul/2023 00:03:59] "GET /static/css/fonts/SF-Pro-Text-Regular.woff HTTP/1.1" 200 2815828
+[10/Jul/2023 00:04:00] "GET /media/websrc/search.png HTTP/1.1" 200 487
+[10/Jul/2023 00:04:00] "GET /media/websrc/floatbutton.png HTTP/1.1" 200 2355
+[10/Jul/2023 00:04:01] "GET /media/websrc/t0.png HTTP/1.1" 200 1373
+[10/Jul/2023 00:04:01] "GET /media/websrc/see_all.png HTTP/1.1" 200 717
+[10/Jul/2023 00:04:01] "GET /media/websrc/rest-1.png HTTP/1.1" 200 913662
+[10/Jul/2023 00:04:01] "GET /media/websrc/new_r_t2.png HTTP/1.1" 200 853
+[10/Jul/2023 00:04:01] "GET /media/websrc/t1.png HTTP/1.1" 200 1547
+[10/Jul/2023 00:04:01] "GET /media/websrc/new_r_h1.png HTTP/1.1" 200 476
+[10/Jul/2023 00:04:02] "GET /media/websrc/home_active.png HTTP/1.1" 200 825
+[10/Jul/2023 00:04:03] "GET /media/websrc/new_r_t1.png HTTP/1.1" 200 905
+[10/Jul/2023 00:04:03] "GET /media/websrc/new_r_h2.png HTTP/1.1" 200 577
+[10/Jul/2023 00:04:03] "GET /media/websrc/user_deactive.png HTTP/1.1" 200 915
+[10/Jul/2023 00:04:03] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 200 1018
+[10/Jul/2023 00:04:03] "GET /media/websrc/gift_deactive.png HTTP/1.1" 200 849
+[10/Jul/2023 00:04:03] "GET /media/websrc/new_rest-2.png HTTP/1.1" 200 68518
+[10/Jul/2023 00:04:03] "GET /media/websrc/new_rest-1.png HTTP/1.1" 200 58681
+[10/Jul/2023 00:04:03] "GET /media/websrc/t2.png HTTP/1.1" 200 1402
+[10/Jul/2023 00:04:03] "GET /media/websrc/t3.png HTTP/1.1" 200 657
+[10/Jul/2023 00:04:03] "GET /media/websrc/t4.png HTTP/1.1" 200 1072
+[10/Jul/2023 00:04:03] "GET / HTTP/1.1" 200 5745
+[10/Jul/2023 00:04:07] "GET /media/websrc/follow-h1.png HTTP/1.1" 200 702
+[10/Jul/2023 00:04:07] "GET /media/websrc/follow-h2.png HTTP/1.1" 200 907
+[10/Jul/2023 06:39:31] code 400, message Bad request version ('À\x14À')
+[10/Jul/2023 06:39:31] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jul/2023 06:39:31] code 400, message Bad request version ('À\x14À')
+[10/Jul/2023 06:39:31] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jul/2023 06:39:32] "GET / HTTP/1.1" 200 5745
+[10/Jul/2023 11:18:29] code 400, message Bad request version ('À\x14À')
+[10/Jul/2023 11:18:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jul/2023 11:18:48] code 400, message Bad request version ('\x00\x04\x03\x00\x01\x02\x00')
+[10/Jul/2023 11:18:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jul/2023 11:19:04] "GET / HTTP/1.1 " 200 5745
+[10/Jul/2023 11:19:04,230] - Broken pipe from ('185.180.143.15', 37280)
+
+[10/Jul/2023 11:26:53] "GET / HTTP/1.1" 200 5745
+[10/Jul/2023 11:26:53] "GET /static/js/main.js HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /static/css/style.css HTTP/1.1" 200 3611
+[10/Jul/2023 11:26:53] "GET /media/websrc/floatbutton.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/search.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/t0.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/home-h1.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/noti.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/home-h2.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /static/css/fonts/SF-Pro-Text-Regular.woff HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/t1.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/new_rest-1.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/see_all.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/rest-1.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/new_r_t1.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/new_rest-2.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/new_r_h1.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/new_r_h2.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/new_r_t2.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/t2.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/t4.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:53] "GET /media/websrc/t3.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:54] "GET /media/websrc/home_active.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:54] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:54] "GET /media/websrc/user_deactive.png HTTP/1.1" 304 0
+[10/Jul/2023 11:26:54] "GET /media/websrc/gift_deactive.png HTTP/1.1" 304 0
+[10/Jul/2023 17:38:30] "GET / HTTP/1.1" 200 5745
+[10/Jul/2023 17:38:30] "GET /static/css/style.css HTTP/1.1" 200 3611
+[10/Jul/2023 17:38:30] "GET /static/js/main.js HTTP/1.1" 200 1653
+[10/Jul/2023 17:38:30] "GET /media/websrc/new_r_t1.png HTTP/1.1" 200 905
+[10/Jul/2023 17:38:30] "GET /media/websrc/t1.png HTTP/1.1" 200 1547
+[10/Jul/2023 17:38:30] "GET /media/websrc/new_rest-1.png HTTP/1.1" 200 58681
+[10/Jul/2023 17:38:30] "GET /media/websrc/new_rest-2.png HTTP/1.1" 200 68518
+[10/Jul/2023 17:38:30] "GET /media/websrc/new_r_t2.png HTTP/1.1" 200 853
+[10/Jul/2023 17:38:30] "GET /media/websrc/see_all.png HTTP/1.1" 200 717
+[10/Jul/2023 17:38:30] "GET /media/websrc/new_r_h1.png HTTP/1.1" 200 476
+[10/Jul/2023 17:38:30] "GET /media/websrc/new_r_h2.png HTTP/1.1" 200 577
+[10/Jul/2023 17:38:30] "GET /media/websrc/gift_deactive.png HTTP/1.1" 200 849
+[10/Jul/2023 17:38:30] "GET /media/websrc/rest-1.png HTTP/1.1" 200 913662
+[10/Jul/2023 17:38:30] "GET /media/websrc/user_deactive.png HTTP/1.1" 200 915
+[10/Jul/2023 17:38:31] "GET /media/websrc/restaurant_deactive.png HTTP/1.1" 200 1018
+[10/Jul/2023 17:38:31] "GET /media/websrc/home_active.png HTTP/1.1" 200 825
+[10/Jul/2023 17:38:31] "GET /media/websrc/home-h1.png HTTP/1.1" 200 657
+[10/Jul/2023 17:38:31] "GET /media/websrc/home-h2.png HTTP/1.1" 200 950
+[10/Jul/2023 17:38:31] "GET /media/websrc/noti.png HTTP/1.1" 200 401
+[10/Jul/2023 17:38:31] "GET /media/websrc/search.png HTTP/1.1" 200 487
+[10/Jul/2023 17:38:31] "GET /media/websrc/floatbutton.png HTTP/1.1" 200 2355
+[10/Jul/2023 17:38:31] "GET /media/websrc/t0.png HTTP/1.1" 200 1373
+[10/Jul/2023 17:38:31] "GET /media/websrc/t2.png HTTP/1.1" 200 1402
+[10/Jul/2023 17:38:31] "GET /media/websrc/t3.png HTTP/1.1" 200 657
+[10/Jul/2023 17:38:31] "GET /media/websrc/t4.png HTTP/1.1" 200 1072
+[10/Jul/2023 17:38:31] "GET /static/css/fonts/SF-Pro-Text-Regular.woff HTTP/1.1" 200 2815828
+Not Found: /favicon.ico
+[10/Jul/2023 17:38:31] "GET /favicon.ico HTTP/1.1" 404 2668
+/home/dmsai2/Desktop/COARR/server/project/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 09, 2023 - 20:21:54
+Django version 3.2.20, using settings 'project.settings'
+Starting development server at http://117.16.136.174:5000/
+Quit the server with CONTROL-C.

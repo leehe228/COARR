@@ -346,6 +346,8 @@ body {
 }
 
 #editor1 > img {
+    max-height: 200px;
+    max-width: 200px;
 }
 
 .style-btn {

@@ -45,6 +45,43 @@ function cb_check(o) {
     };
 }
 
-function radio_check(s) {
+function radio_check(n) {
+    let r1 = document.getElementById('radio-lunch');
+    let r2 = document.getElementById('radio-dinner');
     
+    if (n == 1) {
+        r1.setAttribute('class', 'radio-button r-active');
+        r2.setAttribute('class', 'radio-button');
+        
+        r1.removeAttribute('style');
+        r2.removeAttribute('style');
+    }
+    else if (n == 2) {
+        r1.setAttribute('class', 'radio-button');
+        r2.setAttribute('class', 'radio-button r-active');
+    
+        r1.setAttribute('style', 'border-right: 1px solid #A21E31;');
+        r2.setAttribute('style', 'border-left: 1px solid #0000;');
+    } else {
+        r1.setAttribute('class', 'radio-button');
+        r2.setAttribute('class', 'radio-button');
+
+        r1.removeAttribute('style');
+        r2.removeAttribute('style');
+    }
+}
+
+function stylebar(o) {
+    let sb = document.getElementById('tool-style-btn');
+    let style_bar = document.getElementById('editor-menubar');
+    
+    if (o == true) {
+        // open
+        style_bar.setAttribute('style', 'border-top: #0000;');
+        sb.setAttribute('onclick', 'stylebar(false)');
+    } else {
+        // close
+        style_bar.setAttribute('style', 'border-top: #0000; display: none;');
+        sb.setAttribute('onclick', 'stylebar(true)');
+    }
 }

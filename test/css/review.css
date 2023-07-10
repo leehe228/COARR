@@ -82,8 +82,7 @@ body {
     flex-shrink: 0;
     border: 1px solid #fff0;
     margin-right: 16px;
-    object-fit: ;
-    cover; }
+    object-fit:cover; }
 
 .title-input {
     height: 56px;
@@ -160,6 +159,6 @@ body {
 }
 
 /* .text-input-s > input:focus {
-    outline: none; */
+    outline: none; 
     border: none;
 } */

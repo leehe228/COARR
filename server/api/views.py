@@ -22,3 +22,10 @@ def test(request):
 
     return HttpResponse(f"200")
 
+
+@csrf_exempt
+@require_POST
+def upload_review(request):
+    print(request.body)
+
+    return HttpResponse("OK")

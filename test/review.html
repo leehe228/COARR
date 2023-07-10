@@ -73,7 +73,7 @@
 
         <!-- 제목 입력칸 -->
         <div class="title-input">
-            <input type="text" placeholder="제목">
+            <input id="title-input" type="text" placeholder="제목">
         </div>
     
         <!-- 본문 -->
@@ -88,7 +88,7 @@
 
         <!-- 레스토랑명 -->
         <div id="select-restaurant-bar" class="bar-button" style="border-top: 1px solid #dfdfdf;">
-            <a>
+            <a id="restaurant-name-text">
                 레스토랑명
             </a>
             <div class="btn">
@@ -98,7 +98,7 @@
 
         <!-- 방문 날짜 -->
         <div class="bar-button">
-            <a>
+            <a id="visit-date-text">
                 방문 날짜
             </a>
             <div class="btn">
@@ -112,10 +112,10 @@
                 식사 시간
             </a>
             <div class="radio-button-group">
-                <div id="radio-lunch" class="radio-button" onclick="radio_check(1);">
+                <div id="radio-lunch" class="radio-button" onclick="radio_check(1);" checked="false">
                     런치
                 </div>
-                <div id="radio-dinner" class="radio-button" onclick="radio_check(2);">
+                <div id="radio-dinner" class="radio-button" onclick="radio_check(2);" checked="false">
                     디너
                 </div>
             </div>
@@ -143,7 +143,7 @@
         </div>
 
         <!-- submit button -->
-        <div class="submit-btn">
+        <div class="submit-btn" onclick="upload_review();">
             리뷰 업로드
         </div>
         

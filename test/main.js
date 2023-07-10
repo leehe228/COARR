@@ -55,6 +55,9 @@ function radio_check(n) {
         
         r1.removeAttribute('style');
         r2.removeAttribute('style');
+
+        r1.setAttribute('checked', 'true');
+        r2.setAttribute('checked', 'false');
     }
     else if (n == 2) {
         r1.setAttribute('class', 'radio-button');
@@ -62,12 +65,18 @@ function radio_check(n) {
     
         r1.setAttribute('style', 'border-right: 1px solid #A21E31;');
         r2.setAttribute('style', 'border-left: 1px solid #0000;');
+
+        r1.setAttribute('checked', 'false');
+        r2.setAttribute('checked', 'true');
     } else {
         r1.setAttribute('class', 'radio-button');
         r2.setAttribute('class', 'radio-button');
 
         r1.removeAttribute('style');
         r2.removeAttribute('style');
+
+        r1.setAttribute('checked', 'false');
+        r2.setAttribute('checked', 'false');
     }
 }
 
@@ -84,4 +93,42 @@ function stylebar(o) {
         style_bar.setAttribute('style', 'border-top: #0000; display: none;');
         sb.setAttribute('onclick', 'stylebar(true)');
     }
+}
+
+function upload_review() {
+    // checkbox
+    let cb = document.getElementById('review-cb');
+    
+    // lunch dinner radio button
+    let r1 = document.getElementById('radio-lunch');
+    let r2 = document.getElementById('radio-dinner');
+
+    // text input
+    let title_input = document.getElementById('title-input');
+    let editor1 = document.getElementById('editor1');
+    let editor2 = document.getElementById('editor2');
+
+    // 식당
+    let restaurant_input = document.getElementById('restaurant-name-text');
+    
+    // 방문일자 
+    let visit_date_input = document.getElementById('visit-date-text');
+
+    if (title_input.textContent.trim() == '' || editor1.textContent.trim() == '' || editor2.textContent.trim() == '') {
+        alert('내용을 모두 입력해주세요.');
+        return;
+    }
+
+    if (r1.getAttribute('checked') == 'false' && r2.getAttribute('checked') == 'false') {
+        alert('식사 시간을 선택해주세요.');
+        return;
+    }
+    
+    if (cb.getAttribute('checked') == 'false') {
+        alert('어뷰징 리뷰 및 허위 광고가 아님을 확인해주세요');
+        return;
+    }
+
+    // upload to server
+    
 }

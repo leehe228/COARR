@@ -130,7 +130,31 @@ function upload_review() {
     }
 
     // upload to server
-    
+    var jlist = new Array();
+
+    var data = new Object();
+    data.UID = 0;
+    data.title = title_input.textContent.trim();
+    data.content1 = editor1.textContent.trim();
+    data.content2 = editor2.textContent.trim();
+    data.RID = 0;
+    data.visit_date = new Date.now();
+    jlist.push(data);
+
+    upload(JSON.stringify(jlist));
+}
+
+function upload(sdata) {
+    fetch("http://117.16.136.174:5000/api/upload_review", {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        header: {'Content-Type': 'application/json'},
+        credentials : 'same-origin',
+        redirect : 'follow',
+        referrer : 'no-referrer',
+        body: sdata,
+    }).then(response => console.log(response));
 }
 
 function test() {

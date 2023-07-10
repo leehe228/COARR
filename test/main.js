@@ -29,3 +29,22 @@ function to_recomm() {
     htbutton1.setAttribute('class', 'header-button pointer');
     htbutton2.setAttribute('class', 'header-button-disable pointer');
 }
+
+function cb_check(o) {
+    let cb = document.getElementById('review-cb');
+    if (o == true) {
+        // on
+        cb.setAttribute('checked', 'true');
+        cb.setAttribute('onclick', 'cb_check(false);');
+        cb.setAttribute('class', 'cb checked');
+    } else {
+        // off
+        cb.setAttribute('checked', 'false');
+        cb.setAttribute('onclick', 'cb_check(true);');
+        cb.setAttribute('class', 'cb');
+    };
+}
+
+function radio_check(s) {
+    
+}

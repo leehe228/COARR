@@ -1,41 +1,50 @@
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
-    recomm_page.setAttribute('style', 'display: none;');
-
     let follow_page = document.getElementById('main-page-follow');
-    follow_page.setAttribute('style', 'margin-top:90px; margin-bottom:72px;');
-
-    // 
     let hline2 = document.getElementById('hline-right');
-    hline2.setAttribute('style', 'background: #000;');
-
     let hline1 = document.getElementById('hline-left');
+    let htbutton1 = document.getElementById('header-button-h1');
+    let htbutton2 = document.getElementById('header-button-h2');
+
+    recomm_page.setAttribute('style', 'display: none;');
+    follow_page.setAttribute('style', 'margin-top:90px; margin-bottom:72px;');
+    hline2.setAttribute('style', 'background: #000;');
     hline1.removeAttribute('style');
-
-    let htbutton1 = document.getElementById('header-text-b1');
-    htbutton1.setAttribute('src', 'http://117.16.136.174:5000/media/websrc/follow-h1.png');
-
-    let htbutton2 = document.getElementById('header-text-b2');
-    htbutton2.setAttribute('src', 'http://117.16.136.174:5000/media/websrc/follow-h2.png');
+    htbutton1.setAttribute('class', 'header-button-disable pointer');
+    htbutton2.setAttribute('class', 'header-button pointer');
 }
 
 function to_recomm() {
     let recomm_page = document.getElementById('main-page-recommend');
-    recomm_page.setAttribute('style', 'margin-top:90px; margin-bottom:72px;');
-
     let follow_page = document.getElementById('main-page-follow');
-    follow_page.setAttribute('style', 'display: none;');
-
-    // 
     let hline1 = document.getElementById('hline-left');
-    hline1.setAttribute('style', 'background: #000;');
-    
     let hline2 = document.getElementById('hline-right');
+    let htbutton1 = document.getElementById('header-button-h1');
+    let htbutton2 = document.getElementById('header-button-h2');
+
+    recomm_page.setAttribute('style', 'margin-top:90px; margin-bottom:72px;');
+    follow_page.setAttribute('style', 'display: none;');
+    hline1.setAttribute('style', 'background: #000;');
     hline2.removeAttribute('style');
+    htbutton1.setAttribute('class', 'header-button pointer');
+    htbutton2.setAttribute('class', 'header-button-disable pointer');
+}
 
-    let htbutton1 = document.getElementById('header-text-b1');
-    htbutton1.setAttribute('src', 'http://117.16.136.174:5000/media/websrc/home-h1.png');
+function cb_check(o) {
+    let cb = document.getElementById('review-cb');
+    if (o == true) {
+        // on
+        cb.setAttribute('checked', 'true');
+        cb.setAttribute('onclick', 'cb_check(false);');
+        cb.setAttribute('class', 'cb checked');
+    } else {
+        // off
+        cb.setAttribute('checked', 'false');
+        cb.setAttribute('onclick', 'cb_check(true);');
+        cb.setAttribute('class', 'cb');
+    };
+}
 
-    let htbutton2 = document.getElementById('header-text-b2');
-    htbutton2.setAttribute('src', 'http://117.16.136.174:5000/media/websrc/home-h2.png');
+function radio_check(s) {
+    
 }

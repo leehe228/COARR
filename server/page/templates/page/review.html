@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -31,29 +32,97 @@
 
         <!-- Tool Header -->
         <div class="tool-header">
+            <!-- 사진 첨부 -->
             <div class="btn">
                 <img src="http://117.16.136.174:5000/media/websrc/btn_photo.png"/>
             </div>
 
+            <!-- 스타일 -->
             <div class="btn">
                 <img src="http://117.16.136.174:5000/media/websrc/btn_style.png"/>
             </div>
 
+            <!-- 정렬 -->
             <div class="btn">
                 <img src="http://117.16.136.174:5000/media/websrc/btn_array.png"/>
             </div>
         </div>
 
+        <!-- 제목 입력칸 -->
         <div class="title-input">
             <input type="text" placeholder="제목">
         </div>
     
-        <!-- Text Input 1 -->
+        <!-- 본문 -->
         <div id="editor1" class="text-input-l" contenteditable="true">
         </div>
 
-        <!-- Text Input 2 -->
+        <div class="divider"></div>
+        
+        <!-- 분위기 맛 -->
         <div id="editor2" class="text-input-s" contenteditable="true">
         </div>
+
+        <!-- 레스토랑명 -->
+        <div id="select-restaurant-bar" class="bar-button" style="border-top: 1px solid #dfdfdf;">
+            <a>
+                레스토랑명
+            </a>
+            <div class="btn">
+                <img class="btn" src="http://117.16.136.174:5000/media/websrc/rarrow.png"/>
+            </div>
+        </div>
+
+        <!-- 방문 날짜 -->
+        <div class="bar-button">
+            <a>
+                방문 날짜
+            </a>
+            <div class="btn">
+                <img class="btn" src="http://117.16.136.174:5000/media/websrc/rarrow.png"/>
+            </div>
+        </div>
+
+        <!-- 식사 시간 선택 -->
+        <div class="bar-button" style="cursor: default;">
+            <a>
+                식사 시간
+            </a>
+            <div class="radio-button-group">
+                <div class="radio-button">
+                    런치
+                </div>
+                <div class="radio-button r-active">
+                    디너
+                </div>
+            </div>
+        </div>
+
+        <!-- alert text -->
+        <div class="bar-block">
+            <div class="bb-text1">
+                해당 글은 어뷰징 리뷰 및 허위 광고가 아닙니까?
+            </div>
+
+            <div class="bb-text2">
+                체크하지 않을시 글을 작성하실 수 없습니다
+            </div>
+
+            <div class="bb-group1">
+                <a>
+                    어뷰징 리뷰 및 허위광고가 아닙니다
+                </a>
+
+                <div id="review-cb" class="cb" checked="false" onclick="cb_check(true);">
+                    <img src="http://117.16.136.174:5000/media/websrc/checked.png"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- submit button -->
+        <div class="submit-btn">
+            리뷰 업로드
+        </div>
+        
     </body>
 </html>

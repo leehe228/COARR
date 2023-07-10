@@ -32,19 +32,43 @@
         <!-- Tool Header -->
         <div class="tool-header">
             <!-- 사진 첨부 -->
-            <div class="btn">
+            <div id="tool-img-btn" class="btn">
                 <img src="./websrc/btn_photo.png"/>
             </div>
 
+            <input id="img-selector" type="file" accept="image/*"/>
+
             <!-- 스타일 -->
-            <div class="btn">
+            <div id="tool-style-btn" class="btn" onclick="stylebar(true);">
                 <img src="./websrc/btn_style.png"/>
             </div>
 
             <!-- 정렬 -->
-            <div class="btn">
+            <div id="tool-align-btn" class="btn">
                 <img src="./websrc/btn_array.png"/>
             </div>
+        </div>
+
+        <!-- 텍스트 스타일 바 -->
+        <div id="editor-menubar" class="tool-header" style="border-top: #0000; display: none;">
+            <button id="btn-bold" class="style-btn">
+                <b>B</b>
+            </button>
+            <button id="btn-italic" class="style-btn">
+                <i>I</i>
+            </button>
+            <button id="btn-underline" class="style-btn">
+                <u>U</u>
+            </button>
+            <button id="btn-strike" class="style-btn">
+                <s>S</s>
+            </button>
+            <button id="btn-ordered-list" class="style-btn">
+                OL
+            </button>
+            <button id="btn-unordered-list" class="style-btn">
+                UL
+            </button>
         </div>
 
         <!-- 제목 입력칸 -->
@@ -53,13 +77,13 @@
         </div>
     
         <!-- 본문 -->
-        <div id="editor1" class="text-input-l" contenteditable="true">
+        <div id="editor1" class="text-input-l" contenteditable="true" placeholder="본문 내용을 입력하세요.">
         </div>
 
         <div class="divider"></div>
         
         <!-- 분위기 맛 -->
-        <div id="editor2" class="text-input-s" contenteditable="true">
+        <div id="editor2" class="text-input-s" contenteditable="true" placeholder="분위기, 서비스에 대한 설명을 입력하세요.">
         </div>
 
         <!-- 레스토랑명 -->
@@ -88,10 +112,10 @@
                 식사 시간
             </a>
             <div class="radio-button-group">
-                <div class="radio-button">
+                <div id="radio-lunch" class="radio-button" onclick="radio_check(1);">
                     런치
                 </div>
-                <div class="radio-button r-active">
+                <div id="radio-dinner" class="radio-button" onclick="radio_check(2);">
                     디너
                 </div>
             </div>
@@ -124,4 +148,5 @@
         </div>
         
     </body>
+        <script src="./editor.js"></script>
 </html>

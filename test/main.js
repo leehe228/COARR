@@ -132,3 +132,18 @@ function upload_review() {
     // upload to server
     
 }
+
+function test() {
+    var json_text = "{'name': '이호은', 'gender':'boy', 'age':23}";
+
+    fetch("http://117.16.136.174:5000/api/test", {
+        method : 'POST',
+        mode : 'cors',
+        cache : 'no-cache',
+        headers: {'Content-Type': 'application/json'},
+        credentials : 'same-origin',
+        redirect : 'follow',
+        referrer : 'no-referrer',
+        body: JSON.stringify(json_text),
+    }).then(response => console.log(response));
+}

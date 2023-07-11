@@ -141,10 +141,10 @@ function upload_review() {
     data.visit_date = new Date.now();
     jlist.push(data);
 
-    upload(JSON.stringify(jlist));
+    upload_review(JSON.stringify(jlist));
 }
 
-function upload(sdata) {
+function upload_review(sdata) {
     fetch("http://117.16.136.174:5000/api/upload_review", {
         method: 'POST',
         mode: 'cors',
@@ -154,20 +154,5 @@ function upload(sdata) {
         redirect : 'follow',
         referrer : 'no-referrer',
         body: sdata,
-    }).then(response => console.log(response));
-}
-
-function test() {
-    var json_text = "{'name': '이호은', 'gender':'boy', 'age':23}";
-
-    fetch("http://117.16.136.174:5000/api/test", {
-        method : 'POST',
-        mode : 'cors',
-        cache : 'no-cache',
-        headers: {'Content-Type': 'application/json'},
-        credentials : 'same-origin',
-        redirect : 'follow',
-        referrer : 'no-referrer',
-        body: JSON.stringify(json_text),
     }).then(response => console.log(response));
 }

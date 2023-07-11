@@ -37,7 +37,7 @@ body {
     top: 0px;
     left: 0px;
     right: 0px;
-    background:#ffffff80;
+    background: #ffffff80;
 }
 
 .header > a {
@@ -361,7 +361,7 @@ body {
     height: 32px;
     font-size: 15px;
     text-align: center;
-    font-family:AppleSDGothicNeoR;
+    font-family: AppleSDGothicNeoR;
     color: #000;
     border: 1px solid #f0f0f0;
     border-radius: 15px;
@@ -394,7 +394,7 @@ body {
     top: 0px;
     bottom: 80px;
     left: 0px;
-    right: 0px;
+    3 right: 0px;
     background: #f0f;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -446,3 +446,10 @@ body {
     object-fit: fill;
     cursor: pointer;
 }
+
+[contenteditable=true]:empty:before {
+    content: attr(placeholder);
+    color: #808080;
+    display: block;
+}
+

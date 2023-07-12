@@ -145,6 +145,7 @@ function upload_review() {
 }
 
 function upload_review(sdata) {
+    console.log(sdata);
     fetch("http://117.16.136.174:5000/api/upload_review", {
         method: 'POST',
         mode: 'cors',

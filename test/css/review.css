@@ -151,7 +151,7 @@ body {
 }
 
 /* placeholder */
-.text-input-l:empty:before {
+#editor2:empty:before {
     content: attr(placeholder);
     color: #808080;
 }
@@ -182,7 +182,7 @@ body {
 }
 
 /* placeholder */
-.text-input-s:empty:before {
+#editor1:empty:before {
     content: attr(placeholder);
     color: #808080;
 }
@@ -452,4 +452,3 @@ body {
     color: #808080;
     display: block;
 }
-

@@ -1,3 +1,5 @@
+let loading_page = document.getElementById('loading-page');
+
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
     let follow_page = document.getElementById('main-page-follow');
@@ -49,7 +51,7 @@ function radio_check(n) {
     let r1 = document.getElementById('radio-lunch');
     let r2 = document.getElementById('radio-dinner');
     
-    if (n == 1) {
+    if (n === 1) {
         r1.setAttribute('class', 'radio-button r-active');
         r2.setAttribute('class', 'radio-button');
         
@@ -59,7 +61,7 @@ function radio_check(n) {
         r1.setAttribute('checked', 'true');
         r2.setAttribute('checked', 'false');
     }
-    else if (n == 2) {
+    else if (n === 2) {
         r1.setAttribute('class', 'radio-button');
         r2.setAttribute('class', 'radio-button r-active');
     
@@ -84,7 +86,7 @@ function stylebar(o) {
     let sb = document.getElementById('tool-style-btn');
     let style_bar = document.getElementById('editor-menubar');
     
-    if (o == true) {
+    if (o === true) {
         // open
         style_bar.setAttribute('style', 'border-top: #0000;');
         sb.setAttribute('onclick', 'stylebar(false)');
@@ -114,21 +116,23 @@ function upload_review() {
     // 방문일자 
     let visit_date_input = document.getElementById('visit-date-text');
 
-    if (title_input.textContent.trim() == '' || editor1.textContent.trim() == '' || editor2.textContent.trim() == '') {
+    if (title_input.textContent.trim() === '' || editor1.textContent.trim() === '' || editor2.textContent.trim() === '') {
         alert('내용을 모두 입력해주세요.');
         return;
     }
 
-    if (r1.getAttribute('checked') == 'false' && r2.getAttribute('checked') == 'false') {
+    if (r1.getAttribute('checked') === 'false' && r2.getAttribute('checked') === 'false') {
         alert('식사 시간을 선택해주세요.');
         return;
     }
     
-    if (cb.getAttribute('checked') == 'false') {
+    if (cb.getAttribute('checked') === 'false') {
         alert('어뷰징 리뷰 및 허위 광고가 아님을 확인해주세요');
         return;
     }
 
+    loading_page.removeAttribute('style');
+    
     // upload to server
     var jlist = new Array();
 
@@ -140,7 +144,7 @@ function upload_review() {
     data.RID = 0;
     data.visit_date = new Date.now();
     jlist.push(data);
-
+    
     upload_review(JSON.stringify(jlist));
 }
 
@@ -155,5 +159,8 @@ function upload_review(sdata) {
         redirect : 'follow',
         referrer : 'no-referrer',
         body: sdata,
-    }).then(response => console.log(response));
+    }).then(response => {
+        console.log(response);
+        loading_page.setAttribute('style', 'display: none;');
+    });
 }

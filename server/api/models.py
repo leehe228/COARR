@@ -3,7 +3,7 @@ from django.conf import settings
 from django.utils import timezone
 
 class User(models.Model):
-    UID = models.IntegerField()
+    UID = models.AutoField(primary_key=True)
     EMAIL = models.CharField(max_length=100)
     NAME = models.CharField(max_length=10)
     PASSWORD = models.CharField(max_length=50)
@@ -19,7 +19,7 @@ class User(models.Model):
         return self.UID
 
 class Restaurant(models.Model):
-    RID = models.IntegerField()
+    RID = models.AutoField(primary_key=True)
     STATUS = models.IntegerField(default=0)
     NAME = models.CharField(max_length=30)
     CONTENT = models.TextField(blank=True)
@@ -31,7 +31,7 @@ class Restaurant(models.Model):
 
 
 class Content(models.Model):
-    CID = models.IntegerField()
+    CID = models.AutoField(primary_key=True)
     CTYPE = models.CharField(max_length=10)
     WRITER = models.IntegerField()
     APPROVER = models.IntegerField()
@@ -41,6 +41,7 @@ class Content(models.Model):
     NUM_LIKE = models.IntegerField(default=0)
     NUM_SAVED = models.IntegerField(default=0)
     NUM_SHARE = models.IntegerField(default=0)
+    GPT = models.TextField(blank=True)
     CREATED = models.DateTimeField(
             default=timezone.now)
     UPDATED = models.DateTimeField(

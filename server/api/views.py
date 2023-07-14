@@ -148,7 +148,21 @@ def save_gpt_review(eval_json, jobject, CID):
     print(jobject)
     print(CID)
 
-    # queryset = Content
+    queryset = Content.objects.filter(CID=CID)
+    eval_text = json.dumps(eval_json, ensure_ascii=False)
+
+    if (queryset):
+        try:
+            bf = Content.objects.get(CID=CID)
+            bf.GPT = eval_text
+            bf.save()
+        except Exception as e:
+            print(e)
+
+    else:
+        print("NO DATA FOUND in DB")
+
+    return
     
 
 

@@ -9,6 +9,7 @@ from .models import User, Restaurant, Content
 import os
 from urllib import parse
 import json
+import re
 
 op = os.path.join
 
@@ -28,6 +29,12 @@ def ko2en(text):
 def en2ko(text):
     return translator.translate_text(text, target_lang="KO").text
 
+def replaceHTML(text):
+    text = re.sub('(<[^>]+)>', '', text)
+    text.replace('&gt;', '').replace('&lt;', '')
+    text.replace('&nbsp;', ' ')
+    return text
+
 @csrf_exempt
 @require_POST
 def upload_review(request):
@@ -38,8 +45,8 @@ def upload_review(request):
     body = body[0]
 
     title = body['title']
-    content1 = body['content1']
-    content2 = body['content2']
+    content1 = replaceHTML(body['content1'])
+    content2 = replaceHTML(body['content2'])
 
     text_data = title + "\n" + content1 + "\n" + content2
 

@@ -164,5 +164,11 @@ function upload_data(sdata) {
     }).then(response => {
         console.log(response);
         //loading_page.setAttribute('style', 'display: none;');
+        window.location.href = 'http://beta.coarr.kro.kr:5000/review_uploaded';
     });
+}
+
+function backto(t) {
+    console.log('http://beta.coarr.kro.kr:5000/' + t);
+    window.location.href = 'http://beta.coarr.kro.kr:5000/' + t;
 }

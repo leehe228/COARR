@@ -16,3 +16,11 @@ def home(request):
 @csrf_exempt
 def review(request):
     return render(request, 'page/review.html', {})
+
+@csrf_exempt
+def review_uploaded(request):
+    return render(request, 'page/review_uploaded.html', {})
+
+@csrf_exempt
+def review_home(request):
+    return render(request, 'page/review_home.html', {})

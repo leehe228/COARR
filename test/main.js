@@ -118,7 +118,7 @@ function upload_review() {
 
     // test
 
-    if (title_input.textContent.trim() === '' || editor1.textContent.trim() === '' || editor2.textContent.trim() === '') {
+    if (title_input.value.trim() === '' || editor1.textContent.trim() === '' || editor2.textContent.trim() === '') {
         alert('내용을 모두 입력해주세요.');
         return;
     }
@@ -140,7 +140,7 @@ function upload_review() {
 
     var data = new Object();
     data.UID = 0;
-    data.title = title_input.textContent.trim();
+    data.title = title_input.value.trim();
     data.content1 = editor1.innerHTML.trim();
     data.content2 = editor2.textContent.trim();
     data.RID = 0;

@@ -16,7 +16,7 @@ class User(models.Model):
             default=timezone.now)
 
     def __str__(self):
-        return self.UID
+        return str(self.UID)
 
 class Restaurant(models.Model):
     RID = models.AutoField(primary_key=True)
@@ -26,7 +26,7 @@ class Restaurant(models.Model):
     REVIEWS = models.TextField(blank=True)
 
     def __str__(self):
-        return self.RID
+        return str(self.RID)
     
 
 
@@ -48,4 +48,4 @@ class Content(models.Model):
             default=timezone.now)
 
     def __str__(self):
-        return self.CID
+        return str(self.CID)

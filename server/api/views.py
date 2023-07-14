@@ -26,7 +26,7 @@ def ko2en(text):
     return translator.translate_text(text, source_lang="KO", target_lang="EN-US").text
 
 def en2ko(text):
-    return translator.translate_text(text, source_lang="KO").text
+    return translator.translate_text(text, target_lang="KO").text
 
 @csrf_exempt
 @require_POST
@@ -35,15 +35,16 @@ def upload_review(request):
     body = json.loads(body_unicode)
     print(body)
 
-    title = body['tite']
+    body = body[0]
+
+    title = body['title']
     content1 = body['content1']
     content2 = body['content2']
 
     text_data = title + "\n" + content1 + "\n" + content2
-    json_data = json.dumps(body)
 
     # save
-    save_review(json_data)
+    save_review(body)
     review_gpt(text_data)
 
     return HttpResponse("OK")
@@ -52,7 +53,7 @@ def upload_review(request):
 def save_review(jdata):
 
     newContent = Content(CTYPE="REVIEW", 
-                         WRITER=jdata['UID'],
+                         WRITER=int(jdata['UID']),
                          APPROVER=-1,
                          DELETED=0,
                          STATUS=0,
@@ -120,7 +121,7 @@ def review_gpt(data):
 
     start = time.time()
     
-    review_en = ko2en(review_ko)
+    review_en = ko2en(data)
     eval_en = coarr_en(review_en)
     eval_json = json.loads(eval_en)
     

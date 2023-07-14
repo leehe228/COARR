@@ -44,8 +44,9 @@ def upload_review(request):
     text_data = title + "\n" + content1 + "\n" + content2
 
     # save
-    save_review(body)
-    review_gpt(text_data)
+    CID = save_review(body)
+    print(CID)
+    review_gpt(text_data, body, CID)
 
     return HttpResponse("OK")
 
@@ -65,10 +66,10 @@ def save_review(jdata):
     
     try:
         newContent.save(force_insert=True)
-        return HttpResponse(200)
+        return newContent.pk
     except Exception as e:
         print(e)
-        return HttpResponse(500)
+        return -1
 
 
 def coarr_en(review_en):
@@ -117,7 +118,7 @@ def coarr_en(review_en):
 
 
 @csrf_exempt
-def review_gpt(data):
+def review_gpt(data, jobject, CID):
 
     start = time.time()
     
@@ -139,10 +140,16 @@ def review_gpt(data):
     print("### original evaluation in english ###")
     print(eval_en)
     
-    save_gpt_review(eval_json)
+    save_gpt_review(eval_json, jobject, CID)
 
 
-def save_gpt_review(eval_json):
+def save_gpt_review(eval_json, jobject, CID):
     print(eval_json)
+    print(jobject)
+    print(CID)
+
+    # queryset = Content
+    
+
 
 

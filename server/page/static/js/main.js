@@ -1,3 +1,5 @@
+let loading_page = document.getElementById('loading-page');
+
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
     let follow_page = document.getElementById('main-page-follow');
@@ -48,21 +50,21 @@ function cb_check(o) {
 function radio_check(n) {
     let r1 = document.getElementById('radio-lunch');
     let r2 = document.getElementById('radio-dinner');
-    
-    if (n == 1) {
+
+    if (n === 1) {
         r1.setAttribute('class', 'radio-button r-active');
         r2.setAttribute('class', 'radio-button');
-        
+
         r1.removeAttribute('style');
         r2.removeAttribute('style');
 
         r1.setAttribute('checked', 'true');
         r2.setAttribute('checked', 'false');
     }
-    else if (n == 2) {
+    else if (n === 2) {
         r1.setAttribute('class', 'radio-button');
         r2.setAttribute('class', 'radio-button r-active');
-    
+
         r1.setAttribute('style', 'border-right: 1px solid #A21E31;');
         r2.setAttribute('style', 'border-left: 1px solid #0000;');
 
@@ -83,8 +85,8 @@ function radio_check(n) {
 function stylebar(o) {
     let sb = document.getElementById('tool-style-btn');
     let style_bar = document.getElementById('editor-menubar');
-    
-    if (o == true) {
+
+    if (o === true) {
         // open
         style_bar.setAttribute('style', 'border-top: #0000;');
         sb.setAttribute('onclick', 'stylebar(false)');
@@ -98,7 +100,7 @@ function stylebar(o) {
 function upload_review() {
     // checkbox
     let cb = document.getElementById('review-cb');
-    
+
     // lunch dinner radio button
     let r1 = document.getElementById('radio-lunch');
     let r2 = document.getElementById('radio-dinner');
@@ -110,24 +112,31 @@ function upload_review() {
 
     // 식당
     let restaurant_input = document.getElementById('restaurant-name-text');
-    
-    // 방문일자 
+
+    // 방문일자
     let visit_date_input = document.getElementById('visit-date-text');
 
-    if (title_input.textContent.trim() == '' || editor1.textContent.trim() == '' || editor2.textContent.trim() == '') {
+    // test
+    title_input.textContent = "테스트 데이터 제목";
+    editor1.textContent = "테스트 데이터 내용1";
+    editor2.textContent = "테스트 데이터 내용2";
+
+    if (title_input.textContent.trim() === '' || editor1.textContent.trim() === '' || editor2.textContent.trim() === '') {
         alert('내용을 모두 입력해주세요.');
         return;
     }
 
-    if (r1.getAttribute('checked') == 'false' && r2.getAttribute('checked') == 'false') {
+    if (r1.getAttribute('checked') === 'false' && r2.getAttribute('checked') === 'false') {
         alert('식사 시간을 선택해주세요.');
         return;
     }
-    
-    if (cb.getAttribute('checked') == 'false') {
+
+    if (cb.getAttribute('checked') === 'false') {
         alert('어뷰징 리뷰 및 허위 광고가 아님을 확인해주세요');
         return;
     }
+
+    //loading_page.removeAttribute('style');
 
     // upload to server
     var jlist = new Array();
@@ -138,14 +147,15 @@ function upload_review() {
     data.content1 = editor1.textContent.trim();
     data.content2 = editor2.textContent.trim();
     data.RID = 0;
-    data.visit_date = new Date.now();
+    data.visit_date = Date.now();
     jlist.push(data);
 
-    upload(JSON.stringify(jlist));
+    upload_data(JSON.stringify(jlist));
 }
 
-function upload(sdata) {
-    fetch("http://117.16.136.174:5000/api/upload_review", {
+function upload_data(sdata) {
+    console.log(sdata);
+    fetch("http://158.247.251.57:5000/api/upload_review", {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
@@ -154,20 +164,8 @@ function upload(sdata) {
         redirect : 'follow',
         referrer : 'no-referrer',
         body: sdata,
-    }).then(response => console.log(response));
-}
-
-function test() {
-    var json_text = "{'name': '이호은', 'gender':'boy', 'age':23}";
-
-    fetch("http://117.16.136.174:5000/api/test", {
-        method : 'POST',
-        mode : 'cors',
-        cache : 'no-cache',
-        headers: {'Content-Type': 'application/json'},
-        credentials : 'same-origin',
-        redirect : 'follow',
-        referrer : 'no-referrer',
-        body: JSON.stringify(json_text),
-    }).then(response => console.log(response));
+    }).then(response => {
+        console.log(response);
+        //loading_page.setAttribute('style', 'display: none;');
+    });
 }

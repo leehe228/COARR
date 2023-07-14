@@ -155,7 +155,7 @@ function upload_review() {
 
 function upload_data(sdata) {
     console.log(sdata);
-    fetch("http://158.247:5000/api/upload_review", {
+    fetch("http://158.247.251.57:5000/api/upload_review", {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',

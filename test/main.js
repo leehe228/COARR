@@ -117,9 +117,9 @@ function upload_review() {
     let visit_date_input = document.getElementById('visit-date-text');
 
     // test
-    title_input.textContent = "테스트 데이터 제목";
-    editor1.textContent = "테스트 데이터 내용1";
-    editor2.textContent = "테스트 데이터 내용2";
+    // title_input.textContent = "테스트 데이터 제목";
+    // editor1.textContent = "테스트 데이터 내용1";
+    // editor2.textContent = "테스트 데이터 내용2";
 
     if (title_input.textContent.trim() === '' || editor1.textContent.trim() === '' || editor2.textContent.trim() === '') {
         alert('내용을 모두 입력해주세요.');

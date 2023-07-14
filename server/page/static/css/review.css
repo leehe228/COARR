@@ -133,7 +133,7 @@ body {
 }
 
 .text-input-l::-webkit-scrollbar {
-    /*display:none; */
+         /*display:none; */
 }
 
 .text-input-l > input:focus {
@@ -362,4 +362,52 @@ body {
 
 .style-btn:hover {
     background: #f3f3f3;
+}
+
+.review-uploaded {
+    position: fixed;
+    top: 60px;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.review-uploaded > a {
+    font-family: AppleSDGothicNeoR, serif;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.review-uploaded > b {
+    margin-top: 4px;
+    font-family: AppleSDGothicNeoR, serif;
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.return-btn {
+    height: 50px;
+    margin: 10px 20px 32px 20px;
+    border-radius: 20px;
+    border: 1px solid #fff0;
+    text-align: center;
+    line-height : 50px;
+    background: #A21E31;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right:0;
+    cursor: pointer;
+    color: #FFF;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
 }

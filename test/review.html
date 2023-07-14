@@ -1,158 +1,158 @@
 <!--{% load static %}-->
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <title>COARR GUIDE</title>
-        <!-- <link rel="stylesheet" href="{% static 'css/review.css' %}"> -->
+<head>
+    <meta charset="UTF-8">
+    <title>COARR GUIDE</title>
+<!--    <link rel="stylesheet" href="{% static 'css/review.css' %}">-->
         <link rel="stylesheet" href="./css/review.css">
-        <!-- font -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=0.8">
-        <link rel="shortcut icon" href="" type="image/x-icon">
-    </head>
-    <body oncontextmenu='return false' onselectstart='return false;' ondragstart='return false;'>
-    
-        <!-- Header -->
-        <div class="header">
-            <div class="btn">
-                <img class="btn" src="./websrc/btn_back.png" alt=""/>
-            </div>
-            <a>
-                리뷰작성
-            </a>
-            <div style="width:11px;">
-            </div>
+    <!-- js -->
+<!--    <script src="{% static 'js/main.js' %}"> </script>-->
+        <script src="./main.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+</head>
+<body oncontextmenu='return false' onselectstart='return false;' ondragstart='return false;'>
+
+<!-- Header -->
+<div class="header">
+    <div class="btn">
+        <img class="btn" src="./websrc/btn_back.png" alt=""/>
+    </div>
+    <a>
+        리뷰작성
+    </a>
+    <div style="width:11px;">
+    </div>
+</div>
+
+<!-- Tool Header -->
+<div class="tool-header">
+    <!-- 사진 첨부 -->
+    <div id="tool-img-btn" class="btn">
+        <img src="./websrc/btn_photo.png" alt=""/>
+    </div>
+
+    <input id="img-selector" type="file" accept="image/*"/>
+
+    <!-- 스타일 -->
+    <div id="tool-style-btn" class="btn" onclick="stylebar(true);">
+        <img src="./websrc/btn_style.png" alt=""/>
+    </div>
+
+    <!-- 정렬 -->
+    <div id="tool-align-btn" class="btn">
+        <img src="./websrc/btn_array.png" alt=""/>
+    </div>
+</div>
+
+<!-- 텍스트 스타일 바 -->
+<div id="editor-menubar" class="tool-header" style="border-top: #0000; display: none;">
+    <button id="btn-bold" class="style-btn">
+        <b>B</b>
+    </button>
+    <button id="btn-italic" class="style-btn">
+        <i>I</i>
+    </button>
+    <button id="btn-underline" class="style-btn">
+        <u>U</u>
+    </button>
+    <button id="btn-strike" class="style-btn">
+        <s>S</s>
+    </button>
+    <button id="btn-ordered-list" class="style-btn">
+        OL
+    </button>
+    <button id="btn-unordered-list" class="style-btn">
+        UL
+    </button>
+</div>
+
+<!-- 제목 입력칸 -->
+<div class="title-input">
+    <input id="title-input" type="text" placeholder="제목">
+</div>
+
+<!-- 본문 -->
+<div id="editor1" class="text-input-l" contenteditable="true" placeholder="본문 내용을 입력하세요.">
+</div>
+
+<div class="divider"></div>
+
+<!-- 분위기 맛 -->
+<div id="editor2" class="text-input-s" contenteditable="true" placeholder="분위기, 서비스에 대한 설명을 입력하세요.">
+</div>
+
+<!-- 레스토랑명 -->
+<div id="select-restaurant-bar" class="bar-button" style="border-top: 1px solid #dfdfdf;">
+    <a id="restaurant-name-text">
+        레스토랑명
+    </a>
+    <div class="btn">
+        <img class="btn" src="./websrc/rarrow.png" alt=""/>
+    </div>
+</div>
+
+<!-- 방문 날짜 -->
+<div class="bar-button">
+    <a id="visit-date-text">
+        방문 날짜
+    </a>
+    <div class="btn">
+        <img class="btn" src="./websrc/rarrow.png" alt=""/>
+    </div>
+</div>
+
+<!-- 식사 시간 선택 -->
+<div class="bar-button" style="cursor: default;">
+    <a>
+        식사 시간
+    </a>
+    <div class="radio-button-group">
+        <div id="radio-lunch" class="radio-button" onclick="radio_check(1);" checked="false">
+            런치
         </div>
-
-        <!-- Tool Header -->
-        <div class="tool-header">
-            <!-- 사진 첨부 -->
-            <div id="tool-img-btn" class="btn">
-                <img src="./websrc/btn_photo.png" alt=""/>
-            </div>
-
-            <input id="img-selector" type="file" accept="image/*"/>
-
-            <!-- 스타일 -->
-            <div id="tool-style-btn" class="btn" onclick="stylebar(true);">
-                <img src="./websrc/btn_style.png" alt=""/>
-            </div>
-
-            <!-- 정렬 -->
-            <div id="tool-align-btn" class="btn">
-                <img src="./websrc/btn_array.png" alt=""/>
-            </div>
+        <div id="radio-dinner" class="radio-button" onclick="radio_check(2);" checked="false">
+            디너
         </div>
+    </div>
+</div>
 
-        <!-- 텍스트 스타일 바 -->
-        <div id="editor-menubar" class="tool-header" style="border-top: #0000; display: none;">
-            <button id="btn-bold" class="style-btn">
-                <b>B</b>
-            </button>
-            <button id="btn-italic" class="style-btn">
-                <i>I</i>
-            </button>
-            <button id="btn-underline" class="style-btn">
-                <u>U</u>
-            </button>
-            <button id="btn-strike" class="style-btn">
-                <s>S</s>
-            </button>
-            <button id="btn-ordered-list" class="style-btn">
-                OL
-            </button>
-            <button id="btn-unordered-list" class="style-btn">
-                UL
-            </button>
+<!-- alert text -->
+<div class="bar-block">
+    <div class="bb-text1">
+        해당 글은 어뷰징 리뷰 및 허위 광고가 아닙니까?
+    </div>
+
+    <div class="bb-text2">
+        체크하지 않을시 글을 작성하실 수 없습니다
+    </div>
+
+    <div class="bb-group1">
+        <a>
+            어뷰징 리뷰 및 허위광고가 아닙니다
+        </a>
+
+        <div id="review-cb" class="cb" checked="false" onclick="cb_check(true);">
+            <img src="./websrc/checked.png" alt=""/>
         </div>
+    </div>
+</div>
 
-        <!-- 제목 입력칸 -->
-        <div class="title-input">
-            <input id="title-input" type="text" placeholder="제목">
-        </div>
-    
-        <!-- 본문 -->
-        <div id="editor1" class="text-input-l" contenteditable="true" placeholder="본문 내용을 입력하세요.">
-        </div>
+<!-- submit button -->
+<div class="submit-btn" onclick="upload_review();">
+    리뷰 업로드
+</div>
 
-        <div class="divider"></div>
-        
-        <!-- 분위기 맛 -->
-        <div id="editor2" class="text-input-s" contenteditable="true" placeholder="분위기, 서비스에 대한 설명을 입력하세요.">
-        </div>
-
-        <!-- 레스토랑명 -->
-        <div id="select-restaurant-bar" class="bar-button" style="border-top: 1px solid #dfdfdf;">
-            <a id="restaurant-name-text">
-                레스토랑명
-            </a>
-            <div class="btn">
-                <img class="btn" src="./websrc/rarrow.png" alt=""/>
-            </div>
-        </div>
-
-        <!-- 방문 날짜 -->
-        <div class="bar-button">
-            <a id="visit-date-text">
-                방문 날짜
-            </a>
-            <div class="btn">
-                <img class="btn" src="./websrc/rarrow.png" alt=""/>
-            </div>
-        </div>
-
-        <!-- 식사 시간 선택 -->
-        <div class="bar-button" style="cursor: default;">
-            <a>
-                식사 시간
-            </a>
-            <div class="radio-button-group">
-                <div id="radio-lunch" class="radio-button" onclick="radio_check(1);" checked="false">
-                    런치
-                </div>
-                <div id="radio-dinner" class="radio-button" onclick="radio_check(2);" checked="false">
-                    디너
-                </div>
-            </div>
-        </div>
-
-        <!-- alert text -->
-        <div class="bar-block">
-            <div class="bb-text1">
-                해당 글은 어뷰징 리뷰 및 허위 광고가 아닙니까?
-            </div>
-
-            <div class="bb-text2">
-                체크하지 않을시 글을 작성하실 수 없습니다
-            </div>
-
-            <div class="bb-group1">
-                <a>
-                    어뷰징 리뷰 및 허위광고가 아닙니다
-                </a>
-
-                <div id="review-cb" class="cb" checked="false" onclick="cb_check(true);">
-                    <img src="./websrc/checked.png" alt=""/>
-                </div>
-            </div>
-        </div>
-
-        <!-- submit button -->
-        <div class="submit-btn" onclick="upload_review();">
-            리뷰 업로드
-        </div>
-
-        <!-- Loading Page -->
+<!-- Loading Page -->
 <!--         <div class="loading-page">
             <img src="./websrc/loading.gif" style="display:none;" disabled alt="">
         </div> -->
-        
-    </body>
-    <!-- <script src="{% static 'js/editor.js' %}"> </script> -->
-    <script src="./editor.js"></script>
-    <!-- js -->
-    <!-- <script src="{% static 'js/main.js' %}"> </script> -->
-    <script src="./main.js"></script>
+
+</body>
+<!--<script src="{% static 'js/editor.js' %}"> </script>-->
+<script src="./editor.js"></script>
 </html>

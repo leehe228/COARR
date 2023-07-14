@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'AppleSDGothicNeoR';
     src: url('./AppleSDGothicNeoR.woff') format('woff');
-    ; }
+; }
 
 @font-face {
     font-family: 'AppleSDGothicNeoL';
@@ -14,7 +14,7 @@
 }
 
 * {
-    font-family: AppleSDGothicNeoR;
+    font-family: AppleSDGothicNeoR, serif;
 }
 
 body {
@@ -39,10 +39,10 @@ body {
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    color: var(--grey-900, #212121);
+    color: #212121;
     text-align: center;
     /* Title2/Emphasized */
-    font-family: AppleSDGothicNeoR;
+    font-family: AppleSDGothicNeoR, serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
@@ -55,7 +55,6 @@ body {
     height: 25px;
     flex-direction: column;
     flex-shrink: 0;
-    display: flex;
     object-fit: fill;
     cursor: pointer;
 }
@@ -100,8 +99,7 @@ body {
 
 .title-input > input {
     color: #000;
-    /* Title2/Regular */
-    font-family: AppleSDGothicNeoR;
+    font-family: AppleSDGothicNeoR, serif;
     width: 100%;
     font-size: 22px;
     font-style: normal;
@@ -124,17 +122,18 @@ body {
     max-height: 375px;
     overflow-y: scroll;
     color: #000;
-    font-family: AppleSDGothicNeoR;
+    font-family: AppleSDGothicNeoR, serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: -0.4px;
     outline: none;
+    user-select: text;
 }
 
 .text-input-l::-webkit-scrollbar {
-    /*     display:none; */
+    /*display:none; */
 }
 
 .text-input-l > input:focus {
@@ -155,13 +154,14 @@ body {
     max-height: 160px;
     overflow-y: scroll;
     color: #000;
-    font-family: AppleSDGothicNeoR;
+    font-family: AppleSDGothicNeoR, serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: -0.4px;
     outline: none;
+    user-select: text;
 }
 
 .text-input-s::-webkit-scrollbar {
@@ -197,10 +197,9 @@ body {
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    color: var(--grey-900, #000000);
+    color: #000000;
     text-align: center;
-    /* Title2/Emphasized */
-    font-family: AppleSDGothicNeoR;
+    font-family: AppleSDGothicNeoR, serif;
     font-size: 20px;
     margin-left: 8px;
     font-style: normal;
@@ -227,9 +226,8 @@ body {
     border: 1px solid #777;
     text-align : center;
     line-height : 30px;
-    color: var(--grey-500, #9E9E9E);
-    /* Subheadline/Regular */
-    font-family: AppleSDGothicNeoR;
+    color: #9E9E9E;
+    font-family: AppleSDGothicNeoR, serif;
     font-size: 15px;
     cursor: pointer;
     padding-top: 2px;
@@ -260,8 +258,8 @@ body {
 }
 
 .bb-text1 {
-    color: var(--grey-900, #212121);
-    font-family: AppleSDGothicNeoR;
+    color: #212121;
+    font-family: AppleSDGothicNeoR, serif;
     font-size: 20px;
     font-style: normal;
     margin-top: 2px;
@@ -272,8 +270,8 @@ body {
 }
 
 .bb-text2 {
-    color: var(--colors-red, #FF3B30);
-    font-family: AppleSDGothicNeoR;
+    color: #FF3B30;
+    font-family: AppleSDGothicNeoR, serif;
     font-size: 16px;
     font-weight: bold;
     line-height: 16px;
@@ -293,7 +291,7 @@ body {
 
 .bb-group1 > a {
     color: #000;
-    font-family: AppleSDGothicNeoR;
+    font-family: AppleSDGothicNeoR, serif;
     font-size: 19px;
     line-height: 22px;
     letter-spacing: -0.4px;
@@ -335,7 +333,7 @@ body {
     background: #A21E31;
     cursor: pointer;
     color: #FFF;
-    font-family: AppleSDGothicNeoR;
+    font-family: AppleSDGothicNeoR, serif;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: -0.4px;
@@ -353,7 +351,7 @@ body {
     height: 32px;
     font-size: 15px;
     text-align: center;
-    font-family:AppleSDGothicNeoR;
+    font-family: AppleSDGothicNeoR, serif;
     color: #000;
     border: 1px solid #f0f0f0;
     border-radius: 15px;

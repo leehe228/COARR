@@ -141,7 +141,7 @@ function upload_review() {
     var data = new Object();
     data.UID = 0;
     data.title = title_input.textContent.trim();
-    data.content1 = editor1.textContent.trim();
+    data.content1 = editor1.innerHTML.trim();
     data.content2 = editor2.textContent.trim();
     data.RID = 0;
     data.visit_date = Date.now();

@@ -62,7 +62,7 @@ def save_review(jdata):
                          NUM_LIKE=0,
                          NUM_SAVED=0,
                          NUM_SHARE=0,
-                         GPT="")
+                         GPT="Evaluating by GPT Model...")
     
     try:
         newContent.save(force_insert=True)

@@ -1,5 +1,13 @@
 let loading_page = document.getElementById('loading-page');
 
+// let title_input = document.getElementById('title-input');
+// let editor1 = document.getElementById('editor1');
+// let editor2 = document.getElementById('editor2');
+
+// title_input.tabIndex = 0;
+// editor1.tabIndex = 1;
+// editor2.tabIndex = 2;
+
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
     let follow_page = document.getElementById('main-page-follow');
@@ -115,8 +123,12 @@ function upload_review() {
     
     // 방문일자 
     let visit_date_input = document.getElementById('visit-date-text');
+
+    console.log(title_input.value.trim());
+    console.log(editor1.textContent.trim());
+    console.log(editor2.textContent.trim());
     
-    if (title_input.textContent.trim() === '' || editor1.textContent.trim() === '' || editor2.textContent.trim() === '') {
+    if (title_input.value.trim() === '' || editor1.textContent.trim() === '' || editor2.textContent.trim() === '') {
         alert('내용을 모두 입력해주세요.');
         return;
     }

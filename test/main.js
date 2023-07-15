@@ -172,3 +172,32 @@ function backto(t) {
     console.log('http://beta.coarr.kro.kr:5000/' + t);
     window.location.href = 'http://beta.coarr.kro.kr:5000/' + t;
 }
+
+function open_restaurant_view(t) {
+    let rview = document.getElementById('restaurant-view');
+
+    if (t === true) {
+        rview.setAttribute('class', 'popup-view long');
+    } else {
+        rview.setAttribute('class', 'popup-view long hide');
+    }
+}
+
+function open_calendar_view(t) {
+    let rview = document.getElementById('calendar-view');
+
+    if (t === true) {
+        rview.setAttribute('class', 'popup-view short');
+    } else {
+        rview.setAttribute('class', 'popup-view short hide');
+    }
+}
+
+function select_rest(rid) {
+    console.log(rid);
+    let rname_text = document.getElementById('selected-restaurant-text');
+    var rnames = ["밍글스", "서울신라호텔 라연", "온6.5", "솔밤", "이속우화진"];
+
+    rname_text.textContent = rnames[rid];
+    open_restaurant_view(false);
+}

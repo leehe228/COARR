@@ -70,18 +70,18 @@
         <!-- 분위기 맛 -->
         <div id="editor2" class="text-input-s" contenteditable="true" placeholder="분위기, 서비스에 대한 설명을 입력하세요."></div>
         <!-- 레스토랑명 -->
-        <div id="select-restaurant-bar" class="bar-button" style="border-top: 1px solid #dfdfdf;">
-            <a id="restaurant-name-text">레스토랑명
-    </a>
+        <div id="select-restaurant-bar" class="bar-button" style="border-top: 1px solid #dfdfdf;" onclick="open_restaurant_view(true)">
+            <a id="restaurant-name-text">레스토랑명</a>
             <div class="btn">
+                <a class="select-name-text" id="selected-restaurant-text"></a>
                 <img class="btn" src="./websrc/rarrow.png" alt=""/>
             </div>
         </div>
         <!-- 방문 날짜 -->
-        <div class="bar-button">
-            <a id="visit-date-text">방문 날짜
-    </a>
+        <div id="select-visitdate-bar" class="bar-button" onclick="open_calendar_view(true);">
+            <a id="visit-date-text">방문 날짜</a>
             <div class="btn">
+                <a class="select-name-text" id="selected-visitdate-text">오늘</a>
                 <img class="btn" src="./websrc/rarrow.png" alt=""/>
             </div>
         </div>
@@ -114,17 +114,17 @@
         <div class="submit-btn" onclick="upload_review();">리뷰 업로드
 </div>
         <!-- Restaurant Window -->
-        <div class="popup-view">
+        <div id="restaurant-view" class="popup-view long hide">
             <div class="pv-header">
                 <a>방문 레스토랑</a>
-                <img src="./websrc/close_btn.png" alt="">
+                <img id="rview-close-button" src="./websrc/close_btn.png" alt="" onclick="open_restaurant_view(false);">
             </div>
             <div class="pv-header-search">
                 <img src="./websrc/search.png" alt="">
                 <input type="text" placeholder="레스토랑 검색">
             </div>
             <div class="list-view">
-                <div class="restaurant-block">
+                <div class="restaurant-block" onclick="select_rest(0);">
                     <img src="./websrc/rest1.jpeg" alt="">
                     <div class="rb-text-block">
                         <b>
@@ -136,7 +136,7 @@
                     </div>
                 </div>
 
-                <div class="restaurant-block">
+                <div class="restaurant-block" onclick="select_rest(1);">
                     <img src="./websrc/rest2.jpeg" alt="">
                     <div class="rb-text-block">
                         <b>
@@ -148,7 +148,7 @@
                     </div>
                 </div>
 
-                <div class="restaurant-block">
+                <div class="restaurant-block" onclick="select_rest(2);">
                     <img src="./websrc/new_rest-1.png" alt="">
                     <div class="rb-text-block">
                         <b>
@@ -160,7 +160,7 @@
                     </div>
                 </div>
 
-                <div class="restaurant-block">
+                <div class="restaurant-block" onclick="select_rest(3);">
                     <img src="./websrc/new_rest-2.png" alt="">
                     <div class="rb-text-block">
                         <b>
@@ -172,7 +172,7 @@
                     </div>
                 </div>
 
-                <div class="restaurant-block">
+                <div class="restaurant-block" onclick="select_rest(4);">
                     <img src="./websrc/rest5.jpeg" alt="">
                     <div class="rb-text-block">
                         <b>
@@ -184,6 +184,36 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+
+        <!-- calendar view -->
+        <div id="calendar-view" class="popup-view short hide">
+            <div class="pv-header">
+                <a>방문 날짜</a>
+                <img src="./websrc/close_btn.png" alt="" onclick="open_calendar_view(false);">
+            </div>
+
+            <div class="month-header">
+                <img src="./websrc/left_next.png" alt="">
+                <a>7월</a>
+                <img src="./websrc/right_next.png" alt="">
+            </div>
+
+            <table class="date-month">
+                <thead>
+                    <tr>
+                        <th><a>일</a></th>
+                        <th><a>월</a></th>
+                        <th><a>화</a></th>
+                        <th><a>수</a></th>
+                        <th><a>목</a></th>
+                        <th><a>금</a></th>
+                        <th><a>토</a></th>
+                    </tr>
+                </thead>
+            </table>
+            
         </div>
         <!-- Loading Page -->
         <div class="loading-page hide">

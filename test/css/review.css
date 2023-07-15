@@ -414,13 +414,23 @@ body {
 
 .popup-view {
     position: fixed;
-    top: 150px;
     bottom: 0;
     left: 0;
     right: 0;
     background: #ffffff;
     border-radius: 16px 16px 0 0;
     box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.short {
+    height: 480px;
+    background: #ffffff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.long {
+    top: 150px;
 }
 
 .pv-header {
@@ -542,4 +552,48 @@ body {
     height: 0;
     width: 0;
     display: none;
+}
+
+
+.month-header {
+    height: 36px;
+    display: flex;
+    border: 1px solid #f00;
+    margin: 24px 30px 0 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.month-header > a {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: AppleSDGothicNeoR, serif;
+    line-height: 28px; /* 127.273% */
+    letter-spacing: -0.4px;
+    margin-left: 36px;
+    margin-right: 36px;
+}
+
+.month-header > img {
+    width: 11px;
+    height: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.date-month {
+    border: 1px solid #000;
+    position: fixed;
+    left: 30px;
+    right: 30px;
+    margin-top: 30px;
+}
+
+.select-name-text {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 19px;
+    margin-right: 10px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.4px;
 }

@@ -2,6 +2,14 @@ var GLOBAL_SELECT_VISIT_DAY = "";
 var GLOBAL_SELECT_RESTAURANT = "";
 var GLOBAL_SELECT_RESTAURANT_ID = -1;
 
+// 식당
+let MEDIA_ROOT = "http:://beta.coarr.kro.kr:8080/media/websrc/"
+var RESTAURANTS_LIST = ["0::밍글스::서울 강남구 도산대로67길 19 힙탑빌딩 2층::rest1.jpeg",
+                        "1::서울신라호텔 라연::서울 중구 동호로 249::rest2.jpeg",
+                        "2::온6.5::서울 종로구 북촌로1길 28 지상1층 온6.5::new_rest-1.png", 
+                        "3::솔밤::서울 강남구 도산대로37길 6 4층::new_rest-2.png", 
+                        "4::이속우화진::서울 강남구 영동대로 513::rest5.jpeg"];
+
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
     let follow_page = document.getElementById('main-page-follow');
@@ -385,5 +393,57 @@ function set_calendar(year, month) {
 
     if (last_input_day < 6) {
         date_month.appendChild(this_row);
+    }
+}
+
+function search_filter() {
+    let search_input = document.getElementById('restaurant-search-input');
+    var keyword = search_input.value.trim();
+    
+    if (keyword === "") {
+        var idx_list = [0, 1, 2, 3, 4];
+        render_restaurants(idx_list);
+    }
+
+    else {
+        var idx_list = [];
+        for (let i = 0; i < RESTAURANTS_LIST.length; i++) {
+            if (RESTAURANTS_LIST[i].indexOf(keyword) >= 0) {
+                idx_list.push(i);
+            }
+        }
+        render_restaurants(idx_list);
+    }
+}
+
+function render_restaurants(idx_list) {
+    let restaurant_view = document.getElementById('restaurant-list-view');
+    restaurant_view.innerHTML = "";
+    
+    for (let i = 0; i < RESTAURANTS_LIST.length; i++) {
+        if (idx_list.includes(i)) {
+            var d = document.createElement('div');
+            d.setAttribute('class', 'restaurant-block');
+            d.setAttribute('onclick', 'select_rest(' + i + ');');
+
+            var img_tag = document.createElement('img');
+            img_tag.setAttribute('src', MEDIA_ROOT + RESTAURANTS_LIST[i].split('::')[3]);
+            img_tag.setAttribute('alt', '');
+            d.appendChild(img_tag);
+
+            var d2 = document.createElement('div');
+            d2.setAttribute('class', 'rb-text-block');
+
+            var b_text = document.createElement('b');
+            b_text.textContent = RESTAURANTS_LIST[i].split('::')[1];
+            d2.appendChild(b_text);
+
+            var a_text = document.createElement('a');
+            a_text.textContent = RESTAURANTS_LIST[i].split('::')[2];
+            d2.appendChild(a_text);
+
+            d.appendChild(d2);
+            restaurant_view.appendChild(d);
+        }
     }
 }

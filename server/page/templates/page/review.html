@@ -120,68 +120,10 @@
             </div>
             <div class="pv-header-search">
                 <img src="http://beta.coarr.kro.kr:8080/media/websrc/search.png" alt="">
-                <input type="text" placeholder="레스토랑 검색">
+                <input id="restaurant-search-input" type="text" placeholder="레스토랑 검색" oninput="search_filter();">
             </div>
-            <div class="list-view">
-                <div class="restaurant-block" onclick="select_rest(0);">
-                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest1.jpeg" alt="">
-                    <div class="rb-text-block">
-                        <b>
-                            밍글스
-                        </b>
-                        <a>
-                            서울 강남구 도산대로67길 19 힐탑빌딩 2층
-                        </a>
-                    </div>
-                </div>
-
-                <div class="restaurant-block" onclick="select_rest(1);">
-                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest2.jpeg" alt="">
-                    <div class="rb-text-block">
-                        <b>
-                            서울신라호텔 라연
-                        </b>
-                        <a>
-                            서울 중구 동호로 249
-                        </a>
-                    </div>
-                </div>
-
-                <div class="restaurant-block" onclick="select_rest(2);">
-                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/new_rest-1.png" alt="">
-                    <div class="rb-text-block">
-                        <b>
-                            온6.5
-                        </b>
-                        <a>
-                            서울 종로구 북촌로1길 28 지상1층 온6.5
-                        </a>
-                    </div>
-                </div>
-
-                <div class="restaurant-block" onclick="select_rest(3);">
-                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/new_rest-2.png" alt="">
-                    <div class="rb-text-block">
-                        <b>
-                            솔밤
-                        </b>
-                        <a>
-                            서울 강남구 도산대로37길 6 4층
-                        </a>
-                    </div>
-                </div>
-
-                <div class="restaurant-block" onclick="select_rest(4);">
-                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest5.jpeg" alt="">
-                    <div class="rb-text-block">
-                        <b>
-                            이속우화진
-                        </b>
-                        <a>
-                            서울 강남구 영동대로 513
-                        </a>
-                    </div>
-                </div>
+            <div id="restaurant-list-view" class="list-view">
+                
             </div>
         </div>
 
@@ -200,6 +142,7 @@
             </div>
 
             <div id="date-month" class="date-month">
+
             </div>
             
         </div>

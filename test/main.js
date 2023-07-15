@@ -2,6 +2,9 @@ var GLOBAL_SELECT_VISIT_DAY = "";
 var GLOBAL_SELECT_RESTAURANT = "";
 var GLOBAL_SELECT_RESTAURANT_ID = -1;
 
+// 식당
+var RESTAURANTS_LIST = new Array();
+
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
     let follow_page = document.getElementById('main-page-follow');
@@ -386,4 +389,8 @@ function set_calendar(year, month) {
     if (last_input_day < 6) {
         date_month.appendChild(this_row);
     }
+}
+
+function search_filter(keyword) {
+    
 }

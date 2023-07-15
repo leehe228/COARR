@@ -147,7 +147,7 @@ function upload_review() {
     var jlist = new Array();
 
     var data = new Object();
-    data.UID = GLOBAL_SELECT_RESTAURANT;
+    data.UID = 0;
     data.title = title_input.value.trim();
     data.content1 = editor1.innerHTML.trim();
     data.content2 = editor2.textContent.trim();
@@ -162,22 +162,28 @@ function upload_review() {
 function upload_data(sdata) {
     let loading_page = document.getElementById('loading-page');
     console.log(sdata);
-    fetch("http://beta.coarr.kro.kr:8080/api/upload_review", {
-        method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
-        header: {'Content-Type': 'application/json'},
-        credentials : 'same-origin',
-        redirect : 'follow',
-        referrer : 'no-referrer',
-        body: sdata,
-    }).then(response => {
-        console.log(response);
-    
-        loading_page.setAttribute('class', 'loading-page hide');
+    try {
+        fetch("http://beta.coarr.kro.kr:8080/api/upload_review", {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            header: {'Content-Type': 'application/json'},
+            credentials : 'same-origin',
+            redirect : 'follow',
+            referrer : 'no-referrer',
+            body: sdata,
+        }).then(response => {
+            console.log(response);
         
-        window.location.href = 'http://beta.coarr.kro.kr:8080/review_uploaded';
-    });
+            loading_page.setAttribute('class', 'loading-page hide');
+            
+            window.location.href = 'http://beta.coarr.kro.kr:8080/review_uploaded';
+        });
+    } catch (error) {
+        console.log(error);
+        loading_page.setAttribute('class', 'loading-page hide');
+        alert("리뷰 업로드에 실패했습니다. 네트워크를 확인해주세요.");
+    }
 }
 
 function backto(t) {
@@ -222,8 +228,18 @@ function select_visitday(year, month, day) {
     open_calendar_view(false);
 
     let vdate_text = document.getElementById('selected-visitdate-text');
-    vdate_text.textContent = year + "년 " + month + "월 " + day + "일";
 
+    let today = new Date();
+    let today_year = today.getFullYear();
+    let today_month = today.getMonth() + 1;
+    let today_date = today.getDate();
+
+    if (year === today_year && month === today_month && day === today_date) {
+        vdate_text.textContent = "오늘";
+    } else {
+        vdate_text.textContent = year + "년 " + month + "월 " + day + "일";
+    }
+    
     GLOBAL_SELECT_VISIT_DAY = year + "-" + month + "-" + day;
 }
 

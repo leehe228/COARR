@@ -48,6 +48,7 @@ body {
     font-weight: 700;
     line-height: 28px;
     letter-spacing: -0.4px;
+    cursor: default;
 }
 
 .header > div {
@@ -130,10 +131,11 @@ body {
     letter-spacing: -0.4px;
     outline: none;
     user-select: text;
+    cursor: text;
 }
 
 .text-input-l::-webkit-scrollbar {
-         /*display:none; */
+    /*display:none; */
 }
 
 .text-input-l > input:focus {
@@ -162,6 +164,7 @@ body {
     letter-spacing: -0.4px;
     outline: none;
     user-select: text;
+    cursor: text;
 }
 
 .text-input-s::-webkit-scrollbar {
@@ -267,6 +270,7 @@ body {
     line-height: 22px;
     letter-spacing: -0.4px;
     border: 1px solid #fff;
+    cursor: default;
 }
 
 .bb-text2 {
@@ -278,6 +282,7 @@ body {
     letter-spacing: -0.4px;
     border: 1px solid #fff;
     margin-top: 8px;
+    cursor: default;
 }
 
 .bb-group1 {
@@ -297,6 +302,7 @@ body {
     letter-spacing: -0.4px;
     margin-right: 6px;
     margin-top: 1px;
+    cursor: default;
 }
 
 .cb {
@@ -344,6 +350,11 @@ body {
 }
 
 #editor1 > img {
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px soild #000;
+    border-radius: 10px;
+    cursor: text;
 }
 
 .style-btn {
@@ -442,6 +453,10 @@ body {
     align-items: center;
 }
 
+.pv-header > img {
+    cursor: pointer;
+}
+
 .pv-header > a {
     color: #000;
     font-family: AppleSDGothicNeoR, serif;
@@ -449,6 +464,7 @@ body {
     font-weight: bold;
     line-height: 22px;
     letter-spacing: -0.4px;
+    cursor: default;
 }
 
 .pv-header-search {
@@ -472,7 +488,7 @@ body {
     margin: 2px 0 0 10px;
     outline: none;
     border: none;
-    
+
     color: #000000;
     font-size: 20px;
     font-family: AppleSDGothicNeoR, serif;
@@ -503,6 +519,7 @@ body {
     justify-content: flex-start;
     flex-direction: row;
     padding: 20px;
+    cursor: pointer;
 }
 
 .restaurant-block > img {
@@ -558,7 +575,7 @@ body {
 .month-header {
     height: 36px;
     display: flex;
-    border: 1px solid #f00;
+    border: 1px solid #fff;
     margin: 24px 30px 0 30px;
     align-items: center;
     justify-content: center;
@@ -572,6 +589,7 @@ body {
     letter-spacing: -0.4px;
     margin-left: 36px;
     margin-right: 36px;
+    cursor: default;
 }
 
 .month-header > img {
@@ -579,10 +597,11 @@ body {
     height: 20px;
     padding-left: 8px;
     padding-right: 8px;
+    cursor: pointer;
 }
 
 .date-month {
-    border: 1px solid #000;
+    border: 1px solid #f00;
     position: fixed;
     left: 30px;
     right: 30px;

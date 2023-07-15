@@ -3,7 +3,7 @@ var GLOBAL_SELECT_RESTAURANT = "";
 var GLOBAL_SELECT_RESTAURANT_ID = -1;
 
 // 식당
-let MEDIA_ROOT = "http:://beta.coarr.kro.kr:8080/media/websrc/"
+let MEDIA_ROOT = "http://beta.coarr.kro.kr:8080/media/websrc/"
 var RESTAURANTS_LIST = ["0::밍글스::서울 강남구 도산대로67길 19 힙탑빌딩 2층::rest1.jpeg",
                         "1::서울신라호텔 라연::서울 중구 동호로 249::rest2.jpeg",
                         "2::온6.5::서울 종로구 북촌로1길 28 지상1층 온6.5::new_rest-1.png", 

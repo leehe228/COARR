@@ -1,5 +1,3 @@
-let loading_page = document.getElementById('loading-page');
-
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
     let follow_page = document.getElementById('main-page-follow');
@@ -98,6 +96,8 @@ function stylebar(o) {
 }
 
 function upload_review() {
+    let loading_page = document.getElementById('loading-page');
+    
     // checkbox
     let cb = document.getElementById('review-cb');
 
@@ -133,7 +133,7 @@ function upload_review() {
         return;
     }
 
-    //loading_page.removeAttribute('style');
+    loading_page.setAttribute('class', 'loading-page');
 
     // upload to server
     var jlist = new Array();
@@ -151,6 +151,7 @@ function upload_review() {
 }
 
 function upload_data(sdata) {
+    let loading_page = document.getElementById('loading-page');
     console.log(sdata);
     fetch("http://158.247.251.57:5000/api/upload_review", {
         method: 'POST',
@@ -163,12 +164,43 @@ function upload_data(sdata) {
         body: sdata,
     }).then(response => {
         console.log(response);
-        //loading_page.setAttribute('style', 'display: none;');
+    
+        loading_page.setAttribute('class', 'loading-page hide');
+        
+        window.location.href = 'http://beta.coarr.kro.kr:5000/review_uploaded';
     });
-    window.location.href = 'http://beta.coarr.kro.kr:5000/review_uploaded';
 }
 
 function backto(t) {
     console.log('http://beta.coarr.kro.kr:5000/' + t);
     window.location.href = 'http://beta.coarr.kro.kr:5000/' + t;
+}
+
+function open_restaurant_view(t) {
+    let rview = document.getElementById('restaurant-view');
+
+    if (t === true) {
+        rview.setAttribute('class', 'popup-view long');
+    } else {
+        rview.setAttribute('class', 'popup-view long hide');
+    }
+}
+
+function open_calendar_view(t) {
+    let rview = document.getElementById('calendar-view');
+
+    if (t === true) {
+        rview.setAttribute('class', 'popup-view short');
+    } else {
+        rview.setAttribute('class', 'popup-view short hide');
+    }
+}
+
+function select_rest(rid) {
+    console.log(rid);
+    let rname_text = document.getElementById('selected-restaurant-text');
+    var rnames = ["밍글스", "서울신라호텔 라연", "온6.5", "솔밤", "이속우화진"];
+
+    rname_text.textContent = rnames[rid];
+    open_restaurant_view(false);
 }

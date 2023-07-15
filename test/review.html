@@ -15,14 +15,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <link rel="shortcut icon" href="" type="image/x-icon">
     </head>
-    <body oncontextmenu='return false' onselectstart='return false;' ondragstart='return false;'>
+    <body oncontextmenu='return false' ondragstart='return false;'>
         <!-- Header -->
         <div class="header">
             <div class="btn">
                 <img class="btn" src="./websrc/btn_back.png" alt=""/>
             </div>
-            <a>리뷰작성
-    </a>
+            <a onclick="location.reload();">리뷰작성</a>
             <div style="width:11px;"></div>
         </div>
         <!-- Tool Header -->
@@ -81,7 +80,7 @@
         <div id="select-visitdate-bar" class="bar-button" onclick="open_calendar_view(true);">
             <a id="visit-date-text">방문 날짜</a>
             <div class="btn">
-                <a class="select-name-text" id="selected-visitdate-text">오늘</a>
+                <a class="select-name-text" id="selected-visitdate-text"></a>
                 <img class="btn" src="./websrc/rarrow.png" alt=""/>
             </div>
         </div>
@@ -195,24 +194,82 @@
             </div>
 
             <div class="month-header">
-                <img src="./websrc/left_next.png" alt="">
-                <a>7월</a>
-                <img src="./websrc/right_next.png" alt="">
+                <img id="before-month-button" src="./websrc/left_next.png" alt="">
+                <a id="calendar-title"></a>
+                <img id="next-month-button" src="./websrc/right_next.png" alt="">
             </div>
 
-            <table class="date-month">
-                <thead>
-                    <tr>
-                        <th><a>일</a></th>
-                        <th><a>월</a></th>
-                        <th><a>화</a></th>
-                        <th><a>수</a></th>
-                        <th><a>목</a></th>
-                        <th><a>금</a></th>
-                        <th><a>토</a></th>
-                    </tr>
-                </thead>
-            </table>
+            <div id="date-month" class="date-month">
+<!--                 <div class="cal-row weekdays">
+                        <a class="sun">일</a>
+                        <a>월</a>
+                        <a>화</a>
+                        <a>수</a>
+                        <a>목</a>
+                        <a>금</a>
+                        <a class="sat">토</a>
+                </div>
+
+                <div id="cal-row-days-1" class="cal-row days">
+                        <a></a>
+                        <a></a>
+                        <a></a>
+                        <a></a>
+                        <a></a>
+                        <a></a>
+                        <a>1</a>
+                </div>
+                    
+                <div id="cal-row-days-2" class="cal-row days">
+                        <a>2</a>
+                        <a>3</a>
+                        <a>4</a>
+                        <a>5</a>
+                        <a>6</a>
+                        <a>7</a>
+                        <a>8</a>
+                </div>
+
+                <div id="cal-row-days-3" class="cal-row days">
+                        <a>9</a>
+                        <a>10</a>
+                        <a>11</a>
+                        <a>12</a>
+                        <a>13</a>
+                        <a>14</a>
+                        <a>15</a>
+                </div> -->
+
+<!--                 <div id="cal-row-days-4" class="cal-row days">
+                        <a>16</a>
+                        <a>17</a>
+                        <a>18</a>
+                        <a>19</a>
+                        <a class="today">20</a>
+                        <a class="future">21</a>
+                        <a class="future">22</a>
+                </div>
+
+                <div id="cal-row-days-5" class="cal-row days">
+                        <a class="future">23</a>
+                        <a class="future">24</a>
+                        <a class="future">25</a>
+                        <a class="future">26</a>
+                        <a class="future">27</a>
+                        <a class="future">28</a>
+                        <a class="future">29</a>
+                </div>
+
+                <div id="cal-row-days-6" class="cal-row days">
+                        <a class="future">30</a>
+                        <a class="future">31</a>
+                        <a></a>
+                        <a></a>
+                        <a></a>
+                        <a></a>
+                        <a></a>
+                </div> -->
+            </div>
             
         </div>
         <!-- Loading Page -->

@@ -1,3 +1,7 @@
+var GLOBAL_SELECT_VISIT_DAY = "";
+var GLOBAL_SELECT_RESTAURANT = "";
+var GLOBAL_SELECT_RESTAURANT_ID = -1;
+
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
     let follow_page = document.getElementById('main-page-follow');
@@ -110,14 +114,6 @@ function upload_review() {
     let editor1 = document.getElementById('editor1');
     let editor2 = document.getElementById('editor2');
 
-    // 식당
-    let restaurant_input = document.getElementById('restaurant-name-text');
-
-    // 방문일자
-    let visit_date_input = document.getElementById('visit-date-text');
-
-    // test
-
     if (title_input.value.trim() === '' || editor1.textContent.trim() === '' || editor2.textContent.trim() === '') {
         alert('내용을 모두 입력해주세요.');
         return;
@@ -125,6 +121,18 @@ function upload_review() {
 
     if (r1.getAttribute('checked') === 'false' && r2.getAttribute('checked') === 'false') {
         alert('식사 시간을 선택해주세요.');
+        return;
+    }
+
+    // 식당 선택
+    if (GLOBAL_SELECT_RESTAURANT === "") {
+        alert('방문 식당을 선택해주세요.');
+        return;
+    }
+
+    // 날짜 선택 
+    if (GLOBAL_SELECT_VISIT_DAY === "") {
+        alert('방문 날짜를 선택해주세요.');
         return;
     }
 
@@ -139,12 +147,13 @@ function upload_review() {
     var jlist = new Array();
 
     var data = new Object();
-    data.UID = 0;
+    data.UID = GLOBAL_SELECT_RESTAURANT;
     data.title = title_input.value.trim();
     data.content1 = editor1.innerHTML.trim();
     data.content2 = editor2.textContent.trim();
-    data.RID = 0;
-    data.visit_date = Date.now();
+    data.RID = GLOBAL_SELECT_RESTAURANT_ID;
+    data.RNAME = GLOBAL_SELECT_RESTAURANT;
+    data.visit_date = GLOBAL_SELECT_VISIT_DAY;
     jlist.push(data);
 
     upload_data(JSON.stringify(jlist));
@@ -191,6 +200,7 @@ function open_calendar_view(t) {
 
     if (t === true) {
         rview.setAttribute('class', 'popup-view short');
+        set_calendar(-1);
     } else {
         rview.setAttribute('class', 'popup-view short hide');
     }
@@ -202,5 +212,162 @@ function select_rest(rid) {
     var rnames = ["밍글스", "서울신라호텔 라연", "온6.5", "솔밤", "이속우화진"];
 
     rname_text.textContent = rnames[rid];
+    GLOBAL_SELECT_RESTAURANT = rnames[rid];
+    GLOBAL_SELECT_RESTAURANT_ID = rid;
     open_restaurant_view(false);
+}
+
+function select_visitday(year, month, day) {
+    console.log("select_visitday : " + year + ", " + month + ", " + day);
+    open_calendar_view(false);
+
+    let vdate_text = document.getElementById('selected-visitdate-text');
+    vdate_text.textContent = year + "년 " + month + "월 " + day + "일";
+
+    GLOBAL_SELECT_VISIT_DAY = year + "-" + month + "-" + day;
+}
+
+function set_calendar(year, month) {
+    var target_year;
+    var target_month;
+
+    // 오늘
+    let today = new Date();
+    let today_year = today.getFullYear();
+    let today_month = today.getMonth() + 1;
+    let today_date = today.getDate();
+    
+    if (year === -1 || month === -1) {
+        target_year = today.getFullYear();
+        target_month = today.getMonth() + 1;
+    } else {
+        target_year = year;
+        target_month = month;
+    }
+
+    // 이번달 1일
+    let t = new Date(target_year, target_month - 1, 1);
+    let t_day = t.getDay();
+
+    // 달력 OOOO년 O월로 변경
+    let month_title = document.getElementById('calendar-title');
+    month_title.textContent = t.getFullYear() + "년 " + (t.getMonth() + 1) + "월";
+
+    // 이전달 변경 버튼
+    var before_month_button = document.getElementById('before-month-button');
+    before_month_button.setAttribute('onclick', 'set_calendar(' + t.getFullYear() + ',' + t.getMonth() + ');');
+
+    // 다음달 변경 버튼
+    var next_month_button = document.getElementById('next-month-button');
+    next_month_button.setAttribute('onclick', 'set_calendar(' + t.getFullYear() + ',' + (t.getMonth() + 1 + 1) + ');');
+
+    // 이번달 마지막날
+    let last_day = new Date(target_year, target_month, 0).getDate();
+    let last_day_weekday = new Date(target_year, target_month, 0).getDay();
+    
+    // div
+    let date_month = document.getElementById('date-month');
+
+    date_month.innerHTML = "";
+
+    // 요일 넣기
+    var week_row = document.createElement('div');
+    week_row.setAttribute('class', 'cal-row weekdays');
+
+    let week_array = ['일', '월', '화', '수', '목', '금', '토'];
+    for (let i = 0; i < 7; i++) {
+        var da = document.createElement('a');
+        da.textContent = week_array[i];
+        if (i == 0) {
+            da.setAttribute('class', 'sun');
+        }
+        else if (i == 6) {
+            da.setAttribute('class', 'sat');
+        }
+        week_row.appendChild(da);
+    }
+    date_month.appendChild(week_row);
+    
+    // 1주차
+    var first_row = document.createElement('div');
+    first_row.setAttribute('id', 'cal-row-days-1');
+    first_row.setAttribute('class', 'cal-row days');
+
+    last_input = -1;
+    
+    // 첫주
+    for (let i = 0; i < t_day; i++) {
+        var da = document.createElement('a');
+        first_row.appendChild(da);
+    }
+    for (let i = t_day; i < 7; i++) {
+        var da = document.createElement('a');
+        var this_day = (i - t_day) + 1;
+        var temp = new Date(target_year, target_month - 1, this_day);
+        da.textContent = this_day;
+        var class_text = '';
+        da.setAttribute('onclick', 'select_visitday(' + target_year + ',' + target_month + ',' + this_day + ');');
+
+        if (today_year === target_year && today_month === target_month && today_date == this_day) {
+            class_text += 'today';
+        }
+
+        if (temp - new Date() > 0) {
+            class_text += ' future';
+            da.removeAttribute('onclick');
+        }
+
+        da.setAttribute('class', class_text);
+        first_row.appendChild(da);
+        last_input = this_day;
+    }
+    date_month.appendChild(first_row);
+
+    var last_input_day = -1;
+    var this_row;
+    var id_it = 2;
+    // 나머지
+    for (let i = last_input + 1; i <= last_day + (6 - last_day_weekday); i++) {
+        var class_text = '';
+        var temp = new Date(target_year, target_month - 1, i);
+        var temp_day = temp.getDay();
+        var temp_year = temp.getFullYear();
+        var temp_month = temp.getMonth() + 1;
+        var temp_date = temp.getDate();
+        
+        if (temp_day == 0) {
+            this_row = document.createElement('div');
+            this_row.setAttribute('class', 'cal-row days');
+            this_row.setAttribute('id', 'cal-row-days-' + id_it);
+        }
+
+        var da = document.createElement('a');
+
+        if (i <= last_day) {
+            da.textContent = i;
+            da.setAttribute('onclick', 'select_visitday(' + target_year + ',' + target_month + ',' + i + ');');
+
+            if (today_year === target_year && today_month === target_month && today_date == i) {
+                class_text += 'today';
+            }
+
+            if (temp - new Date() > 0) {
+                class_text += ' future';
+                da.removeAttribute('onclick');
+            }
+        }    
+
+        da.setAttribute('class', class_text);
+        this_row.appendChild(da);
+
+        if (temp_day == 6) {
+            date_month.appendChild(this_row);
+            id_it++;
+        }
+        last_input_day = temp_day;
+    }
+
+    if (last_input_day < 6) {
+        date_month.appendChild(this_row);
+    }
 }

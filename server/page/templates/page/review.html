@@ -15,14 +15,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <link rel="shortcut icon" href="" type="image/x-icon">
     </head>
-    <body oncontextmenu='return false' onselectstart='return false;' ondragstart='return false;'>
+    <body oncontextmenu='return false' ondragstart='return false;'>
         <!-- Header -->
         <div class="header">
             <div class="btn">
                 <img class="btn" src="http://beta.coarr.kro.kr:8080/media/websrc/btn_back.png" alt=""/>
             </div>
-            <a>리뷰작성
-    </a>
+            <a onclick="location.reload();">리뷰작성</a>
             <div style="width:11px;"></div>
         </div>
         <!-- Tool Header -->
@@ -81,7 +80,7 @@
         <div id="select-visitdate-bar" class="bar-button" onclick="open_calendar_view(true);">
             <a id="visit-date-text">방문 날짜</a>
             <div class="btn">
-                <a class="select-name-text" id="selected-visitdate-text">오늘</a>
+                <a class="select-name-text" id="selected-visitdate-text"></a>
                 <img class="btn" src="http://beta.coarr.kro.kr:8080/media/websrc/rarrow.png" alt=""/>
             </div>
         </div>
@@ -195,24 +194,14 @@
             </div>
 
             <div class="month-header">
-                <img src="http://beta.coarr.kro.kr:8080/media/websrc/left_next.png" alt="">
-                <a>7월</a>
-                <img src="http://beta.coarr.kro.kr:8080/media/websrc/right_next.png" alt="">
+                <img id="before-month-button" src="http://beta.coarr.kro.kr:8080/media/websrc/left_next.png" alt="">
+                <a id="calendar-title"></a>
+                <img id="next-month-button" src="http://beta.coarr.kro.kr:8080/media/websrc/right_next.png" alt="">
             </div>
 
-            <table class="date-month">
-                <thead>
-                    <tr>
-                        <th><a>일</a></th>
-                        <th><a>월</a></th>
-                        <th><a>화</a></th>
-                        <th><a>수</a></th>
-                        <th><a>목</a></th>
-                        <th><a>금</a></th>
-                        <th><a>토</a></th>
-                    </tr>
-                </thead>
-            </table>
+            <div id="date-month" class="date-month">
+
+            </div>
             
         </div>
         <!-- Loading Page -->

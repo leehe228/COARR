@@ -548,3 +548,214 @@ July 09, 2023 - 20:21:54
 Django version 3.2.20, using settings 'project.settings'
 Starting development server at http://117.16.136.174:5000/
 Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[14/Jul/2023 16:02:48] "GET /admin/api/content/ HTTP/1.1" 200 9166
+[14/Jul/2023 16:02:48] "GET /admin/jsi18n/ HTTP/1.1" 302 0
+[14/Jul/2023 16:02:48] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[14/Jul/2023 16:02:49] "GET /admin/api/content/18/change/ HTTP/1.1" 200 25325
+[14/Jul/2023 16:02:49] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[14/Jul/2023 16:03:06] "GET /review_uploaded HTTP/1.1" 200 1446
+[14/Jul/2023 16:03:06] "GET /static/css/review.css HTTP/1.1" 304 0
+[14/Jul/2023 16:03:06] "GET /static/js/main.js HTTP/1.1" 304 0
+[14/Jul/2023 16:09:01] "GET /review HTTP/1.1" 200 4654
+[14/Jul/2023 16:09:01] "GET /static/css/review.css HTTP/1.1" 200 7794
+[14/Jul/2023 16:09:01] "GET /static/js/editor.js HTTP/1.1" 200 1842
+[14/Jul/2023 16:09:01] "GET /media/websrc/btn_back.png HTTP/1.1" 200 320
+[14/Jul/2023 16:09:01] "GET /static/js/main.js HTTP/1.1" 200 5840
+[14/Jul/2023 16:09:01] "GET /media/websrc/btn_photo.png HTTP/1.1" 200 462
+[14/Jul/2023 16:09:01] "GET /media/websrc/btn_style.png HTTP/1.1" 200 437
+[14/Jul/2023 16:09:01] "GET /media/websrc/btn_array.png HTTP/1.1" 200 236
+[14/Jul/2023 16:09:01] "GET /media/websrc/rarrow.png HTTP/1.1" 200 254
+[14/Jul/2023 16:09:01] "GET /media/websrc/checked.png HTTP/1.1" 200 250
+[14/Jul/2023 16:09:02] "GET /static/css/AppleSDGothicNeoR.woff HTTP/1.1" 200 1823408
+[14/Jul/2023 16:09:02] "GET /review HTTP/1.1" 200 4654
+[14/Jul/2023 16:13:13] "GET /admin/ HTTP/1.1" 302 0
+[14/Jul/2023 16:13:13] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4214
+[14/Jul/2023 16:13:14] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[14/Jul/2023 16:13:14] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[14/Jul/2023 16:13:14] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[14/Jul/2023 16:13:14] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[14/Jul/2023 16:13:14] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[14/Jul/2023 16:13:14] "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[14/Jul/2023 16:13:14] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+Not Found: /favicon.ico
+[14/Jul/2023 16:13:14] "GET /favicon.ico HTTP/1.1" 404 3185
+[14/Jul/2023 16:13:48] "GET /review HTTP/1.1" 200 4654
+[14/Jul/2023 16:13:48] "GET /static/css/review.css HTTP/1.1" 200 7794
+[14/Jul/2023 16:13:48] "GET /static/js/main.js HTTP/1.1" 200 5840
+[14/Jul/2023 16:13:48] "GET /static/js/editor.js HTTP/1.1" 200 1842
+[14/Jul/2023 16:13:48] "GET /media/websrc/btn_back.png HTTP/1.1" 200 320
+[14/Jul/2023 16:13:48] "GET /media/websrc/btn_photo.png HTTP/1.1" 200 462
+[14/Jul/2023 16:13:48] "GET /media/websrc/btn_style.png HTTP/1.1" 200 437
+[14/Jul/2023 16:13:48] "GET /media/websrc/btn_array.png HTTP/1.1" 200 236
+[14/Jul/2023 16:13:48] "GET /media/websrc/rarrow.png HTTP/1.1" 200 254
+[14/Jul/2023 16:13:48] "GET /media/websrc/checked.png HTTP/1.1" 200 250
+[14/Jul/2023 16:13:48] "GET /static/css/AppleSDGothicNeoR.woff HTTP/1.1" 200 1823408
+[14/Jul/2023 16:13:57] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[14/Jul/2023 16:13:57] "GET /admin/ HTTP/1.1" 200 9042
+[14/Jul/2023 16:13:57] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[14/Jul/2023 16:13:57] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[14/Jul/2023 16:13:57] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[14/Jul/2023 16:13:58] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[14/Jul/2023 16:57:37] "GET /review HTTP/1.1" 200 4654
+[14/Jul/2023 16:57:37] "GET /static/css/review.css HTTP/1.1" 200 7794
+[14/Jul/2023 16:57:37] "GET /static/js/editor.js HTTP/1.1" 200 1842
+[14/Jul/2023 16:57:37] "GET /static/js/main.js HTTP/1.1" 200 5840
+[14/Jul/2023 16:57:37] "GET /media/websrc/btn_back.png HTTP/1.1" 200 320
+[14/Jul/2023 16:57:37] "GET /media/websrc/btn_photo.png HTTP/1.1" 200 462
+[14/Jul/2023 16:57:37] "GET /media/websrc/btn_style.png HTTP/1.1" 200 437
+[14/Jul/2023 16:57:38] "GET /media/websrc/btn_array.png HTTP/1.1" 200 236
+[14/Jul/2023 16:57:38] "GET /media/websrc/rarrow.png HTTP/1.1" 200 254
+[14/Jul/2023 16:57:38] "GET /media/websrc/checked.png HTTP/1.1" 200 250
+[14/Jul/2023 16:57:39] "GET /static/css/AppleSDGothicNeoR.woff HTTP/1.1" 200 1823408
+[14/Jul/2023 16:57:42] "GET /admin/ HTTP/1.1" 302 0
+[14/Jul/2023 16:57:42] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4214
+[14/Jul/2023 16:57:42] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[14/Jul/2023 16:57:42] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[14/Jul/2023 16:57:42] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[14/Jul/2023 16:57:42] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[14/Jul/2023 16:57:42] "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[14/Jul/2023 16:57:42] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[14/Jul/2023 16:57:42] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[14/Jul/2023 16:57:53] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4388
+[14/Jul/2023 16:58:03] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[14/Jul/2023 16:58:03] "GET /admin/ HTTP/1.1" 200 9042
+[14/Jul/2023 16:58:03] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[14/Jul/2023 16:58:03] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[14/Jul/2023 16:58:03] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[14/Jul/2023 16:58:03] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[14/Jul/2023 19:20:12] "GET /review HTTP/1.1" 200 4654
+[14/Jul/2023 19:20:12] "GET /static/css/review.css HTTP/1.1" 200 7794
+[14/Jul/2023 19:20:12] "GET /static/js/editor.js HTTP/1.1" 200 1842
+[14/Jul/2023 19:20:12] "GET /static/js/main.js HTTP/1.1" 200 5840
+[14/Jul/2023 19:20:12] "GET /media/websrc/checked.png HTTP/1.1" 200 250
+[14/Jul/2023 19:20:12] "GET /media/websrc/btn_back.png HTTP/1.1" 200 320
+[14/Jul/2023 19:20:12] "GET /media/websrc/btn_photo.png HTTP/1.1" 200 462
+[14/Jul/2023 19:20:12] "GET /media/websrc/btn_array.png HTTP/1.1" 200 236
+[14/Jul/2023 19:20:12] "GET /media/websrc/rarrow.png HTTP/1.1" 200 254
+[14/Jul/2023 19:20:12] "GET /media/websrc/btn_style.png HTTP/1.1" 200 437
+[14/Jul/2023 19:20:14] "GET /static/css/AppleSDGothicNeoR.woff HTTP/1.1" 200 1823408
+Not Found: /favicon.ico
+[14/Jul/2023 19:20:14] "GET /favicon.ico HTTP/1.1" 404 3185
+[14/Jul/2023 20:28:33] "GET / HTTP/1.1" 200 8943
+[14/Jul/2023 21:02:59] "GET / HTTP/1.1" 200 8943
+[14/Jul/2023 21:20:37] "GET /review_uploaded HTTP/1.1" 200 1446
+[14/Jul/2023 21:20:37] "GET /static/js/main.js HTTP/1.1" 304 0
+[14/Jul/2023 21:20:37] "GET /static/css/review.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[14/Jul/2023 21:20:37] "GET /favicon.ico HTTP/1.1" 404 3185
+[14/Jul/2023 21:20:40] "GET /review_home HTTP/1.1" 200 874
+Not Found: /css/review.css
+[14/Jul/2023 21:20:40] "GET /css/review.css HTTP/1.1" 404 3194
+Not Found: /main.js
+[14/Jul/2023 21:20:40] "GET /main.js HTTP/1.1" 404 3173
+[14/Jul/2023 21:20:53] "GET /admin HTTP/1.1" 301 0
+[14/Jul/2023 21:20:53] "GET /admin/ HTTP/1.1" 302 0
+[14/Jul/2023 21:20:53] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4214
+[14/Jul/2023 21:20:53] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[14/Jul/2023 21:20:53] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[14/Jul/2023 21:20:53] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[14/Jul/2023 21:20:53] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[14/Jul/2023 21:20:53] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[14/Jul/2023 21:20:53] "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[14/Jul/2023 21:20:53] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[14/Jul/2023 21:20:59] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[14/Jul/2023 21:20:59] "GET /admin/ HTTP/1.1" 200 9042
+[14/Jul/2023 21:20:59] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[14/Jul/2023 21:20:59] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[14/Jul/2023 21:20:59] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[14/Jul/2023 21:20:59] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[14/Jul/2023 21:21:02] "GET /admin/api/content/ HTTP/1.1" 200 9368
+[14/Jul/2023 21:21:02] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[14/Jul/2023 21:21:02] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[14/Jul/2023 21:21:02] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[14/Jul/2023 21:21:02] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[14/Jul/2023 21:21:02] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[14/Jul/2023 21:21:02] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[14/Jul/2023 21:21:02] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[14/Jul/2023 21:21:02] "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[14/Jul/2023 21:21:02] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[14/Jul/2023 21:21:02] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[14/Jul/2023 21:21:02] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[14/Jul/2023 21:21:03] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[14/Jul/2023 21:21:04] "GET /admin/api/content/20/change/ HTTP/1.1" 200 18858
+[14/Jul/2023 21:21:04] "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+[14/Jul/2023 21:21:04] "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+[14/Jul/2023 21:21:04] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+[14/Jul/2023 21:21:04] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[14/Jul/2023 21:21:04] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[14/Jul/2023 21:21:04] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[14/Jul/2023 21:21:04] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+[14/Jul/2023 21:21:04] "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 200 1094
+[14/Jul/2023 21:21:04] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[14/Jul/2023 21:21:04] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[14/Jul/2023 21:21:37] "GET /admin/api/content/ HTTP/1.1" 200 9368
+[14/Jul/2023 21:21:37] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[14/Jul/2023 21:21:39] "GET /admin/api/content/19/change/ HTTP/1.1" 200 17373
+[14/Jul/2023 21:21:39] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[14/Jul/2023 21:21:45] "GET /admin/api/content/ HTTP/1.1" 200 9368
+[14/Jul/2023 21:21:45] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[14/Jul/2023 21:21:46] "GET /admin/api/content/18/change/ HTTP/1.1" 200 25325
+[14/Jul/2023 21:21:46] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[14/Jul/2023 21:21:51] "GET /admin/api/content/ HTTP/1.1" 200 9368
+[14/Jul/2023 21:21:51] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[14/Jul/2023 21:22:27,526] - Broken pipe from ('180.92.243.34', 20255)
+[15/Jul/2023 03:20:39] "GET / HTTP/1.0" 200 8943
+[15/Jul/2023 04:38:44] code 400, message Bad request version ('À\x14À')
+[15/Jul/2023 04:38:44] You're accessing the development server over HTTPS, but it only supports HTTP.
+[15/Jul/2023 04:38:44] code 400, message Bad request version ('À\x14À')
+[15/Jul/2023 04:38:44] You're accessing the development server over HTTPS, but it only supports HTTP.
+[15/Jul/2023 04:38:45] "GET / HTTP/1.1" 200 8943
+[15/Jul/2023 07:51:45] code 400, message Bad request version ('À\x14À')
+[15/Jul/2023 07:51:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+[15/Jul/2023 07:51:45] code 400, message Bad request version ('À\x14À')
+[15/Jul/2023 07:51:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+[15/Jul/2023 07:51:45] "GET / HTTP/1.1" 200 8943
+[15/Jul/2023 08:38:26] code 400, message Bad request version ('Üx¤ê\x98st')
+[15/Jul/2023 08:38:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+[15/Jul/2023 13:59:22] "GET / HTTP/1.1" 200 8943
+[15/Jul/2023 14:17:54] "GET / HTTP/1.1" 200 8943
+[15/Jul/2023 14:51:17] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x01ý\x01\x00\x01ù\x03\x03ÈbÒõ\x8fsm°\x96¶Å=D\x9d;\x94\x987¢\x98vÕ\x9eó\x14çp\x89O\xad')
+[15/Jul/2023 14:51:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+[15/Jul/2023 15:27:22] "GET /admin/api/content/18/change/ HTTP/1.1" 200 25325
+[15/Jul/2023 15:27:22] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[15/Jul/2023 15:27:22] "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+[15/Jul/2023 15:27:22] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[15/Jul/2023 15:27:24] "GET /admin/api/content/ HTTP/1.1" 200 9368
+[15/Jul/2023 15:27:24] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[15/Jul/2023 15:27:24] "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[15/Jul/2023 15:27:24] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[15/Jul/2023 15:27:24] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[15/Jul/2023 15:27:25] "GET /admin/api/content/20/change/ HTTP/1.1" 200 18858
+[15/Jul/2023 15:27:25] "GET /admin/jsi18n/ HTTP/1.1" 200 9131
+[15/Jul/2023 15:28:14] "GET /review_home HTTP/1.1" 200 874
+Not Found: /css/review.css
+[15/Jul/2023 15:28:14] "GET /css/review.css HTTP/1.1" 404 3194
+Not Found: /main.js
+[15/Jul/2023 15:28:15] "GET /main.js HTTP/1.1" 404 3173
+[15/Jul/2023 15:28:16] "GET /review_home HTTP/1.1" 200 874
+Not Found: /css/review.css
+[15/Jul/2023 15:28:16] "GET /css/review.css HTTP/1.1" 404 3194
+Not Found: /main.js
+[15/Jul/2023 15:28:16] "GET /main.js HTTP/1.1" 404 3173

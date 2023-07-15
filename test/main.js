@@ -153,7 +153,7 @@ function upload_review() {
 function upload_data(sdata) {
     let loading_page = document.getElementById('loading-page');
     console.log(sdata);
-    fetch("http://158.247.251.57:5000/api/upload_review", {
+    fetch("http://beta.coarr.kro.kr:8080/api/upload_review", {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
@@ -167,13 +167,13 @@ function upload_data(sdata) {
     
         loading_page.setAttribute('class', 'loading-page hide');
         
-        window.location.href = 'http://beta.coarr.kro.kr:5000/review_uploaded';
+        window.location.href = 'http://beta.coarr.kro.kr:8080/review_uploaded';
     });
 }
 
 function backto(t) {
-    console.log('http://beta.coarr.kro.kr:5000/' + t);
-    window.location.href = 'http://beta.coarr.kro.kr:5000/' + t;
+    console.log('http://beta.coarr.kro.kr:8080/' + t);
+    window.location.href = 'http://beta.coarr.kro.kr:8080/' + t;
 }
 
 function open_restaurant_view(t) {

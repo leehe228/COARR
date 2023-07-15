@@ -65,7 +65,7 @@ def save_review(jdata):
                          APPROVER=-1,
                          DELETED=0,
                          STATUS=0,
-                         CONTENT=jdata,
+                         CONTENT=json.dumps(jdata, ensure_ascii=False, indent=4),
                          NUM_LIKE=0,
                          NUM_SAVED=0,
                          NUM_SHARE=0,
@@ -133,6 +133,8 @@ def review_gpt(data, jobject, CID):
     eval_en = coarr_en(review_en)
     eval_json = json.loads(eval_en)
     
+    print(eval_json)
+
     # ratings
     eval_json["criterion1"]["ratings"] = int(eval_json["criterion1"]["ratings"][:-3])
     eval_json["criterion2"]["ratings"] = int(eval_json["criterion2"]["ratings"][:-3])
@@ -156,7 +158,7 @@ def save_gpt_review(eval_json, jobject, CID):
     print(CID)
 
     queryset = Content.objects.filter(CID=CID)
-    eval_text = json.dumps(eval_json, ensure_ascii=False)
+    eval_text = json.dumps(eval_json, ensure_ascii=False, indent=4)
 
     if (queryset):
         try:

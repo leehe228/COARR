@@ -204,6 +204,7 @@ function open_restaurant_view(t) {
 
     if (t === true) {
         rview.setAttribute('class', 'popup-view long');
+        search_filter();
     } else {
         rview.setAttribute('class', 'popup-view long hide');
     }

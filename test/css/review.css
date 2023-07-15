@@ -120,7 +120,8 @@ body {
     margin: 16px;
     border: 1px solid #ffffff;
     height: 375px;
-    max-height: 375px;
+/*     min-height: 375px; */
+/*     max-height: 2000px; */
     overflow-y: scroll;
     color: #000;
     font-family: AppleSDGothicNeoR, serif;

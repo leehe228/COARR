@@ -120,9 +120,9 @@
             </div>
             <div class="pv-header-search">
                 <img src="./websrc/search.png" alt="">
-                <input type="text" placeholder="레스토랑 검색">
+                <input id="restaurant-search-input" type="text" placeholder="레스토랑 검색" oninput="search_filter();">
             </div>
-            <div class="list-view">
+            <div id="restaurant-list-view" class="list-view">
                 <div class="restaurant-block" onclick="select_rest(0);">
                     <img src="./websrc/rest1.jpeg" alt="">
                     <div class="rb-text-block">

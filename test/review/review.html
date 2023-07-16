@@ -4,22 +4,24 @@
     <head>
         <meta charset="UTF-8">
         <title>COARR GUIDE</title>
+        <!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
         <!--    <link rel="stylesheet" href="{% static 'css/review.css' %}">-->
-        <link rel="stylesheet" href="./css/review.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/review.css">
         <!-- js -->
         <!--    <script src="{% static 'js/main.js' %}"> </script>-->
-        <script src="./main.js"></script>
+        <script src="../main.js"></script>
         <!-- font -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap" rel="stylesheet">
-        <meta name="viewport" content="initial-scale=0.8,user-scalable=no,maximum-scale=1,width=device-width" />
-        <link rel="shortcut icon" href="./websrc/favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="initial-scale=0.8,user-scalable=no,maximum-scale=0.8,width=device-width" />
+        <link rel="shortcut icon" href="../websrc/favicon.ico" type="image/x-icon">
     </head>
     <body oncontextmenu='return false' ondragstart='return false;'>
         <!-- Header -->
         <div class="header">
             <div class="btn">
-                <img class="btn" src="./websrc/btn_back.png" alt=""/>
+                <img class="btn" src="../websrc/btn_back.png" alt=""/>
             </div>
             <a onclick="location.reload();">리뷰작성</a>
             <div style="width:11px;"></div>
@@ -28,16 +30,16 @@
         <div class="tool-header">
             <!-- 사진 첨부 -->
             <div id="tool-img-btn" class="btn">
-                <img src="./websrc/btn_photo.png" alt=""/>
+                <img src="../websrc/btn_photo.png" alt=""/>
             </div>
             <input id="img-selector" type="file" accept="image/*"/>
             <!-- 스타일 -->
             <div id="tool-style-btn" class="btn" onclick="stylebar(true);">
-                <img src="./websrc/btn_style.png" alt=""/>
+                <img src="../websrc/btn_style.png" alt=""/>
             </div>
             <!-- 정렬 -->
             <div id="tool-align-btn" class="btn">
-                <img src="./websrc/btn_array.png" alt=""/>
+                <img src="../websrc/btn_array.png" alt=""/>
             </div>
         </div>
         <!-- 텍스트 스타일 바 -->
@@ -73,7 +75,7 @@
             <a id="restaurant-name-text">레스토랑명</a>
             <div class="btn">
                 <a class="select-name-text" id="selected-restaurant-text"></a>
-                <img class="btn" src="./websrc/rarrow.png" alt=""/>
+                <img class="btn" src="../websrc/rarrow.png" alt=""/>
             </div>
         </div>
         <!-- 방문 날짜 -->
@@ -81,7 +83,7 @@
             <a id="visit-date-text">방문 날짜</a>
             <div class="btn">
                 <a class="select-name-text" id="selected-visitdate-text"></a>
-                <img class="btn" src="./websrc/rarrow.png" alt=""/>
+                <img class="btn" src="../websrc/rarrow.png" alt=""/>
             </div>
         </div>
         <!-- 식사 시간 선택 -->
@@ -105,7 +107,7 @@
                 <a>어뷰징 리뷰 및 허위광고가 아닙니다
         </a>
                 <div id="review-cb" class="cb" checked="false" onclick="cb_check(true);">
-                    <img src="./websrc/checked.png" alt=""/>
+                    <img src="../websrc/checked.png" alt=""/>
                 </div>
             </div>
         </div>
@@ -116,15 +118,15 @@
         <div id="restaurant-view" class="popup-view long hide">
             <div class="pv-header">
                 <a>방문 레스토랑</a>
-                <img id="rview-close-button" src="./websrc/close_btn.png" alt="" onclick="open_restaurant_view(false);">
+                <img id="rview-close-button" src="../websrc/close_btn.png" alt="" onclick="open_restaurant_view(false);">
             </div>
             <div class="pv-header-search">
-                <img src="./websrc/search.png" alt="">
+                <img src="../websrc/search.png" alt="">
                 <input id="restaurant-search-input" type="text" placeholder="레스토랑 검색" oninput="search_filter();">
             </div>
             <div id="restaurant-list-view" class="list-view">
                 <div class="restaurant-block" onclick="select_rest(0);">
-                    <img src="./websrc/rest1.jpeg" alt="">
+                    <img src="../websrc/rest1.jpeg" alt="">
                     <div class="rb-text-block">
                         <b>
                             밍글스
@@ -136,7 +138,7 @@
                 </div>
 
                 <div class="restaurant-block" onclick="select_rest(1);">
-                    <img src="./websrc/rest2.jpeg" alt="">
+                    <img src="../websrc/rest2.jpeg" alt="">
                     <div class="rb-text-block">
                         <b>
                             서울신라호텔 라연
@@ -148,7 +150,7 @@
                 </div>
 
                 <div class="restaurant-block" onclick="select_rest(2);">
-                    <img src="./websrc/new_rest-1.png" alt="">
+                    <img src="../websrc/new_rest-1.png" alt="">
                     <div class="rb-text-block">
                         <b>
                             온6.5
@@ -160,7 +162,7 @@
                 </div>
 
                 <div class="restaurant-block" onclick="select_rest(3);">
-                    <img src="./websrc/new_rest-2.png" alt="">
+                    <img src="../websrc/new_rest-2.png" alt="">
                     <div class="rb-text-block">
                         <b>
                             솔밤
@@ -172,7 +174,7 @@
                 </div>
 
                 <div class="restaurant-block" onclick="select_rest(4);">
-                    <img src="./websrc/rest5.jpeg" alt="">
+                    <img src="../websrc/rest5.jpeg" alt="">
                     <div class="rb-text-block">
                         <b>
                             이속우화진
@@ -190,13 +192,13 @@
         <div id="calendar-view" class="popup-view short hide">
             <div class="pv-header">
                 <a>방문 날짜</a>
-                <img src="./websrc/close_btn.png" alt="" onclick="open_calendar_view(false);">
+                <img src="../websrc/close_btn.png" alt="" onclick="open_calendar_view(false);">
             </div>
 
             <div class="month-header">
-                <img id="before-month-button" src="./websrc/left_next.png" alt="">
+                <img id="before-month-button" src="../websrc/left_next.png" alt="">
                 <a id="calendar-title"></a>
-                <img id="next-month-button" src="./websrc/right_next.png" alt="">
+                <img id="next-month-button" src="../websrc/right_next.png" alt="">
             </div>
 
             <div id="date-month" class="date-month">
@@ -274,9 +276,9 @@
         </div>
         <!-- Loading Page -->
         <div id="loading-page" class="loading-page hide">
-            <img src="./websrc/loading.gif" alt="">
+            <img src="../websrc/loading.gif" alt="">
         </div>
 </body>
 <!--<script src="{% static 'js/editor.js' %}"> </script>-->
-<script src="./editor.js"></script>
+<script src="../editor.js"></script>
 </html>

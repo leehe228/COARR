@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'AppleSDGothicNeoR';
     src: url('./AppleSDGothicNeoR.woff') format('woff');
-}
+; }
 
 @font-face {
     font-family: 'AppleSDGothicNeoL';
@@ -14,34 +14,62 @@
 }
 
 * {
-    font-family: 'AppleSDGothicNeoR', serif;
+    font-family: AppleSDGothicNeoR, serif;
 }
 
 body {
-    overflow-x: hidden !important;
-    overflow-y: hidden;
-    margin: 0;
+    margin: 0px;
 }
 
-.pointer {
+
+/* Header */
+.header {
+    display: flex;
+    height: 56px;
+    padding-left: 16px;
+    padding-top: 5px;
+    padding-right: 16px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fff0;
+}
+
+.header > a {
+    display: flex;
+    width: 142px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #212121;
+    text-align: center;
+    /* Title2/Emphasized */
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.4px;
     cursor: pointer;
 }
 
-.header-bar {
+.header > div {
     display: flex;
-    height: 48px;
-    padding: 16px;
-    justify-content: space-between;
-    align-items: center;
+    height: 25px;
+    flex-direction: column;
     flex-shrink: 0;
-    /* border: 1px solid #000; */
-    background: #fff;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    object-fit: fill;
+    cursor: pointer;
 }
 
+
+/* Pair-Header */
+.pair-header {
+    
+}
+
+
+/* Footer */
 .footer-bar {
     height: 40px;
     flex-shrink: 0;
@@ -58,258 +86,7 @@ body {
     justify-content: space-evenly;
 }
 
-.header-button-group {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    justify-content: center;
-}
-
-.header-text-button-group {
-    width: 117px;
-    height: 28px;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-button {
-    color: #212121;
-    text-align: center;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: -0.4px;
-    font-family: AppleSDGothicNeoR, serif;
-}
-
-.header-button-disable {
-    color: #9E9E9E;
-    text-align: center;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: -0.4px;
-    font-family: AppleSDGothicNeoR, serif;
-}
-
-.title-text-group1 {
-    font-family: AppleSDGothicNeoR, serif;
-    margin-top: 18px;
-    margin-left: 16px;
-}
-
-.title-text-group2 {
-    font-family: AppleSDGothicNeoR, serif;
-    margin-top: 48px;
-    margin-left: 16px;
-    margin-right: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.title-t3 {
-    color: #212121;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 590;
-    line-height: 22px;
-    letter-spacing: -0.4px;
-    font-family: AppleSDGothicNeoR, serif;
-}
-
-.hscroll-view1 {
-    margin-top: 20px;
-    height: 416px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-.hscroll-view1::-webkit-scrollbar {
-    display: none;
-}
-
-.home-restaurant-view {
-    height: 416px;
-    width: 311px;
-    margin-left: 16px;
-}
-
-.home-restaurant-view > img {
-    height: 416px;
-    width: 311px;
-}
-
-.home-restaurant-view-box {
-    display: inline-block;
-    width: 311px;
-    height: 416px;
-    position: relative;
-    margin-left: 16px;
-    border: 1px soild #000;
-}
-
-.home-restaurant-view-box > img {
-    width: 311px;
-    height: 416px;
-    position: absolute;
-    object-fit: cover;
-}
-
-.home-restaurant-view-box-title {
-    width: 311px;
-    height: 148px;
-    top: 268px;
-    position: absolute;
-    background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 80%);
-}
-
-.home-restaurant-view-box-h1 {
-    position: absolute;
-    color: white;
-    font-size: 16px;
-    bottom: 18px;
-    left: 18px;
-    font-family: Apple;
-    font-weight: 590;
-    line-height: 20px;
-    word-wrap: break-word;
-    font-family: AppleSDGothicNeoR, serif;
-}
-
-.home-restaurant-view-box-h {
-    position: absolute;
-    color: white;
-    font-size: 28px;
-    bottom: 44px;
-    left: 18px;
-    word-wrap: break-word;
-    font-family: AppleSDGothicNeoR, serif;
-    font-weight: bold;
-    line-height: 34px;
-}
-
-.hscroll-view2 {
-    margin-top: 20px;
-    height: 294px;
-    width: max-content;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    border: 1px solid #fff;
-}
-
-.hscroll-view2::-webkit-scrollbar {
-    display: none;
-}
-
-.new-restaurant-view {
-    height: 280px;
-    width: 165px;
-    margin-left: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.new-restaurant-view > title-img {
-    height: 243px;
-    width: 165px;
-}
-
-.header-linebar {
-    height: 3px;
-    width: 100%;
-    border: 1px solid #fff;
-    position: fixed;
-    top: 64px;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    left: 0px;
-    right: 0px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.header-line-left {
-    width: 43px;
-    height: 3px;
-    border: 1px soild #fff;
-    /*   background: #000; */
-    margin-left: 13px;
-}
-
-.header-line-right {
-    width: 59px;
-    height: 3px;
-    border: 1px soild #fff;
-    /*   background: #ffffff; */
-    margin-left: 18px;
-}
-
-.float-button {
-    position: fixed;
-    bottom: 66px;
-    right: 8px;
+.footer-bar > img {
     cursor: pointer;
-}
-
-.hscroll-view-dummy {
-    margin-top: 20px;
-    height: 200px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    background: #d9d9d9;
-    width: max-content;
-}
-
-.hscroll-view-dummy::-webkit-scrollbar {
-    display: none;
-}
-
-.follower-header {
-    height: 110px;
-    border: 1px solid #000;
-}
-
-.follower-header-right {
-    width: 80px;
-    height: 110px;
-    float: right;
-    background: linear-gradient(to right, #0000, #ffffff80 20%, #ffffffd6 30%, #fffffff0 75%, #fff 100%);
-    flex-shrink: 0;
-}
-
-.follower-block {
-    border: 1px solid #0f0;
-    background: #ffffff;
-    height: 110px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-.follower-profile {
-    width: 80px;
-    height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    user-select: none;
 }

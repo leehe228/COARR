@@ -1,0 +1,31 @@
+<!--{% load static %}-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>COARR GUIDE</title>
+        <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+        <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/home.css">
+        <!-- js -->
+        <!-- <script src="{% static 'js/main.js' %}"> </script> -->
+        <script src="../main.js"></script>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=0.8,user-scalable=no,maximum-scale=0.8,width=device-width" />
+        <link rel="shortcut icon" href="../websrc/favicon.ico" type="image/x-icon">
+    </head>
+    <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+        
+    <!-- Footer Bar -->
+    <div class="footer-bar">
+        <img src="../websrc/home_active.png" onclick="switch_tab(0, 0);">
+        <img src="../websrc/restaurant_deactive.png" onclick="switch_tab(0, 1);">
+        <img src="../websrc/gift_deactive.png" onclick="switch_tab(0, 2);">
+        <img src="../websrc/user_deactive.png" onclick="switch_tab(0, 3);">
+    </div>
+        
+</body>
+</html>

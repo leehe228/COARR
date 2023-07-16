@@ -4,11 +4,7 @@ var GLOBAL_SELECT_RESTAURANT_ID = -1;
 
 // 식당
 let MEDIA_ROOT = "./websrc/"
-var RESTAURANTS_LIST = ["0::밍글스::서울 강남구 도산대로67길 19 힙탑빌딩 2층::rest1.jpeg",
-                        "1::서울신라호텔 라연::서울 중구 동호로 249::rest2.jpeg",
-                        "2::온6.5::서울 종로구 북촌로1길 28 지상1층 온6.5::new_rest-1.png", 
-                        "3::솔밤::서울 강남구 도산대로37길 6 4층::new_rest-2.png", 
-                        "4::이속우화진::서울 강남구 영동대로 513::rest5.jpeg"];
+var RESTAURANTS_LIST = ["0::밍글스::서울 강남구 도산대로67길 19 힙탑빌딩 2층::rest1.jpeg", "1::서울신라호텔 라연::서울 중구 동호로 249::rest2.jpeg", "2::온6.5::서울 종로구 북촌로1길 28 지상1층 온6.5::new_rest-1.png", "3::솔밤::서울 강남구 도산대로37길 6 4층::new_rest-2.png", "4::이속우화진::서울 강남구 영동대로 513::rest5.jpeg"];
 
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
@@ -54,7 +50,8 @@ function cb_check(o) {
         cb.setAttribute('checked', 'false');
         cb.setAttribute('onclick', 'cb_check(true);');
         cb.setAttribute('class', 'cb');
-    };
+    }
+    ;
 }
 
 function radio_check(n) {
@@ -70,8 +67,7 @@ function radio_check(n) {
 
         r1.setAttribute('checked', 'true');
         r2.setAttribute('checked', 'false');
-    }
-    else if (n === 2) {
+    } else if (n === 2) {
         r1.setAttribute('class', 'radio-button');
         r2.setAttribute('class', 'radio-button r-active');
 
@@ -109,7 +105,7 @@ function stylebar(o) {
 
 function upload_review() {
     let loading_page = document.getElementById('loading-page');
-    
+
     // checkbox
     let cb = document.getElementById('review-cb');
 
@@ -175,18 +171,21 @@ function upload_data(sdata) {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
-            header: {'Content-Type': 'application/json'},
-            credentials : 'same-origin',
-            redirect : 'follow',
-            referrer : 'no-referrer',
+            header: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'same-origin',
+            redirect: 'follow',
+            referrer: 'no-referrer',
             body: sdata,
-        }).then(response => {
+        }).then(response=>{
             console.log(response);
-        
+
             loading_page.setAttribute('class', 'loading-page hide');
-            
+
             window.location.href = 'http://beta.coarr.kro.kr:8080/review_uploaded';
-        });
+        }
+        );
     } catch (error) {
         console.log(error);
         loading_page.setAttribute('class', 'loading-page hide');
@@ -247,7 +246,7 @@ function select_visitday(year, month, day) {
     } else {
         vdate_text.textContent = year + "년 " + month + "월 " + day + "일";
     }
-    
+
     GLOBAL_SELECT_VISIT_DAY = year + "-" + month + "-" + day;
 }
 
@@ -260,7 +259,7 @@ function set_calendar(year, month) {
     let today_year = today.getFullYear();
     let today_month = today.getMonth() + 1;
     let today_date = today.getDate();
-    
+
     if (year === -1 || month === -1) {
         target_year = today.getFullYear();
         target_month = today.getMonth() + 1;
@@ -270,7 +269,7 @@ function set_calendar(year, month) {
     }
 
     // 이번달 1일
-    let t = new Date(target_year, target_month - 1, 1);
+    let t = new Date(target_year,target_month - 1,1);
     let t_day = t.getDay();
 
     // 달력 OOOO년 O월로 변경
@@ -286,9 +285,9 @@ function set_calendar(year, month) {
     next_month_button.setAttribute('onclick', 'set_calendar(' + t.getFullYear() + ',' + (t.getMonth() + 1 + 1) + ');');
 
     // 이번달 마지막날
-    let last_day = new Date(target_year, target_month, 0).getDate();
-    let last_day_weekday = new Date(target_year, target_month, 0).getDay();
-    
+    let last_day = new Date(target_year,target_month,0).getDate();
+    let last_day_weekday = new Date(target_year,target_month,0).getDay();
+
     // div
     let date_month = document.getElementById('date-month');
 
@@ -304,21 +303,20 @@ function set_calendar(year, month) {
         da.textContent = week_array[i];
         if (i == 0) {
             da.setAttribute('class', 'sun');
-        }
-        else if (i == 6) {
+        } else if (i == 6) {
             da.setAttribute('class', 'sat');
         }
         week_row.appendChild(da);
     }
     date_month.appendChild(week_row);
-    
+
     // 1주차
     var first_row = document.createElement('div');
     first_row.setAttribute('id', 'cal-row-days-1');
     first_row.setAttribute('class', 'cal-row days');
 
     last_input = -1;
-    
+
     // 첫주
     for (let i = 0; i < t_day; i++) {
         var da = document.createElement('a');
@@ -327,7 +325,7 @@ function set_calendar(year, month) {
     for (let i = t_day; i < 7; i++) {
         var da = document.createElement('a');
         var this_day = (i - t_day) + 1;
-        var temp = new Date(target_year, target_month - 1, this_day);
+        var temp = new Date(target_year,target_month - 1,this_day);
         da.textContent = this_day;
         var class_text = '';
         da.setAttribute('onclick', 'select_visitday(' + target_year + ',' + target_month + ',' + this_day + ');');
@@ -353,12 +351,12 @@ function set_calendar(year, month) {
     // 나머지
     for (let i = last_input + 1; i <= last_day + (6 - last_day_weekday); i++) {
         var class_text = '';
-        var temp = new Date(target_year, target_month - 1, i);
+        var temp = new Date(target_year,target_month - 1,i);
         var temp_day = temp.getDay();
         var temp_year = temp.getFullYear();
         var temp_month = temp.getMonth() + 1;
         var temp_date = temp.getDate();
-        
+
         if (temp_day == 0) {
             this_row = document.createElement('div');
             this_row.setAttribute('class', 'cal-row days');
@@ -379,7 +377,7 @@ function set_calendar(year, month) {
                 class_text += ' future';
                 da.removeAttribute('onclick');
             }
-        }    
+        }
 
         da.setAttribute('class', class_text);
         this_row.appendChild(da);
@@ -399,12 +397,11 @@ function set_calendar(year, month) {
 function search_filter() {
     let search_input = document.getElementById('restaurant-search-input');
     var keyword = search_input.value.trim();
-    
+
     if (keyword === "") {
         var idx_list = [0, 1, 2, 3, 4];
         render_restaurants(idx_list);
     }
-
     else {
         var idx_list = [];
         for (let i = 0; i < RESTAURANTS_LIST.length; i++) {
@@ -419,7 +416,7 @@ function search_filter() {
 function render_restaurants(idx_list) {
     let restaurant_view = document.getElementById('restaurant-list-view');
     restaurant_view.innerHTML = "";
-    
+
     for (let i = 0; i < RESTAURANTS_LIST.length; i++) {
         if (idx_list.includes(i)) {
             var d = document.createElement('div');
@@ -445,5 +442,32 @@ function render_restaurants(idx_list) {
             d.appendChild(d2);
             restaurant_view.appendChild(d);
         }
+    }
+}
+
+function switch_tab(from, to) {
+
+    if (from === to) {
+        window.location.reload();
+    }
+
+    // home tab
+    if (to === 0) {
+        location.href = "http://beta.coarr.kro.kr:8080/"
+    }
+
+    // restaurant tab
+    else if (to === 1) {
+        location.href = "http://beta.coarr.kro.kr:8080/restaurant"
+    }
+
+    // promotion tab
+    else if (to === 2) {
+        location.href = "http://beta.coarr.kro.kr:8080/promotion"
+    }
+
+    // user tab
+    else if (to === 3) {
+        location.href = "http://beta.coarr.kro.kr:8080/user"
     }
 }

@@ -13,33 +13,33 @@ import sys
 
 @csrf_exempt
 def home(request):
-    return render(request, 'page/home/home.html', {})
+    return render(request, 'page/home.html', {})
 
 
 ### REVIEW ###
 
 @csrf_exempt
 def review(request):
-    return render(request, 'page/restaurant/review.html', {})
+    return render(request, 'page/review.html', {})
 
 @csrf_exempt
 def review_uploaded(request):
-    return render(request, 'page/restaurant/review_uploaded.html', {})
+    return render(request, 'page/review_uploaded.html', {})
 
 @csrf_exempt
 def review_tab(request):
-    return render(request, 'page/restaurant/review_tab.html', {})
+    return render(request, 'page/review_tab.html', {})
 
 
 ### PROMOTION ###
 
 @csrf_exempt
 def promotion_tab(request):
-    return render(request, 'page/promotion/promotion_tab.html', {})
+    return render(request, 'page/promotion_tab.html', {})
 
 
 ### USER ###
 
 @csrf_exempt
 def user_tab(request):
-    return render(request, 'page/user/user_tab.html', {})
+    return render(request, 'page/user_tab.html', {})

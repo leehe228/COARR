@@ -234,8 +234,9 @@ function select_visitday(year, month, day) {
 
     var rtv = confirm("방문 날짜를 " + year + "년 " + month + "월 " + day + "일로 선택할까요?");
 
-    if (rtv === false) return;
-    
+    if (rtv === false)
+        return;
+
     console.log("select_visitday : " + year + ", " + month + ", " + day);
     open_calendar_view(false);
 
@@ -406,8 +407,7 @@ function search_filter() {
     if (keyword === "") {
         var idx_list = [0, 1, 2, 3, 4];
         render_restaurants(idx_list);
-    }
-    else {
+    } else {
         var idx_list = [];
         for (let i = 0; i < RESTAURANTS_LIST.length; i++) {
             if (RESTAURANTS_LIST[i].indexOf(keyword) >= 0) {
@@ -460,17 +460,14 @@ function switch_tab(from, to) {
     if (to === 0) {
         location.href = "http://beta.coarr.kro.kr:8080/"
     }
-
     // restaurant tab
     else if (to === 1) {
         location.href = "http://beta.coarr.kro.kr:8080/restaurant"
     }
-
     // promotion tab
     else if (to === 2) {
         location.href = "http://beta.coarr.kro.kr:8080/promotion"
     }
-
     // user tab
     else if (to === 3) {
         location.href = "http://beta.coarr.kro.kr:8080/user"
@@ -483,49 +480,48 @@ function switch_tabview(from, to) {
     if (from === 0) {
         let restaurant_tabview_switch = document.getElementById('recomm-tabview-switch');
         let review_tabview_switch = document.getElementById('follow-tabview-switch');
-        
+
         if (to === 0) {
             restaurant_tabview_switch.setAttribute('class', 'active');
             review_tabview_switch.removeAttribute('class');
-        }
-        else if (to === 1) {
+        } else if (to === 1) {
             restaurant_tabview_switch.removeAttribute('class');
             review_tabview_switch.setAttribute('class', 'active');
         }
     }
-
     // restaurant
     else if (from === 1) {
         let restaurant_tabview_switch = document.getElementById('restaurant-tabview-switch');
         let review_tabview_switch = document.getElementById('review-tabview-switch');
-        
+
+        let restaurant_page = document.getElementById('restaurant-page-restaurant');
+        let review_page = document.getElementById('restaurant-page-review');
+
         if (to === 0) {
             restaurant_tabview_switch.setAttribute('class', 'active');
             review_tabview_switch.removeAttribute('class');
-        }
-        else if (to === 1) {
+
+            restaurant_page.setAttribute('class', 'main-page');
+            review_page.setAttribute('class', 'main-page disabled');
+            
+        } else if (to === 1) {
             restaurant_tabview_switch.removeAttribute('class');
             review_tabview_switch.setAttribute('class', 'active');
+
+            restaurant_page.setAttribute('class', 'main-page disabled');
+            review_page.setAttribute('class', 'main-page');
         }
     }
-
     // promotion
     else if (from === 2) {
         if (to === 0) {
-            
-        }
-        else if (to === 1) {
-            
+        } else if (to === 1) {
         }
     }
-
     // user
     else if (from === 3) {
         if (to === 0) {
-            
-        }
-        else if (to === 1) {
-            
+        } else if (to === 1) {
         }
     }
 }

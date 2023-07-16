@@ -146,13 +146,6 @@ body {
     user-select: none;
 }
 
-.disabled {
-    height: 0;
-    width: 0;
-    display: none;
-    user-select: none;
-}
-
 .main-page {
     background: #ffffff;
     position: fixed;
@@ -163,6 +156,12 @@ body {
     overflow-y: scroll;
     margin-top: 60px;
     margin-bottom: 70px;
+}
+
+.disabled {
+    height: 0;
+    width: 0;
+    display: none;
 }
 
 .grid-view {

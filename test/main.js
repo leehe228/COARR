@@ -494,12 +494,22 @@ function switch_tabview(from, to) {
         let restaurant_tabview_switch = document.getElementById('restaurant-tabview-switch');
         let review_tabview_switch = document.getElementById('review-tabview-switch');
 
+        let restaurant_page = document.getElementById('restaurant-page-restaurant');
+        let review_page = document.getElementById('restaurant-page-review');
+
         if (to === 0) {
             restaurant_tabview_switch.setAttribute('class', 'active');
             review_tabview_switch.removeAttribute('class');
+
+            restaurant_page.setAttribute('class', 'main-page');
+            review_page.setAttribute('class', 'main-page disabled');
+            
         } else if (to === 1) {
             restaurant_tabview_switch.removeAttribute('class');
             review_tabview_switch.setAttribute('class', 'active');
+
+            restaurant_page.setAttribute('class', 'main-page disabled');
+            review_page.setAttribute('class', 'main-page');
         }
     }
     // promotion

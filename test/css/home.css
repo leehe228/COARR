@@ -13,6 +13,7 @@
     align-items: center;
     column-gap: 16px;
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     height: 420px;
     background: #fff0;

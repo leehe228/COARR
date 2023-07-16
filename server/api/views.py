@@ -153,16 +153,16 @@ def review_gpt(data, jobject, CID):
     except Exception as e:
         print(e)
 
-        eval_json = dict(
-            "criterion1"=dict(
-                "ratings"="0",
-                "evalutation"="점수를 평가할 수 없습니다."
-            ),
-            "criterion2"=dict(
-                "ratings"="0",
-                "evaluation"="점수를 평가할 수 없습니다."
-            )
-        )
+        eval_json = {
+            "criterion1":{
+                "ratings":0,
+                "evalutation":"점수를 평가할 수 없습니다."
+            },
+            "criterion2":{
+                "ratings":0,
+                "evaluation":"점수를 평가할 수 없습니다."
+            }
+        }
     
     save_gpt_review(eval_json, jobject, CID)
 

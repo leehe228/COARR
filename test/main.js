@@ -231,6 +231,11 @@ function select_rest(rid) {
 }
 
 function select_visitday(year, month, day) {
+
+    var rtv = confirm("방문 날짜를 " + year + "년 " + month + "월 " + day + "일로 선택할까요?");
+
+    if (rtv === false) return;
+    
     console.log("select_visitday : " + year + ", " + month + ", " + day);
     open_calendar_view(false);
 

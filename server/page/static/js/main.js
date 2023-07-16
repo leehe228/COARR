@@ -231,6 +231,11 @@ function select_rest(rid) {
 }
 
 function select_visitday(year, month, day) {
+
+    var rtv = confirm("방문 날짜를 " + year + "년 " + month + "월 " + day + "일로 선택할까요?");
+
+    if (rtv === false) return;
+    
     console.log("select_visitday : " + year + ", " + month + ", " + day);
     open_calendar_view(false);
 
@@ -476,11 +481,16 @@ function switch_tabview(from, to) {
     console.log(from + ", " + to);
     // home 
     if (from === 0) {
+        let restaurant_tabview_switch = document.getElementById('recomm-tabview-switch');
+        let review_tabview_switch = document.getElementById('follow-tabview-switch');
+        
         if (to === 0) {
-            
+            restaurant_tabview_switch.setAttribute('class', 'active');
+            review_tabview_switch.removeAttribute('class');
         }
         else if (to === 1) {
-            
+            restaurant_tabview_switch.removeAttribute('class');
+            review_tabview_switch.setAttribute('class', 'active');
         }
     }
 

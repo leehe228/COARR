@@ -6,8 +6,11 @@
         <title>COARR GUIDE</title>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/review.css' %}">
+        <link rel="stylesheet" href="{% static 'css/restaurant.css' %}">
         <!-- <link rel="stylesheet" href="../css/style.css"> -->
         <!-- <link rel="stylesheet" href="../css/review.css"> -->
+        <!-- <link rel="stylesheet" href="../css/restaurant.css"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <!-- js -->
         <script src="{% static 'js/main.js' %}"> </script>
         <!-- <script src="../main.js"></script> -->
@@ -19,12 +22,45 @@
     </head>
     <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
 
+    <div id="restaurant-page-restaurant" class="main-page disalbed">
+        
+    </div>
+
+    <div id="restaurant-page-review" class="main-page">
+
+        <div id="" class="tool-header center">
+            <div class="filter-tag-block">
+                <a>인기순</a>
+                <a>지역 : 서울</a>
+                <a>태그</a>
+                <a>태그</a>
+                <a>태그</a>
+                <a>태그</a>
+                <a>태그</a>
+                <a>태그</a>
+            </div>
+            <div id="filter-btn" class="btn">
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/filter_btn.png" alt="">
+            </div>
+        </div>
+        <div class="grid-view">
+            <div class="review-block"></div>
+            <div class="review-block"></div>
+            <div class="review-block"></div>
+            <div class="review-block"></div>
+            <div class="review-block"></div>
+            <div class="review-block"></div>
+            <div class="review-block"></div>
+            <div class="review-block"></div>
+        </div>
+    </div>
+
     <!-- Pair Header -->
     <div class="pair-header">
 
         <div class="pair-title">
-            <div id="restaurant-tabview-switch" class="active" onclick="switch_tabview(1, 0);">레스토랑</div>
-            <div id="review-tabview-switch" class="" onclick="switch_tabview(1, 1);">리뷰</div>
+            <div id="restaurant-tabview-switch" class="" onclick="switch_tabview(1, 0);">레스토랑</div>
+            <div id="review-tabview-switch" class="active" onclick="switch_tabview(1, 1);">리뷰</div>
         </div>
 
         <div class="header-button-block">
@@ -37,11 +73,6 @@
         </div>
 
     </div>
-
-    <div>
-        
-    </div>
-
 
     <!-- Footer Bar -->
     <div class="footer-bar">

@@ -471,3 +471,51 @@ function switch_tab(from, to) {
         location.href = "http://beta.coarr.kro.kr:8080/user"
     }
 }
+
+function switch_tabview(from, to) {
+    console.log(from + ", " + to);
+    // home 
+    if (from === 0) {
+        if (to === 0) {
+            
+        }
+        else if (to === 1) {
+            
+        }
+    }
+
+    // restaurant
+    else if (from === 1) {
+        let restaurant_tabview_switch = document.getElementById('restaurant-tabview-switch');
+        let review_tabview_switch = document.getElementById('review-tabview-switch');
+        
+        if (to === 0) {
+            restaurant_tabview_switch.setAttribute('class', 'active');
+            review_tabview_switch.removeAttribute('class');
+        }
+        else if (to === 1) {
+            restaurant_tabview_switch.removeAttribute('class');
+            review_tabview_switch.setAttribute('class', 'active');
+        }
+    }
+
+    // promotion
+    else if (from === 2) {
+        if (to === 0) {
+            
+        }
+        else if (to === 1) {
+            
+        }
+    }
+
+    // user
+    else if (from === 3) {
+        if (to === 0) {
+            
+        }
+        else if (to === 1) {
+            
+        }
+    }
+}

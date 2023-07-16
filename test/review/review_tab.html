@@ -18,13 +18,37 @@
         <link rel="shortcut icon" href="../websrc/favicon.ico" type="image/x-icon">
     </head>
     <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+
+    <!-- Pair Header -->
+    <div class="pair-header">
+
+        <div class="pair-title">
+            <div id="restaurant-tabview-switch" class="active" onclick="switch_tabview(1, 0);">레스토랑</div>
+            <div id="review-tabview-switch" class="" onclick="switch_tabview(1, 1);">리뷰</div>
+        </div>
+
+        <div class="header-button-block">
+            <div>
+                <img src="../websrc/noti.png" alt="">
+            </div>
+            <div>
+                <img src="../websrc/search.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div>
         
+    </div>
+
+
     <!-- Footer Bar -->
     <div class="footer-bar">
         <img src="../websrc/home_deactive.png" onclick="switch_tab(1, 0);">
-        <img src="../websrc/restaurant_deactive.png" onclick="switch_tab(1, 1);">
+        <img src="../websrc/restaurant_active.png" onclick="switch_tab(1, 1);">
         <img src="../websrc/gift_deactive.png" onclick="switch_tab(1, 2);">
-        <img src="../websrc/user_active.png" onclick="switch_tab(1, 3);">
+        <img src="../websrc/user_deactive.png" onclick="switch_tab(1, 3);">
     </div>
         
 </body>

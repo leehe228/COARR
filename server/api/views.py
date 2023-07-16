@@ -154,13 +154,13 @@ def review_gpt(data, jobject, CID):
         print(e)
 
         eval_json = dict(
-            "criterion1": dict(
-                "ratings": "0",
-                "evalutation": "점수를 평가할 수 없습니다."
+            "criterion1"=dict(
+                "ratings"="0",
+                "evalutation"="점수를 평가할 수 없습니다."
             ),
-            "criterion2": dict(
-                "ratings": "0",
-                "evaluation": "점수를 평가할 수 없습니다."
+            "criterion2"=dict(
+                "ratings"="0",
+                "evaluation"="점수를 평가할 수 없습니다."
             )
         )
     

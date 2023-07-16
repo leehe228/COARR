@@ -1,0 +1,70 @@
+.review-block {
+    width: 49%;
+    height: 300px;
+    background: #e6e6e6;
+    border: 1px solid #f00;
+}
+
+.tool-header {
+    height: 56px;
+    flex-shrink: 0;
+    background: #FFF;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8px;
+}
+
+.tool-header > .btn {
+    display: flex;
+    width: 26px;
+    height: 26px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid #fff0;
+    margin-right: 16px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.tool-header.center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-tag-block {
+    flex-grow: 1;
+    background: #ffffff;
+    margin-right: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.filter-tag-block::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-tag-block > a {
+    scroll-snap-align: center;
+    min-width: fit-content;
+    display: flex;
+    background: #A21E31;
+    border-radius: 12px;
+    height: 36px;
+    padding: 0 10px 0 10px;
+    margin-right: 4px;
+    color: #fff;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}

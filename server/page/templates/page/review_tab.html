@@ -6,8 +6,11 @@
         <title>COARR GUIDE</title>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/review.css' %}">
+        <!-- <link rel="stylesheet" href="../css/style.css"> -->
+        <!-- <link rel="stylesheet" href="../css/review.css"> -->
         <!-- js -->
         <script src="{% static 'js/main.js' %}"> </script>
+        <!-- <script src="../main.js"></script> -->
         <!-- font -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand&display=swap" rel="stylesheet">
@@ -15,7 +18,31 @@
         <link rel="shortcut icon" href="http://beta.coarr.kro.kr:8080/media/websrc/favicon.ico" type="image/x-icon">
     </head>
     <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+
+    <!-- Pair Header -->
+    <div class="pair-header">
+
+        <div class="pair-title">
+            <div id="restaurant-tabview-switch" class="active" onclick="switch_tabview(1, 0);">레스토랑</div>
+            <div id="review-tabview-switch" class="" onclick="switch_tabview(1, 1);">리뷰</div>
+        </div>
+
+        <div class="header-button-block">
+            <div>
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/noti.png" alt="">
+            </div>
+            <div>
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/search.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div>
         
+    </div>
+
+
     <!-- Footer Bar -->
     <div class="footer-bar">
         <img src="http://beta.coarr.kro.kr:8080/media/websrc/home_deactive.png" onclick="switch_tab(1, 0);">

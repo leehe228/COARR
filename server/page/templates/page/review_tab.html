@@ -20,16 +20,117 @@
     </head>
     <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
 
-    <div id="restaurant-page-restaurant" class="main-page disalbed">
-        
+    <div id="restaurant-page-restaurant" class="main-page">
+        <div id="" class="tool-header center">
+            <div class="filter-tag-block">
+                <a>랭킹순</a>
+                <a>한식</a>
+            </div>
+            <div id="filter-btn" class="btn">
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/filter_btn.png" alt="">
+            </div>
+        </div>
+        <div class="grid-view">
+            
+            <!-- review block -->
+            <div class="review-block-long">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest1.jpeg" alt="">
+                </div>
+                <div class="text-wrapper">
+                <div class="rest-title">
+                    밍글스
+                </div>
+                <a>서울, 강남 · 도산대로</a>
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/coarr_approved.png" alt="">
+                </div>
+            </div>
+
+            <!-- review block -->
+            <div class="review-block-long">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest2.jpeg" alt="">
+                </div>
+                <div class="text-wrapper">
+                <div class="rest-title">
+                    서울신라호텔 라연
+                </div>
+                <a>서울, 중구 · 동호로</a>
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/coarr_approved.png" alt="">
+                </div>
+            </div>
+
+            <!-- review block -->
+            <div class="review-block-long">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/new_rest-2.png" alt="">
+                </div>
+                <div class="text-wrapper">
+                <div class="rest-title">
+                    솔밤
+                </div>
+                <a>서울, 강남 · 도산대로</a>
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/coarr_approved.png" alt="">
+                </div>
+            </div>
+
+            <!-- review block -->
+            <div class="review-block-long">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/new_rest-1.png" alt="">
+                </div>
+                <div class="text-wrapper">
+                <div class="rest-title">
+                    온 6.5
+                </div>
+                <a>서울, 종로 · 영동대로</a>
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/coarr_approved.png" alt="">
+                </div>
+            </div>
+
+            <!-- review block -->
+            <div class="review-block-long">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest5.jpeg" alt="">
+                </div>
+                <div class="text-wrapper">
+                <div class="rest-title">
+                    이속우화진
+                </div>
+                <a>서울, 강남 · 영동대로</a>
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/coarr_approved.png" alt="">
+                </div>
+            </div>
+
+            <!-- review block -->
+            <div class="review-block-long">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest12.jpeg" alt="">
+                </div>
+                <div class="text-wrapper">
+                <div class="rest-title">
+                    텐동 요츠야 <div class="ad-tag">AD</div>
+                </div>
+                <a>서울, 관악 · 관악로</a>
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/coarr_approved.png" alt="">
+                </div>
+            </div>
+            
+        </div>
     </div>
 
-    <div id="restaurant-page-review" class="main-page">
+    <div id="restaurant-page-review" class="main-page disabled">
 
         <div id="" class="tool-header center">
             <div class="filter-tag-block">
                 <a>인기순</a>
                 <a>지역 : 서울</a>
+                <a>태그</a>
+                <a>태그</a>
+                <a>태그</a>
+                <a>태그</a>
+                <a>태그</a>
+                <a>태그</a>
             </div>
             <div id="filter-btn" class="btn">
                 <img src="http://beta.coarr.kro.kr:8080/media/websrc/filter_btn.png" alt="">
@@ -144,8 +245,8 @@
     <div class="pair-header">
 
         <div class="pair-title">
-            <div id="restaurant-tabview-switch" class="" onclick="switch_tabview(1, 0);">레스토랑</div>
-            <div id="review-tabview-switch" class="active" onclick="switch_tabview(1, 1);">리뷰</div>
+            <div id="restaurant-tabview-switch" class="active" onclick="switch_tabview(1, 0);">레스토랑</div>
+            <div id="review-tabview-switch" class="" onclick="switch_tabview(1, 1);">리뷰</div>
         </div>
 
         <div class="header-button-block">

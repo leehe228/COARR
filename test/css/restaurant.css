@@ -29,6 +29,56 @@
     cursor: pointer;
 }
 
+.review-block-long {
+    width: 49%;
+    height: 360px;
+    background: #ffffff;
+    border: 1px solid #fff0;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.review-block-long > .img-wrapper {
+    background: #eee;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.review-block-long > .img-wrapper > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+}
+
+.review-block-long > .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+.text-wrapper > .rest-title {
+    display: flex;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+    font-weight: bold;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text-wrapper > a {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 14px;
+}
+
+.text-wrapper > img {
+    margin-top: 6px;
+}
+
 .save-btn > img {
     width: 24px;
 }

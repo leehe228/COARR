@@ -3,8 +3,11 @@ var GLOBAL_SELECT_RESTAURANT = "";
 var GLOBAL_SELECT_RESTAURANT_ID = -1;
 
 // 식당
-let MEDIA_ROOT = "./websrc/"
+let MEDIA_ROOT = "../websrc/"
 var RESTAURANTS_LIST = ["0::밍글스::서울 강남구 도산대로67길 19 힙탑빌딩 2층::rest1.jpeg", "1::서울신라호텔 라연::서울 중구 동호로 249::rest2.jpeg", "2::온6.5::서울 종로구 북촌로1길 28 지상1층 온6.5::new_rest-1.png", "3::솔밤::서울 강남구 도산대로37길 6 4층::new_rest-2.png", "4::이속우화진::서울 강남구 영동대로 513::rest5.jpeg"];
+
+// 레스토랑 저장 리스트
+var REVIEW_SAVED_LIST = [0, 3, 5];
 
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
@@ -523,5 +526,32 @@ function switch_tabview(from, to) {
         if (to === 0) {
         } else if (to === 1) {
         }
+    }
+}
+
+function toggle_save(i) {
+    var new_review_list = [];
+
+    // 제거 
+    if (REVIEW_SAVED_LIST.includes(i)) {
+        var save_icon = document.getElementById('save-btn-' + i);
+        save_icon.setAttribute('src', MEDIA_ROOT + 'not_saved_icon.png');
+
+        for (let j = 0; j < REVIEW_SAVED_LIST.length; j++) {
+            if (i === REVIEW_SAVED_LIST[j]) {
+                // pass
+            } else {
+                new_review_list.push(REVIEW_SAVED_LIST[j]);
+            }
+        }
+        REVIEW_SAVED_LIST = new_review_list;
+    }
+
+    // 추가
+    else {
+        REVIEW_SAVED_LIST.push(i);
+
+        var save_icon = document.getElementById('save-btn-' + i);
+        save_icon.setAttribute('src', MEDIA_ROOT + 'saved_icon.png');
     }
 }

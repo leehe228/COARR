@@ -22,6 +22,17 @@
     top: 50%;
 }
 
+.review-block > .save-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.save-btn > img {
+    width: 24px;
+}
+
 .review-block > .writer-block {
     font-family: AppleSDGothicNeoR, serif;
     font-size: 16px;

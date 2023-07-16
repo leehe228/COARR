@@ -129,25 +129,40 @@ def review_gpt(data, jobject, CID):
 
     start = time.time()
     
-    review_en = ko2en(data)
-    eval_en = coarr_en(review_en)
-    eval_json = json.loads(eval_en)
-    
-    print(eval_json)
+    try:
+        review_en = ko2en(data)
+        eval_en = coarr_en(review_en)
+        eval_json = json.loads(eval_en)
+        
+        print(eval_json)
 
-    # ratings
-    eval_json["criterion1"]["ratings"] = int(eval_json["criterion1"]["ratings"][:-3])
-    eval_json["criterion2"]["ratings"] = int(eval_json["criterion2"]["ratings"][:-3])
-    
-    # evaluation
-    eval_json["criterion1"]["evaluation"] = en2ko(eval_json["criterion1"]["evaluation"])
-    eval_json["criterion2"]["evaluation"] = en2ko(eval_json["criterion2"]["evaluation"])
-    
-    end = time.time()
-    
-    print(f"### Took {end - start:.2f} sec ###\n")
-    print("### original evaluation in english ###")
-    print(eval_en)
+        # ratings
+        eval_json["criterion1"]["ratings"] = int(eval_json["criterion1"]["ratings"][:-3])
+        eval_json["criterion2"]["ratings"] = int(eval_json["criterion2"]["ratings"][:-3])
+        
+        # evaluation
+        eval_json["criterion1"]["evaluation"] = en2ko(eval_json["criterion1"]["evaluation"])
+        eval_json["criterion2"]["evaluation"] = en2ko(eval_json["criterion2"]["evaluation"])
+        
+        end = time.time()
+        
+        print(f"### Took {end - start:.2f} sec ###\n")
+        print("### original evaluation in english ###")
+        print(eval_en)
+
+    except Exception as e:
+        print(e)
+
+        eval_json = dict(
+            "criterion1": dict(
+                "ratings": "0",
+                "evalutation": "점수를 평가할 수 없습니다."
+            ),
+            "criterion2": dict(
+                "ratings": "0",
+                "evaluation": "점수를 평가할 수 없습니다."
+            )
+        )
     
     save_gpt_review(eval_json, jobject, CID)
 

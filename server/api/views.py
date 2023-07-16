@@ -23,11 +23,11 @@ deepl_api_key = os.environ.get('DEEPL_API_KEY')
 
 translator = deepl.Translator(deepl_api_key)
 
-def ko2en(text):
-    return translator.translate_text(text, source_lang="KO", target_lang="EN-US").text
+def ko2en(text_ko):
+    return translator.translate_text(text_ko, source_lang="KO", target_lang="EN-US").text
 
-def en2ko(text):
-    return translator.translate_text(text, target_lang="KO").text
+def en2ko(text_en):
+    return translator.translate_text(text_en, target_lang="KO").text
 
 def replaceHTML(text):
     text = re.sub('(<[^>]+)>', '', text)
@@ -81,9 +81,12 @@ def save_review(jdata):
 
 def coarr_en(review_en):
     prompt1 = """\
-    Evaluate the professionalism of the following restaurant review based on two criteria
-    1. including detailed and illustrative description of the flavors, textures, ingredients, cooking techniques, and overall taste experience of the food (score out of 20)
-    2. including detailed and illustrative description of the dining experience, service quality, the atmosphere of the restaurant, and the attentiveness of the staff (score out of 10)
+    Evaluate the professionalism of the following restaurant review based on two criteria.
+    If the review lacks of information or is not related about the restaurant, you must implement evaluations.
+    criteria1:
+    including detailed and illustrative description of the flavors, textures, ingredients, and overall taste experience of the food (score out of 20)
+    criteria2:
+    including detailed and illustrative description of the dining experience, service quality, the atmosphere of the restaurant (score out of 10)
     Review:
     """ + review_en
 
@@ -97,7 +100,8 @@ def coarr_en(review_en):
     )
     
     prompt2 = """\
-    return the article in json format without the overall evaluation
+    Return the evaluation in json format without the overall evaluation.
+    Even if the evaluation lacks of information, still fill out both evaluation part in the below format.
     format:
     {
         "criterion1": {
@@ -125,46 +129,36 @@ def coarr_en(review_en):
 
 
 @csrf_exempt
-def review_gpt(data, jobject, CID):
+def review_gpt(review_ko, jobject, CID):
 
-    start = time.time()
+    review_en = ko2en(review_ko)
+    eval_en = coarr_en(review_en)
+    eval_json = json.loads(eval_en)
     
+    # ratings
     try:
-        review_en = ko2en(data)
-        eval_en = coarr_en(review_en)
-        eval_json = json.loads(eval_en)
-        
-        print(eval_json)
-
-        # ratings
         eval_json["criterion1"]["ratings"] = int(eval_json["criterion1"]["ratings"][:-3])
-        eval_json["criterion2"]["ratings"] = int(eval_json["criterion2"]["ratings"][:-3])
-        
-        # evaluation
-        eval_json["criterion1"]["evaluation"] = en2ko(eval_json["criterion1"]["evaluation"])
-        eval_json["criterion2"]["evaluation"] = en2ko(eval_json["criterion2"]["evaluation"])
-        
-        end = time.time()
-        
-        print(f"### Took {end - start:.2f} sec ###\n")
-        print("### original evaluation in english ###")
-        print(eval_en)
-
     except Exception as e:
         print(e)
+        eval_json["criterion1"]["ratings"] = 0
+    try:
+        eval_json["criterion2"]["ratings"] = int(eval_json["criterion2"]["ratings"][:-3])
+    except Exception as e:
+        print(e)
+        eval_json["criterion2"]["ratings"] = 0
 
-        #eval_json = {
-        #    "criterion1":{
-        #        "ratings":0,
-        #        "evalutation":"점수를 평가할 수 없습니다."
-        #    },
-        #    "criterion2":{
-        #        "ratings":0,
-        #        "evaluation":"점수를 평가할 수 없습니다."
-        #    }
-        #}
-        eval_json = json.loads(eval_en)
-    
+    # evaluation
+    try:
+        eval_json["criterion1"]["evaluation"] = en2ko(eval_json["criterion1"]["evaluation"])
+    except Exception as e:
+        print(e)
+        eval_json["criterion1"]["evaluation"] = ""
+    try:
+        eval_json["criterion2"]["evaluation"] = en2ko(eval_json["criterion2"]["evaluation"])
+    except Exception as e:
+        print(e)
+        eval_json["criterion2"]["evaluation"] = ""        
+
     save_gpt_review(eval_json, jobject, CID)
 
 

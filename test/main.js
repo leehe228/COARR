@@ -484,12 +484,21 @@ function switch_tabview(from, to) {
         let restaurant_tabview_switch = document.getElementById('recomm-tabview-switch');
         let review_tabview_switch = document.getElementById('follow-tabview-switch');
 
+        let recomm_page = document.getElementById('recomm-page-review');
+        let follow_page = document.getElementById('follow-page-review');
+
         if (to === 0) {
             restaurant_tabview_switch.setAttribute('class', 'active');
             review_tabview_switch.removeAttribute('class');
+
+            recomm_page.setAttribute('class', 'main-page');
+            follow_page.setAttribute('class', 'main-page disabled');
         } else if (to === 1) {
             restaurant_tabview_switch.removeAttribute('class');
             review_tabview_switch.setAttribute('class', 'active');
+
+            recomm_page.setAttribute('class', 'main-page disabled');
+            follow_page.setAttribute('class', 'main-page');
         }
     }
     // restaurant

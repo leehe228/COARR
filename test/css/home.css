@@ -1,0 +1,45 @@
+.bar-block-left {
+    padding-top: 20px;
+}
+
+.bar-block-left > a {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hscroll-view {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    height: 420px;
+    background: #fff0;
+}
+
+.hscroll-view::-webkit-scrollbar {
+    display: none;
+}
+
+.hscroll-view > .rest-display {
+    scroll-snap-align: center;
+    min-width: 300px;
+    background: #f6f6f6;
+    height: 420px;
+    position: relative;
+}
+
+.rest-display > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hscroll-view > .first {
+    margin-left: 16px;
+}
+
+.hscroll-view > .last {
+    margin-right: 16px;
+}

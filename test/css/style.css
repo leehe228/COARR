@@ -147,7 +147,7 @@ body {
 }
 
 .main-page {
-    background: #ffffff;
+    background: #e1e1e1;
     position: fixed;
     top: 0;
     left: 0;
@@ -188,4 +188,31 @@ body {
     cursor: default;
     margin-left: 6px;
     margin-bottom: 2px;
+}
+
+.bar-block-left {
+    height: 56px;
+    flex-shrink: 0;
+    background: #FFF;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 16px;
+}
+
+.bar-block-center {
+    height: 56px;
+    flex-shrink: 0;
+    background: #FFF;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
 }

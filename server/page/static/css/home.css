@@ -4,14 +4,14 @@
 
 .bar-block-left > a {
     font-family: AppleSDGothicNeoR, serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
 .hscroll-view {
     display: flex;
     align-items: center;
-    column-gap: 16px;
+    column-gap: 8px;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
@@ -43,4 +43,83 @@
 
 .hscroll-view > .last {
     margin-right: 16px;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 90px;
+    right: 16px;
+    background: #A21E31;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 5px 1px #79797980;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.floating-button > img {
+    width: 36px;
+}
+
+.bar-block-center {
+    padding-top: 20px;
+}
+
+.bar-block-center > a {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 22px;
+    font-weight: bold;
+    user-select: none;
+    cursor: default;
+}
+
+.bar-block-center > div {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.bar-block-center > div > img {
+    height: 14px;
+}
+
+.review-block-long {
+    width: 180px;
+    height: 30px;
+    background: #ffffff;
+    border: 1px solid #fff0;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.review-block-long > .img-wrapper {
+    background: #eee;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.review-block-long > .img-wrapper > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+}
+
+.review-block-long > .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 12px;
+    margin-top: 12px;
 }

@@ -564,3 +564,7 @@ function toggle_save(i) {
         save_icon.setAttribute('src', MEDIA_ROOT + 'saved_icon.png');
     }
 }
+
+function refresh() {
+    window.location.reload();
+}

@@ -20,7 +20,7 @@
     </head>
     <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
 
-    <div id="recomm-page-review" class="main-page disabled">
+    <div id="recomm-page-review" class="main-page">
         <div class="bar-block-left">
             <a>오늘의 레스토랑</a>
         </div>
@@ -265,7 +265,7 @@
 
 
     <!-- Following Page -->
-    <div id="follow-page-review" class="main-page">
+    <div id="follow-page-review" class="main-page disabled">
         <div id="" class="follow-header-bar center">
             <div class="followers-block">
                 
@@ -300,14 +300,124 @@
                 <img src="http://beta.coarr.kro.kr:8080/media/websrc/down_arrow.png" alt="">
             </div>
         </div>
+
+        <div class="follow-review-block">
+            <div class="follower-header">
+                <div class="follower-info-block">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/profile3.png" alt="">
+                    <div class="follower-info-name">
+                        <div>
+                            <img src="http://beta.coarr.kro.kr:8080/media/websrc/partner_icon_red.png" alt="">
+                            <a>SeungJun Lee</a>
+                        </div>
+                        <a class="review-upload-date">3일 전</a>
+                    </div>
+                </div>
+                <div class="more-btn">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/more.png" alt="">
+                </div>
+            </div>
+
+            <div class="review-img-wrapper">
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest11.png" alt="">
+
+                <img class="grad" src="http://beta.coarr.kro.kr:8080/media/websrc/main_review_grad.png" alt="">
+                
+                <div class="review-title">
+                    <a>평범한 햄이 아니야! 이베리코 흑돼지 스페셜</a>
+                </div>
+
+                <div class="review-disc">
+                    <a>스페인에서 처음으로 하몽 맛을 본 후로 그 맛을 잊지 못하고 있습니다. 이후에 국내에서 비슷한 맛을 찾기 위해 수없이 돌아다녔는데 드디어 결실을 맺네요.</a>
+                </div>
+                
+                <div class="to-review-btn">
+                    <a>리뷰 보러가기</a>
+                    <img src="" alt="">
+                </div>
+            </div>
+            
+            <div class="review-footer">
+                <div class="btn-block">
+                    <div class="like" onclick="add_dummy('like', 0);">
+                        <img src="http://beta.coarr.kro.kr:8080/media/websrc/like_icon.png" alt="">
+                        <a id="review-like-0">1253</a>
+                    </div>
+                    <div class="saved" onclick="add_dummy('save', 0);">
+                        <img src="http://beta.coarr.kro.kr:8080/media/websrc/save_icon_black.png" alt="">
+                        <a id="review-saved-0">429</a>
+                    </div>
+                </div>
+
+                <div class="share-btn">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/share_icon.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="follow-review-block">
+            <div class="follower-header">
+                <div class="follower-info-block">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/profile4.jpeg" alt="">
+                    <div class="follower-info-name">
+                        <div>
+<!--                             <img src="http://beta.coarr.kro.kr:8080/media/websrc/partner_icon_red.png" alt=""> -->
+                            <a>Eunje Lee</a>
+                        </div>
+                        <a class="review-upload-date">3일 전</a>
+                    </div>
+                </div>
+                <div class="more-btn">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/more.png" alt="">
+                </div>
+            </div>
+
+            <div class="review-img-wrapper">
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest8.jpeg" alt="">
+
+                <img class="grad" src="http://beta.coarr.kro.kr:8080/media/websrc/main_review_grad.png" alt="">
+                
+                <div class="review-title">
+                    <a>점심시간, 맛있는 사시미 한접시로 한끼식사</a>
+                </div>
+
+                <div class="review-disc">
+                    <a>이 동네에 살면서 맛있는 일식집을 자주 찾아다니곤 하는데 오늘 한 곳 더 찾게 되었네요. 
+                        이번엔 사시미 가게 입니다. 점심부터 사시미를 찾으시는분들이 많으실 줄은 몰랐습니다.</a>
+                </div>
+                
+                <div class="to-review-btn">
+                    <a>리뷰 보러가기</a>
+                    <img src="" alt="">
+                </div>
+            </div>
+            
+            <div class="review-footer">
+                <div class="btn-block">
+                    <div class="like" onclick="add_dummy('like', 1);">
+                        <img src="http://beta.coarr.kro.kr:8080/media/websrc/like_icon.png" alt="">
+                        <a id="review-like-1">924</a>
+                    </div>
+                    <div class="saved" onclick="add_dummy('save', 1);">
+                        <img src="http://beta.coarr.kro.kr:8080/media/websrc/save_icon_black.png" alt="">
+                        <a id="review-saved-1">685</a>
+                    </div>
+                </div>
+
+                <div class="share-btn">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/share_icon.png" alt="">
+                </div>
+            </div>
+        </div>
+        
     </div>
     
     <!-- Pair Header -->
     <div class="pair-header">
 
         <div class="pair-title">
-            <div id="recomm-tabview-switch" class="" onclick="switch_tabview(0, 0);">추천</div>
-            <div id="follow-tabview-switch" class="active" onclick="switch_tabview(0, 1);">팔로잉</div>
+            <div id="recomm-tabview-switch" class="active" onclick="switch_tabview(0, 0);">추천</div>
+            <div id="follow-tabview-switch" class="" onclick="switch_tabview(0, 1);">팔로잉</div>
         </div>
 
         <div class="header-button-block">

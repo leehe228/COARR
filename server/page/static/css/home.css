@@ -174,6 +174,7 @@
 }
 
 .follow-header-bar {
+    margin-top: 10px;
     height: 100px;
     flex-shrink: 0;
     background: #FFF;
@@ -442,4 +443,203 @@
     color: #9E9E9E;
     margin-bottom: 8px;
     padding-left: 18px;
+}
+
+.follow-review-block {
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+#follow-page-review {
+    margin-bottom: 72px;
+}
+
+.follow-review-block > .follower-header {
+    height: 85px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+.follow-review-block > .review-img-wrapper {
+    height: 600px;
+    position: relative;
+}
+
+.review-img-wrapper > img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.review-img-wrapper > .to-review-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 32px;
+    background: rgba(224, 224, 224, 0.50);
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+}
+
+.review-img-wrapper > .review-title {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 180px;
+    left: 32px;
+    color: #fff;
+    width: 60%;
+    border: none;
+}
+
+.review-img-wrapper > .review-disc {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+    position: absolute;
+    bottom: 100px;
+    left: 32px;
+    right: 32px;
+    color: rgba(255, 255, 255, 0.80);
+    border: none;
+}
+
+.review-img-wrapper > .grad {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 260px;
+    width: 100%;
+}
+
+.follow-review-block > .review-footer {
+    height: 65px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background: #fff;
+}
+
+.follower-header > .follower-info-block {
+    display: flex;
+    height: 75px;
+    flex-grow: 1;
+    margin-left: 16px;
+    margin-right: 16px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.follower-header > .follower-info-block > img {
+    width: 56px;
+    height: 56px;
+    border-radius: 30px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.follower-header > .follower-info-block > .follower-info-name {
+    display:flex;
+    margin-top: 4px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.follower-info-name > div {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.review-upload-date {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 14px;
+    color: #212121;
+}
+
+.follower-header > .more-btn {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    border: 1px solid #fff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-footer > .btn-block {
+    display: flex;
+    margin-left: 24px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.review-footer > .btn-block > .like > img {
+    height: 28px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.review-footer > .btn-block > .saved > img {
+    height: 28px;
+    object-fit: cover;
+    margin-right: 9px;
+}
+
+.btn-block > * > a {
+    margin-top: 4px;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+}
+
+.saved {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+}
+
+.share-btn {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.share-btn > img {
+    width: 24px;
+}
+
+#follow-page-review {
+    background: #F5F5F5;
 }

@@ -15,6 +15,10 @@ import sys
 def home(request):
     return render(request, 'page/home.html', {})
 
+@csrf_exempt
+def magazine(request):
+    return render(request, 'page/magazine.html', {})
+
 
 ### REVIEW ###
 

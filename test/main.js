@@ -596,3 +596,17 @@ function toggle_magazine_save(i) {
 function refresh() {
     window.location.reload();
 }
+
+function add_dummy(t, i) {
+    console.log(t + ', ' + i);
+    
+    if (t === 'like') {
+        let like_text = document.getElementById('review-like-' + i);
+        like_text.textContent = parseInt(like_text.textContent) + 1;
+    }
+
+    else if (t ==='save') {
+        let save_text = document.getElementById('review-saved-' + i);
+        save_text.textContent = parseInt(save_text.textContent) + 1;
+    }
+}

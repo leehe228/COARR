@@ -147,7 +147,7 @@ body {
 }
 
 .main-page {
-    background: #e1e1e1;
+    background: #ffffff;
     position: fixed;
     top: 0;
     left: 0;
@@ -207,8 +207,8 @@ body {
     height: 56px;
     flex-shrink: 0;
     background: #FFF;
-    border-top: 1px solid #dfdfdf;
-    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

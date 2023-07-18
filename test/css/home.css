@@ -26,7 +26,7 @@
 .hscroll-view > .rest-display {
     scroll-snap-align: center;
     min-width: 300px;
-    background: #f6f6f6;
+    background: #eee;
     height: 420px;
     position: relative;
 }
@@ -93,12 +93,24 @@
 }
 
 .review-block-long {
-    width: 180px;
-    height: 30px;
+    width: 220px;
+    height: 320px;
     background: #ffffff;
     border: 1px solid #fff0;
     overflow: hidden;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
+}
+
+.review-block-long > .text-wrapper {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.review-block-long > .text-wrapper > a {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 14px;
+    font-weight: normal;
 }
 
 .review-block-long > .img-wrapper {
@@ -122,4 +134,31 @@
     justify-content: flex-start;
     margin-left: 12px;
     margin-top: 12px;
+}
+
+.hscroll-view > .rest-display-new {
+    scroll-snap-align: center;
+    min-width: 220px;
+    background: #ffffff;
+    height: 380px;
+    position: relative;
+}
+
+.hscroll-view-new {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    height: 380px;
+    background: #fff0;
+}
+
+.hscroll-view-new > .first {
+    margin-left: 8px;
+}
+
+.hscroll-view-new > .last {
+    margin-right: 8px;
 }

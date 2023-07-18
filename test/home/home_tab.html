@@ -20,7 +20,7 @@
     </head>
     <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
 
-    <div id="recomm-page-review" class="main-page">
+    <div id="recomm-page-review" class="main-page disabled">
         <div class="bar-block-left">
             <a>오늘의 레스토랑</a>
         </div>
@@ -105,6 +105,7 @@
                 <div class="img-wrapper">
                     <img src="../websrc/rest6.jpeg" alt="">
                 </div>
+                <img class="grad" src="../websrc/linear_grad_home_review.png" alt="">
                 <div class="save-btn" onclick="toggle_save(0);">
                     <img id="save-btn-0" src="../websrc/saved_icon.png" alt="">
                 </div>
@@ -122,6 +123,7 @@
                 <div class="img-wrapper">
                     <img src="../websrc/rest16.jpeg" alt="">
                 </div>
+                <img class="grad" src="../websrc/linear_grad_home_review.png" alt="">
                 <div class="save-btn" onclick="toggle_save(1);">
                     <img id="save-btn-1" src="../websrc/not_saved_icon.png" alt="">
                 </div>
@@ -139,6 +141,7 @@
                 <div class="img-wrapper">
                     <img src="../websrc/rest8.jpeg" alt="">
                 </div>
+                <img class="grad" src="../websrc/linear_grad_home_review.png" alt="">
                 <div class="save-btn" onclick="toggle_save(2);">
                     <img id="save-btn-2" src="../websrc/not_saved_icon.png" alt="">
                 </div>
@@ -167,6 +170,7 @@
                 <div class="img-wrapper">
                     <img src="../websrc/mag3.png" alt="">
                 </div>
+                <img class="grad" src="../websrc/linear_grad_home_magazine.png" alt="">
                 <div class="writer-block">
                     <a>[테크] 2023 / 07 / 05</a>
                 </div>
@@ -182,6 +186,7 @@
                 <div class="img-wrapper">
                     <img src="../websrc/mag2.png" alt="">
                 </div>
+                <img class="grad" src="../websrc/linear_grad_home_magazine.png" alt="">
                 <div class="writer-block">
                     <a>[식당] 2023 / 07 / 05</a>
                 </div>
@@ -197,6 +202,7 @@
                 <div class="img-wrapper">
                     <img src="../websrc/mag1.png" alt="">
                 </div>
+                <img class="grad" src="../websrc/linear_grad_home_magazine.png" alt="">
                 <div class="writer-block">
                     <a>[인물] 2023 / 07 / 05</a>
                 </div>
@@ -259,7 +265,7 @@
 
 
     <!-- Following Page -->
-    <div id="follow-page-review" class="main-page disabled">
+    <div id="follow-page-review" class="main-page">
         <div id="" class="follow-header-bar center">
             <div class="followers-block">
                 
@@ -300,8 +306,8 @@
     <div class="pair-header">
 
         <div class="pair-title">
-            <div id="recomm-tabview-switch" class="active" onclick="switch_tabview(0, 0);">추천</div>
-            <div id="follow-tabview-switch" class="" onclick="switch_tabview(0, 1);">팔로잉</div>
+            <div id="recomm-tabview-switch" class="" onclick="switch_tabview(0, 0);">추천</div>
+            <div id="follow-tabview-switch" class="active" onclick="switch_tabview(0, 1);">팔로잉</div>
         </div>
 
         <div class="header-button-block">

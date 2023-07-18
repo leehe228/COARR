@@ -258,6 +258,14 @@
     position: relative;
 }
 
+.new-review-block > .grad {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 260px;
+}
+
 .new-review-block > .img-wrapper {
     background: #eee;
     width: 100%;
@@ -324,6 +332,14 @@
     width: 100%;
     height: 100%;
     border-radius: 20px;
+}
+
+.magazine-block > .grad {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 48px;
+    width: 260px;
 }
 
 .magazine-block > .img-wrapper > img {

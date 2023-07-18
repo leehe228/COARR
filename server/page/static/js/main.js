@@ -3,7 +3,7 @@ var GLOBAL_SELECT_RESTAURANT = "";
 var GLOBAL_SELECT_RESTAURANT_ID = -1;
 
 // 식당
-let MEDIA_ROOT = "http://beta.coarr.kro.kr:8080/media/websrc/"
+let MEDIA_ROOT = "../websrc/"
 var RESTAURANTS_LIST = ["0::밍글스::서울 강남구 도산대로67길 19 힙탑빌딩 2층::rest1.jpeg", "1::서울신라호텔 라연::서울 중구 동호로 249::rest2.jpeg", "2::온6.5::서울 종로구 북촌로1길 28 지상1층 온6.5::new_rest-1.png", "3::솔밤::서울 강남구 도산대로37길 6 4층::new_rest-2.png", "4::이속우화진::서울 강남구 영동대로 513::rest5.jpeg"];
 
 // 레스토랑 저장 리스트
@@ -484,12 +484,21 @@ function switch_tabview(from, to) {
         let restaurant_tabview_switch = document.getElementById('recomm-tabview-switch');
         let review_tabview_switch = document.getElementById('follow-tabview-switch');
 
+        let recomm_page = document.getElementById('recomm-page-review');
+        let follow_page = document.getElementById('follow-page-review');
+
         if (to === 0) {
             restaurant_tabview_switch.setAttribute('class', 'active');
             review_tabview_switch.removeAttribute('class');
+
+            recomm_page.setAttribute('class', 'main-page');
+            follow_page.setAttribute('class', 'main-page disabled');
         } else if (to === 1) {
             restaurant_tabview_switch.removeAttribute('class');
             review_tabview_switch.setAttribute('class', 'active');
+
+            recomm_page.setAttribute('class', 'main-page disabled');
+            follow_page.setAttribute('class', 'main-page');
         }
     }
     // restaurant

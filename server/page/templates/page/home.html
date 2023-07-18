@@ -20,7 +20,7 @@
     </head>
     <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
 
-    <div id="recomm-page-review" class="main-page">
+    <div id="recomm-page-review" class="main-page disabled">
         <div class="bar-block-left">
             <a>오늘의 레스토랑</a>
         </div>
@@ -153,16 +153,51 @@
 
     </div>
 
-    <div id="follow-page-review" class="main-page disabled">
 
+    <!-- Following Page -->
+    <div id="follow-page-review" class="main-page">
+        <div id="" class="follow-header-bar center">
+            <div class="followers-block">
+                
+                <div class="follower-icon">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/home-profile-1.png" alt="">
+                    <a>SeungJun</a>
+                </div>
+
+                <div class="follower-icon">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/home-profile-2.png" alt="">
+                    <a>TaekSon</a>
+                </div>
+
+                <div class="follower-icon">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/home-profile-3.png" alt="">
+                    <a>EunJe</a>
+                </div>
+
+                <div class="follower-icon">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/home-profile-4.png" alt="">
+                    <a>RyongHee</a>
+                </div>
+
+                <div class="follower-icon">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/home-profile-5.png" alt="">
+                    <a>Hoeun</a>
+                </div>
+                
+            </div>
+
+            <div id="filter-btn" class="btn">
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/down_arrow.png" alt="">
+            </div>
+        </div>
     </div>
     
     <!-- Pair Header -->
     <div class="pair-header">
 
         <div class="pair-title">
-            <div id="recomm-tabview-switch" class="active" onclick="switch_tabview(0, 0);">추천</div>
-            <div id="follow-tabview-switch" class="" onclick="switch_tabview(0, 1);">팔로잉</div>
+            <div id="recomm-tabview-switch" class="" onclick="switch_tabview(0, 0);">추천</div>
+            <div id="follow-tabview-switch" class="active" onclick="switch_tabview(0, 1);">팔로잉</div>
         </div>
 
         <div class="header-button-block">
@@ -177,7 +212,7 @@
     </div>
 
     <!-- Floating Button -->
-    <div class="floating-button">
+    <div class="floating-button" onclick="backto('review');">
         <img src="http://beta.coarr.kro.kr:8080/media/websrc/add_logo.png" alt="">
     </div>
 

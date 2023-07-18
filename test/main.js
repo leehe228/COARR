@@ -8,6 +8,7 @@ var RESTAURANTS_LIST = ["0::밍글스::서울 강남구 도산대로67길 19 힙
 
 // 레스토랑 저장 리스트
 var REVIEW_SAVED_LIST = [0, 3, 5];
+var MAGAZINE_SAVED_LIST = [];
 
 function to_follow() {
     let recomm_page = document.getElementById('main-page-recommend');
@@ -561,6 +562,33 @@ function toggle_save(i) {
         REVIEW_SAVED_LIST.push(i);
 
         var save_icon = document.getElementById('save-btn-' + i);
+        save_icon.setAttribute('src', MEDIA_ROOT + 'saved_icon.png');
+    }
+}
+
+function toggle_magazine_save(i) {
+    var new_magazine_list = [];
+
+    // 제거 
+    if (MAGAZINE_SAVED_LIST.includes(i)) {
+        var save_icon = document.getElementById('mag-save-btn-' + i);
+        save_icon.setAttribute('src', MEDIA_ROOT + 'not_saved_icon.png');
+
+        for (let j = 0; j < MAGAZINE_SAVED_LIST.length; j++) {
+            if (i === MAGAZINE_SAVED_LIST[j]) {
+                // pass
+            } else {
+                new_magazine_list.push(MAGAZINE_SAVED_LIST[j]);
+            }
+        }
+        MAGAZINE_SAVED_LIST = new_magazine_list;
+    }
+
+    // 추가
+    else {
+        MAGAZINE_SAVED_LIST.push(i);
+
+        var save_icon = document.getElementById('mag-save-btn-' + i);
         save_icon.setAttribute('src', MEDIA_ROOT + 'saved_icon.png');
     }
 }

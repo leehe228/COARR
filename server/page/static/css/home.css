@@ -163,6 +163,10 @@
     margin-right: 8px;
 }
 
+.hscroll-view-new::-webkit-scrollbar {
+    display:none;
+}
+
 .tool-header.center {
     display: flex;
     justify-content: space-between;
@@ -243,4 +247,125 @@
 
 .header {
     border-bottom: 1px solid #ececec;
+}
+
+.new-review-block {
+    min-width: 260px;
+    height: 360px;
+    background: #ffffff;
+    border: 1px solid #f000;
+    overflow: hidden;
+    position: relative;
+}
+
+.new-review-block > .img-wrapper {
+    background: #eee;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.new-review-block > .img-wrapper > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+}
+
+.new-review-block > .save-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.new-review-block > .writer-block {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+    position: absolute;
+    bottom: 78px;
+    left: 16px;
+    right: 16px;
+}
+
+.new-review-block > .writer-block > a {
+    color: #fff;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+}
+
+.new-review-block > .title-block {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+    position: absolute;
+    top: 289px;
+    left: 12px;
+    right: 12px;
+    color: #fff;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* magazine */
+.magazine-block {
+    min-width: 260px;
+    height: 360px;
+    background: #ffffff;
+    border: 1px solid #f000;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 48px;
+}
+
+.magazine-block > .img-wrapper {
+    background: #eee;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.magazine-block > .img-wrapper > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+}
+
+.magazine-block > .save-btn {
+    position: absolute;
+    bottom: 56px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.magazine-block > .writer-block {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+    position: absolute;
+    bottom: 57px;
+    left: 16px;
+    right: 16px;
+}
+
+.magazine-block > .writer-block > a {
+    color: #fff;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+}
+
+.magazine-block > .title-block {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 260px;
+    right: 12px;
+    color: #000;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
 }

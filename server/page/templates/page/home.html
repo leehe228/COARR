@@ -20,7 +20,7 @@
     </head>
     <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
 
-    <div id="recomm-page-review" class="main-page disabled">
+    <div id="recomm-page-review" class="main-page">
         <div class="bar-block-left">
             <a>오늘의 레스토랑</a>
         </div>
@@ -99,15 +99,57 @@
             </div>
         </div>
 
-        <div class="hscroll-view">
-            <div class="rest-display first">
-                <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest1.jpeg" alt="">
+        <div class="hscroll-view" style="height: 360px;">
+
+            <div class="new-review-block" style="margin-left: 8px;">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest6.jpeg" alt="">
+                </div>
+                <div class="save-btn" onclick="toggle_save(0);">
+                    <img id="save-btn-0" src="http://beta.coarr.kro.kr:8080/media/websrc/saved_icon.png" alt="">
+                </div>
+                <div class="writer-block">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/twin_user_icon.png" alt="">
+                    <a>SeungJun</a>
+                </div>
+                <div class="title-block">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/approved_icon.png" alt="">
+                    니혼료리 타카무라 日本料理たかむら
+                </div>
             </div>
-            <div>
-                
+            
+            <div class="new-review-block">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest16.jpeg" alt="">
+                </div>
+                <div class="save-btn" onclick="toggle_save(1);">
+                    <img id="save-btn-1" src="http://beta.coarr.kro.kr:8080/media/websrc/not_saved_icon.png" alt="">
+                </div>
+                <div class="writer-block">
+<!--                     <img src="http://beta.coarr.kro.kr:8080/media/websrc/twin_user_icon.png" alt=""> -->
+                    <a>EunJe Lee</a>
+                </div>
+                <div class="title-block">
+<!--                     <img src="http://beta.coarr.kro.kr:8080/media/websrc/approved_icon.png" alt=""> -->
+                    평범한 햄이 아니야! 이베리코 흑돼지 스페셜
+                </div>
             </div>
-            <div class="rest-display last">
-                <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest2.jpeg" alt="">
+
+            <div class="new-review-block last" style="margin-right: 8px;">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest8.jpeg" alt="">
+                </div>
+                <div class="save-btn" onclick="toggle_save(2);">
+                    <img id="save-btn-2" src="http://beta.coarr.kro.kr:8080/media/websrc/not_saved_icon.png" alt="">
+                </div>
+                <div class="writer-block">
+<!--                     <img src="http://beta.coarr.kro.kr:8080/media/websrc/twin_user_icon.png" alt=""> -->
+                    <a>TaekSon Park</a>
+                </div>
+                <div class="title-block">
+<!--                     <img src="http://beta.coarr.kro.kr:8080/media/websrc/approved_icon.png" alt=""> -->
+                    점심시간, 맛있는 한끼의 사시미 한접시
+                </div>
             </div>
         </div>
 
@@ -119,16 +161,53 @@
             </div>
         </div>
 
-        <div class="hscroll-view">
-            <div class="rest-display first">
-                <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest1.jpeg" alt="">
+        <div class="hscroll-view" style="height: 410px;">
+
+            <div class="magazine-block" style="margin-left: 8px;">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/mag3.png" alt="">
+                </div>
+                <div class="writer-block">
+                    <a>[테크] 2023 / 07 / 05</a>
+                </div>
+                <div class="save-btn" onclick="toggle_magazine_save(0);">
+                    <img id="mag-save-btn-0" src="http://beta.coarr.kro.kr:8080/media/websrc/not_saved_icon.png" alt="">
+                </div>
+                <div class="title-block">
+                    외식에 기술을 더하다. 푸드...
+                </div>
             </div>
-            <div>
-                
+
+            <div class="magazine-block" style="margin-left: 8px;">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/mag2.png" alt="">
+                </div>
+                <div class="writer-block">
+                    <a>[식당] 2023 / 07 / 05</a>
+                </div>
+                <div class="save-btn" onclick="toggle_magazine_save(1);">
+                    <img id="mag-save-btn-1" src="http://beta.coarr.kro.kr:8080/media/websrc/not_saved_icon.png" alt="">
+                </div>
+                <div class="title-block">
+                    화양연화를 그대로 가져다...
+                </div>
             </div>
-            <div class="rest-display last">
-                <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest2.jpeg" alt="">
+
+            <div class="magazine-block" style="margin-left: 8px;">
+                <div class="img-wrapper">
+                    <img src="http://beta.coarr.kro.kr:8080/media/websrc/mag1.png" alt="">
+                </div>
+                <div class="writer-block">
+                    <a>[인물] 2023 / 07 / 05</a>
+                </div>
+                <div class="save-btn" onclick="toggle_magazine_save(2);">
+                    <img id="mag-save-btn-2" src="http://beta.coarr.kro.kr:8080/media/websrc/not_saved_icon.png" alt="">
+                </div>
+                <div class="title-block">
+                    푸드 디자인부터 전직 디자...
+                </div>
             </div>
+        
         </div>
 
         <div class="bar-block-center">
@@ -155,7 +234,7 @@
 
 
     <!-- Following Page -->
-    <div id="follow-page-review" class="main-page">
+    <div id="follow-page-review" class="main-page disabled">
         <div id="" class="follow-header-bar center">
             <div class="followers-block">
                 
@@ -196,8 +275,8 @@
     <div class="pair-header">
 
         <div class="pair-title">
-            <div id="recomm-tabview-switch" class="" onclick="switch_tabview(0, 0);">추천</div>
-            <div id="follow-tabview-switch" class="active" onclick="switch_tabview(0, 1);">팔로잉</div>
+            <div id="recomm-tabview-switch" class="active" onclick="switch_tabview(0, 0);">추천</div>
+            <div id="follow-tabview-switch" class="" onclick="switch_tabview(0, 1);">팔로잉</div>
         </div>
 
         <div class="header-button-block">

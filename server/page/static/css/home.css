@@ -174,7 +174,7 @@
 }
 
 .follow-header-bar {
-    margin-top: 10px;
+    padding-top: 10px;
     height: 100px;
     flex-shrink: 0;
     background: #FFF;

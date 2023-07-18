@@ -369,3 +369,61 @@
     font-weight: bold;
     line-height: 1.5;
 }
+
+.partner-block {
+    border: 2px solid #9E9E9E;
+    height: 400px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.partner-block > .partner-header {
+    border: 1px solid #ffffff;
+    height: 64px;
+    padding-left: 18px;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 260px;
+}
+
+.partner-header > img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.partner-header > a {
+    margin-left: 12px;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.partner-block > .text-block {
+    border: 1px solid #fff;
+    width: 244px;
+    margin-left: 18px;
+    margin-right: 18px;
+    height: 280px;
+
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 1.2;
+    text-align: start;
+}
+
+.prefer-text {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+    color: #9E9E9E;
+    margin-bottom: 8px;
+    padding-left: 18px;
+}

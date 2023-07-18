@@ -240,3 +240,7 @@
     text-align: center;
     margin-top: 2px;
 }
+
+.header {
+    border-bottom: 1px solid #ececec;
+}

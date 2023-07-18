@@ -1,0 +1,109 @@
+.bar-block-center {
+    height: 56px;
+    flex-shrink: 0;
+    background: #FFF;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #e7e7e7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.bar-block-center > a {
+    color: #000;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.promotion-scroll-view {
+    position: fixed;
+    background: #ffffff;
+    padding-top: 58px;
+    padding-bottom: 72px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+}
+
+.promotion-block {
+    min-height: 380px;
+    max-height: 380px;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    position: relative;
+}
+
+.promotion-block > .main-img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.promotion-block > .badge-img {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    width: 160px;
+}
+
+.promotion-block > .title {
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    color: #fff;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.promotion-block > .text-block {
+    position: absolute;
+    top: 240px;
+    border: 1px solid #0000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.text-block > a {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.text-block > .disc {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #9E9E9E;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.text-block > .sub-title {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #000000;
+}

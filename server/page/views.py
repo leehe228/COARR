@@ -61,7 +61,7 @@ def review_detail(request):
 
     print(title)
 
-    return render(request, 'page/review_detail.html', {title: title, content1: content1, content2: content2, rid: rid, rname: rname, uid: uid, visit_date: visit_date})
+    return render(request, 'page/review_detail.html', {'title': title, 'content1': content1, 'content2': content2, 'rid': rid, 'rname': rname, 'uid': uid, 'visit_date': visit_date})
 
 
 ### PROMOTION ###

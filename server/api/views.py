@@ -133,7 +133,7 @@ def coarr_en(review_en):
 
 
 @csrf_exempt
-async def review_gpt(review_ko, jobject, CID):
+def review_gpt(review_ko, jobject, CID):
 
     review_en = ko2en(review_ko)
     eval_en = coarr_en(review_en)

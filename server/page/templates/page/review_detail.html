@@ -31,7 +31,9 @@
         <div class="trans-view"></div>
 
         <div class="main-view">
-            <div class="dummy"></div>
+            <div class="dummy">
+                <a>{{ content1 }}</a>
+            </div>
 
             <div class="dummy"></div>
 
@@ -46,9 +48,7 @@
         <div class="back_btn" onclick="backto('restaurant?tab=review');">
             <img id="review-title-back-icon" src="http://beta.coarr.kro.kr:8080/media/websrc/back_arrow_white.png" alt="">
         </div>
-        <a onclick="refresh();">
-            {{ title }}
-        </a>
+        <a onclick="refresh();">{{ title }}</a>
         <div class="back_btn"></div>
     </div>
 

@@ -59,6 +59,8 @@ def review_detail(request):
     uid = datas['UID']
     visit_date = datas['visit_date']
 
+    print(title)
+
     return render(request, 'page/review_detail.html', {title: title, content1: content1, content2: content2, rid: rid, rname: rname, uid: uid, visit_date: visit_date})
 
 

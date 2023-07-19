@@ -134,7 +134,7 @@
 
             {% for data in datas %}
 
-            <div class="review-block" onclick="backto('view?cid={{ data.cid }}');">
+            <div class="review-block" onclick="backto('view?cid={{ data['cid'] }}');">
                 <div class="img-wrapper"> </div>
                 <div class="save-btn">
                     <img id="save-btn-x" src="http://beta.coarr.kro.kr:8080/media/websrc/not_saved_icon.png" alt="">
@@ -143,7 +143,7 @@
                     <a>Test User</a>
                 </div>
                 <div class="title-block">
-                    data.title
+                    {{ data['title'] }}
                 </div>
             </div>
             

@@ -46,7 +46,7 @@ def review_tab(request):
 
         datas.append({'cid': content.CID, 'title': temp['title']})
 
-    return render(request, 'page/review_tab.html', {datas : datas})
+    return render(request, 'page/review_tab.html', {'datas' : datas})
 
 @csrf_exempt
 def review_detail(request):

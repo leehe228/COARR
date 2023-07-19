@@ -35,7 +35,18 @@ def review_uploaded(request):
 
 @csrf_exempt
 def review_tab(request):
-    return render(request, 'page/review_tab.html', {})
+
+    contents = Content.objects.all()
+
+    datas = []
+
+    for content in contents:
+        
+        temp = json.loads(content.CONTENT)
+
+        datas.append({'cid': content.CID, 'title': temp['title']})
+
+    return render(request, 'page/review_tab.html', {datas : datas})
 
 @csrf_exempt
 def review_detail(request):

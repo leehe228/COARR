@@ -50,9 +50,16 @@ def review_detail(request):
     print(bp.CONTENT)
 
     datas = json.loads(bp.CONTENT)
-    print(datas)
+    
+    title = datas['title']
+    content1 = datas['content1']
+    content2 = datas['content2']
+    rid = datas['RID']
+    rname = datas['RNAME']
+    uid = datas['UID']
+    visit_date = datas['visit_date']
 
-    return render(request, 'page/review_detail.html', {datas : datas})
+    return render(request, 'page/review_detail.html', {title: title, content1: content1, content2: content2, rid: rid, rname: rname, uid: uid, visit_date: visit_date})
 
 
 ### PROMOTION ###

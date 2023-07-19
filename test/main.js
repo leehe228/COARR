@@ -160,7 +160,7 @@ function upload_review() {
     data.content1 = editor1.innerHTML.trim();
     data.content2 = editor2.innerHTML.trim();
     data.content1_text = editor1.textContent.trim();
-    data_content2_text = editor2.textContent.trim();
+    data.content2_text = editor2.textContent.trim();
     data.RID = GLOBAL_SELECT_RESTAURANT_ID;
     data.RNAME = GLOBAL_SELECT_RESTAURANT;
     data.visit_date = GLOBAL_SELECT_VISIT_DAY;

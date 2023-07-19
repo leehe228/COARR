@@ -58,8 +58,12 @@ def review_detail(request):
     rname = datas['RNAME']
     uid = datas['UID']
     visit_date = datas['visit_date']
+    num_follows = 217
+    writer_name = "SeungJun Lee"
 
-    return render(request, 'page/review_detail.html', {'title': title, 'content1': content1, 'content2': content2, 'rid': rid, 'rname': rname, 'uid': uid, 'visit_date': visit_date})
+    return render(request, 'page/review_detail.html', {'title': title, 'content1': content1, 'content2': content2, 
+                                                       'rid': rid, 'rname': rname, 'uid': uid, 'visit_date': visit_date, 
+                                                       'num_follows': num_follows, 'writer_name': writer_name})
 
 
 ### PROMOTION ###

@@ -45,7 +45,7 @@ def review_tab(request):
         temp = json.loads(content.CONTENT)
 
         if content.CID == 52:
-            break
+            continue
 
         datas.append([str(content.CID), temp['title']])
 

@@ -50,6 +50,10 @@ def upload_review(request):
 
     text_data = title + "\n" + content1 + "\n" + content2
 
+    print("=" * 30)
+    print("TEXT DATA : " + text_data)
+    print("=" * 30)
+
     # save
     CID = save_review(body)
     print(CID)
@@ -101,7 +105,7 @@ def coarr_en(review_en):
     
     prompt2 = """\
     Return the evaluation in json format without the overall evaluation.
-    Even if the evaluation lacks of information, still fill out both evaluation part in the below format.
+    Even if the evaluation lacks information, still fill out both evaluation part in the below format.
     format:
     {
         "criterion1": {

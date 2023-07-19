@@ -34,6 +34,13 @@ def review_uploaded(request):
 def review_tab(request):
     return render(request, 'page/review_tab.html', {})
 
+@csrf_exempt
+def review_detail(request):
+
+    print(request.POST.get('cid'))
+
+    return render(request, 'page/review_detail.html', {})
+
 
 ### PROMOTION ###
 

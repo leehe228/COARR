@@ -610,3 +610,26 @@ function add_dummy(t, i) {
         save_text.textContent = parseInt(save_text.textContent) + 1;
     }
 }
+
+var review_page_gray_flag = false;
+
+function init_review_page() {
+    document.getElementById("main-review-page").addEventListener("scroll", evt => {
+        let review_title_back = document.getElementById('review-title-bar');
+        let review_back_icon = document.getElementById('review-title-back-icon');
+        
+        console.log(evt.target.scrollTop);
+
+        if (evt.target.scrollTop > 510 && review_page_gray_flag === false) {
+            review_title_back.setAttribute('class', 'bar-block-center gray-back');
+            review_back_icon.setAttribute('src', MEDIA_ROOT + 'btn_back.png');
+            review_page_gray_flag = true;
+        }
+
+        else if (evt.target.scrollTop < 510 && review_page_gray_flag === true) {
+            review_title_back.setAttribute('class', 'bar-block-center');
+            review_back_icon.setAttribute('src', MEDIA_ROOT + 'back_arrow_white.png');
+            review_page_gray_flag = false;
+        }
+    });  
+}

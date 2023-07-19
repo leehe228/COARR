@@ -10,6 +10,7 @@ urlpatterns = [
     path('review', views.review, name='review'),
     path('review_uploaded', views.review_uploaded, name='review_uploaded'),
     path('restaurant', views.review_tab, name='review_tab'),
+    path('view', views.review_detail, name='review_detail'),
 
     ### PROMOTION ###
     path('promotion', views.promotion_tab, name='promotion_tab'),

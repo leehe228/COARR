@@ -190,3 +190,116 @@
     justify-content: center;
     user-select: none;
 }
+
+
+.bar-block-center {
+    padding-top: 10px;
+    height: 80px;
+    flex-shrink: 0;
+    background: #0000;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.gray-back {
+    background: #ffffff;
+    border-bottom: #eee !important;
+}
+
+.gray-back > a {
+    color: #000 !important;
+}
+
+.grad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 600px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.30) 100%);
+}
+
+.bar-block-center > a {
+    color: #fff;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: -0.4px;
+}
+
+.bar-block-center > .back_btn {
+    width: 32px;
+}
+
+.title-img-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 600px;
+}
+
+.title-img-wrapper > img {
+    height: 600px;
+    object-fit: cover;
+}
+
+.dummy {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+}
+
+/* Footer */
+.spread-footer-bar {
+    height: 40px;
+    flex-shrink: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    justify-content: space-between;
+}
+
+.spread-footer-bar > img {
+    cursor: pointer;
+    user-select: none;
+    margin-left: 24px;
+    margin-right: 26px;
+    cursor: pointer;
+}
+
+.main-review-page {
+    background: #fff0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    margin-bottom: 72px;
+}
+
+.main-review-page > .trans-view {
+    height: 600px;
+    background: #fff0;
+}
+
+.main-review-page > .main-view {
+    background: #fff;
+}

@@ -638,11 +638,7 @@ function set_data(data) {
     let main_view = document.getElementById('review-detail-main-view');
 
     var content = data.content;
-    content.replaceAll('&gt;', '>');
-    content.replaceAll('&lt;', '<');
-    content.replaceAll('&amp;', '&');
-    content.replaceAll('&nbsp;', ' ');
-    content.replaceAll('<br>', '\n');
+    content = content.replaceAll('&gt;', '>').replaceAll('&lt;', '<').replaceAll('&amp;', '&').replaceAll('&nbsp;', ' ').replaceAll('<br>', '\n');
 
     main_view.innerHTML = content;
 }

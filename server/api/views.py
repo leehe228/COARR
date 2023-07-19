@@ -45,8 +45,10 @@ def upload_review(request):
     body = body[0]
 
     title = body['title']
-    content1 = replaceHTML(body['content1'])
-    content2 = replaceHTML(body['content2'])
+    # content1 = replaceHTML(body['content1'])
+    # content2 = replaceHTML(body['content2'])
+    content1 = body['content1_text']
+    content2 = body['content2_text']
 
     text_data = title + "\n" + content1 + "\n" + content2
 

@@ -158,7 +158,9 @@ function upload_review() {
     data.UID = 0;
     data.title = title_input.value.trim();
     data.content1 = editor1.innerHTML.trim();
-    data.content2 = editor2.textContent.trim();
+    data.content2 = editor2.innerHTML.trim();
+    data.content1_text = editor1.textContent.trim();
+    data_content2_text = editor2.textContent.trim();
     data.RID = GLOBAL_SELECT_RESTAURANT_ID;
     data.RNAME = GLOBAL_SELECT_RESTAURANT;
     data.visit_date = GLOBAL_SELECT_VISIT_DAY;
@@ -184,10 +186,7 @@ function upload_data(sdata) {
             body: sdata,
         }).then(response=>{
             console.log(response);
-
             loading_page.setAttribute('class', 'loading-page hide');
-
-            window.location.href = 'http://beta.coarr.kro.kr:8080/review_uploaded';
         }
         );
     } catch (error) {
@@ -195,6 +194,7 @@ function upload_data(sdata) {
         loading_page.setAttribute('class', 'loading-page hide');
         alert("리뷰 업로드에 실패했습니다. 네트워크를 확인해주세요.");
     }
+    window.location.href = 'http://beta.coarr.kro.kr:8080/review_uploaded';
 }
 
 function backto(t) {

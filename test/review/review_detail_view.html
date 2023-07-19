@@ -56,13 +56,11 @@
     </div>
 
     <script>
-	window.addEventListener('DOMContentLoaded', function()
+    window.addEventListener('DOMContentLoaded', function()
     {
-        var jlist = new Array();
-        var data = new Object();
-        data.content = "{{ content1 }}";
-        jlist.push(data);
-        set_data(JSON.stringify(jlist));
+        let main_view = document.getElementById('review-detail-main-view');
+        var content = "{{ content1 }}".replaceAll('&gt;', '>').replaceAll('&lt;', '<').replaceAll('&amp;', '&').replaceAll('&nbsp;', ' ').replaceAll('<br>', '\n');
+        main_view.innerHTML = content;
     });
     </script>
         

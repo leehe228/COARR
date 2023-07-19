@@ -636,7 +636,7 @@ function init_review_page() {
 
 function set_data(data) {
     let main_view = document.getElementById('review-detail-main-view');
-
+    console.log(data);
     var content = data.content;
     content = content.replaceAll('&gt;', '>').replaceAll('&lt;', '<').replaceAll('&amp;', '&').replaceAll('&nbsp;', ' ').replaceAll('<br>', '\n');
 

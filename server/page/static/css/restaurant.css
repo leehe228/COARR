@@ -323,7 +323,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #00000010;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -360,4 +360,68 @@
     width: 100%;
     margin-top: 24px;
     margin-bottom: 24px;
+}
+
+.review-detail-title {
+    color: #FFF;
+    text-align: start;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 34px;
+    letter-spacing: -0.4px;
+    position: fixed;
+    max-height: 80px;
+    overflow: hidden;
+    top: 400px;
+    left: 32px;
+    max-width: 50%;
+}
+
+.writer-profile-block {
+    position: fixed;
+    top: 500px;
+    left: 32px;
+    right: 32px;
+    display: flex;
+    height: 80px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.writer-profile-img > img {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    border-radius: 32px;
+    border: 2px solid #fff;
+}
+
+.writer-profile-block > .name-block {
+    display: flex;
+    height: 80px;
+    margin-left: 12px;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.writer-profile-block > .name-block > .text1 {
+    width: 80%;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.writer-profile-block > .name-block > .text2 {
+    width: 80%;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 16px;
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 4px;
 }

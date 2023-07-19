@@ -26,6 +26,28 @@
 
     <div class="grad"></div>
 
+    <div class="review-detail-title">
+        {{ title }}
+    </div>
+
+    <div class="writer-profile-block">
+        <div class="writer-profile-img">
+            <img src="http://beta.coarr.kro.kr:8080/media/websrc/profile3.png" alt="">
+        </div>
+
+        <div class="name-block">
+            <div class="text1">
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/twin_user_icon.png" alt="">
+                <a>{{ writer_name }}</a>
+            </div>
+                
+            <div class="text2">
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/" alt="">
+                <a>Follows {{ num_follows }}</a>
+            </div>
+        </div>
+    </div>
+
     <div class="main-review-page" id="main-review-page">
 
         <div class="trans-view"></div>
@@ -36,7 +58,7 @@
     </div>
 
     <!-- Loading Page -->
-    <div id="loading-page" class="loading-page hide">
+    <div id="loading-page" class="loading-page">
         <img src="http://beta.coarr.kro.kr:8080/media/websrc/loading.gif" alt="">
     </div>
 
@@ -56,11 +78,13 @@
     </div>
 
     <script>
-	window.addEventListener('DOMContentLoaded', function()
+    window.addEventListener('DOMContentLoaded', function()
     {
         let main_view = document.getElementById('review-detail-main-view');
         var content = "{{ content1 }}".replaceAll('&gt;', '>').replaceAll('&lt;', '<').replaceAll('&amp;', '&').replaceAll('&nbsp;', ' ').replaceAll('<br>', '\n');
         main_view.innerHTML = content;
+        
+        document.getElementById('loading-page').setAttribute('class', 'loading-page hide');
     });
     </script>
         

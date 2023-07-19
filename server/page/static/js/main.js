@@ -618,7 +618,7 @@ function init_review_page() {
         let review_title_back = document.getElementById('review-title-bar');
         let review_back_icon = document.getElementById('review-title-back-icon');
         
-        console.log(evt.target.scrollTop);
+        // console.log(evt.target.scrollTop);
 
         if (evt.target.scrollTop > 510 && review_page_gray_flag === false) {
             review_title_back.setAttribute('class', 'bar-block-center gray-back');

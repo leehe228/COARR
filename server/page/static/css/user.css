@@ -1,5 +1,13 @@
 .main-page {
-    background: #f4f4f4;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    margin-top: 300px;
+    margin-bottom: 70px;
 }
 
 .bar-block-spread {
@@ -91,4 +99,243 @@
     height: 0;
     width: 0;
     display: none;
+}
+
+.profile-block {
+    height: 170px;
+    padding-left: 24px;
+    padding-right: 24px;
+    top: 70px;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+
+.profile-block1 {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.profile-block1 > img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.profile-block1 > a {
+    margin-left: 16px;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.name-text > a {
+    color: #212121;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 16px; 
+    letter-spacing: -0.4px;
+}
+
+.profile-block > a {
+    color: #212121;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 15px;
+    line-height: 16px; 
+    letter-spacing: -0.4px;
+}
+
+.two-button-block {
+    height: 60px;
+    position: fixed;
+    top: 240px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.two-button-block > div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two-button-block > .btn {
+    color: #212121;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 21px;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+    border-bottom: 3px solid #eee;
+    cursor: pointer;
+    user-select: none;
+}
+
+.two-button-block > .btn-active {
+    color: #212121;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 21px;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+    font-weight: bold;
+    border-bottom: 3px solid #A21E31;
+    user-select: none;
+    cursor: pointer;
+}
+
+.dummy {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+}
+
+.bar-block-center {
+    padding-top: 0;
+}
+
+.bar-block-center > div > a {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 22px;
+    font-weight: bold;
+    user-select: none;
+    cursor: default;
+}
+
+.bar-block-center > div > b {
+    color: #A21E31;
+    /* Body/Regular */
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: normal;
+    letter-spacing: -0.4px;
+    user-select: none;
+    cursor: default;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.bar-block-center > div {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.bar-block-center > div > img {
+    height: 14px;
+}
+
+.recent-title {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 22px;
+    font-weight: bold;
+    user-select: none;
+    cursor: default;
+}
+
+.bar-block-center > .text-wrapper {
+    width: fit-content !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+.review-block-long {
+    width: 220px;
+    height: 320px;
+    background: #ffffff;
+    border: 1px solid #fff0;
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.review-block-long > .text-wrapper {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.review-block-long > .text-wrapper > a {
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.review-block-long > .img-wrapper {
+    background: #eee;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.review-block-long > .img-wrapper > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+}
+
+.review-block-long > .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+.hscroll-view > .rest-display-new {
+    scroll-snap-align: center;
+    min-width: 220px;
+    background: #ffffff;
+    height: 380px;
+    position: relative;
+}
+
+.hscroll-view-new {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    height: 380px;
+    background: #fff0;
+}
+
+.hscroll-view-new > .first {
+    margin-left: 8px;
+}
+
+.hscroll-view-new > .last {
+    margin-right: 8px;
+}
+
+.hscroll-view-new::-webkit-scrollbar {
+    display:none;
 }

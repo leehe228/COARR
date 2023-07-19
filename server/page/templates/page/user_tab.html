@@ -18,12 +18,150 @@
         <link rel="shortcut icon" href="http://beta.coarr.kro.kr:8080/media/websrc/favicon.ico" type="image/x-icon">
     </head>
     <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+    
+    <div id="written-review-view" class="main-page dummy disabled">
 
-    <div class="main-page">
+        작성한 리뷰가 없습니다.
         
     </div>
 
-    <div class="setting-popup-view">
+    <div id="history-view" class="main-page">
+
+        <div class="bar-block-center">
+            <a class="recent-title">최근 본 레스토랑</a>
+            <div>
+                전체보기
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/btn_after.png" alt="">
+            </div>
+        </div>
+
+        <div class="hscroll-view-new" style="height: 400px;">
+            
+            <div class="rest-display-new first">
+                <div class="review-block-long">
+                    <div class="img-wrapper">
+                        <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest1.jpeg" alt="">
+                    </div>
+                    <div class="text-wrapper">
+                    <div class="rest-title">
+                        밍글스
+                    </div>
+                    <a>서울, 강남 · 도산대로</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rest-display-new">
+                <div class="review-block-long">
+                    <div class="img-wrapper">
+                        <img src="http://beta.coarr.kro.kr:8080/media/websrc/new_rest-1.png" alt="">
+                    </div>
+                    <div class="text-wrapper">
+                    <div class="rest-title">
+                        온 6.5
+                    </div>
+                    <a>서울, 종로 · 북촌로</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rest-display-new last">
+                <div class="review-block-long">
+                    <div class="img-wrapper">
+                        <img src="http://beta.coarr.kro.kr:8080/media/websrc/rest5.jpeg" alt="">
+                    </div>
+                    <div class="text-wrapper">
+                    <div class="rest-title">
+                        이속우화진
+                    </div>
+                    <a>서울, 강남 · 영동대로</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="bar-block-center">
+            <div class="text-wrapper">
+                <a>저장한 레스토랑</a>
+                <b>28</b>
+            </div>
+            
+            <div>
+                전체보기
+                <img src="http://beta.coarr.kro.kr:8080/media/websrc/btn_after.png" alt="">
+            </div>
+        </div>
+
+        <div class="hscroll-view-new" style="height: 400px;">
+            
+            <div class="rest-display-new first">
+                <div class="review-block-long">
+                    <div class="img-wrapper">
+                        <img src="http://beta.coarr.kro.kr:8080/media/websrc/my_rest1.jpeg" alt="">
+                    </div>
+                    <div class="text-wrapper">
+                    <div class="rest-title">
+                        미로식당
+                    </div>
+                    <a>서울, 마포 · 와우산로</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rest-display-new">
+                <div class="review-block-long">
+                    <div class="img-wrapper">
+                        <img src="http://beta.coarr.kro.kr:8080/media/websrc/my_rest4.jpeg" alt="">
+                    </div>
+                    <div class="text-wrapper">
+                    <div class="rest-title">
+                        윤서울
+                    </div>
+                    <a>서울, 마포 · 홍익로2길</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rest-display-new last">
+                <div class="review-block-long">
+                    <div class="img-wrapper">
+                        <img src="http://beta.coarr.kro.kr:8080/media/websrc/my_rest1.jpeg" alt="">
+                    </div>
+                    <div class="text-wrapper">
+                    <div class="rest-title">
+                        라멘반라이
+                    </div>
+                    <a>서울, 마포 · 독막로15길</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div class="profile-block">
+        <div class="profile-block1">
+            <img src="http://beta.coarr.kro.kr:8080/media/websrc/profile4.jpeg" alt="">
+            <a>A big fan of good food<br>주로 서울의 맛있는 음식을 먹으러 다닙니다</a>
+        </div>
+        <div class="name-text">
+            <a>EunJe Lee</a>
+        </div>
+        <a>Follower 283 | Following 394</a>
+    </div>
+
+    <div class="two-button-block">
+        <div id="profile_review_btn" class="btn" onclick="switch_tabview(3, 0);">
+            작성 리뷰
+        </div>
+        <div id="profile_history_btn" class="btn-active" onclick="switch_tabview(3, 1);">
+            기록
+        </div>
+    </div>
+
+    <div id="setting-popup-view" class="setting-popup-view hide">
         <div class="center-bar"></div>
 
         <div id="user-profile-edit-btn" class="bar-button" onclick="">
@@ -57,10 +195,9 @@
             <img src="http://beta.coarr.kro.kr:8080/media/websrc/coarr_logo.png" alt="">
         </div>
 
-        <div class="setting-btn">
+        <div id="setting-btn" class="setting-btn" onclick="open_user_setting(true);">
             <img src="http://beta.coarr.kro.kr:8080/media/websrc/setting_icon.png" alt="">
         </div>
-            
     </div>
         
     <!-- Footer Bar -->

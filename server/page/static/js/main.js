@@ -533,8 +533,25 @@ function switch_tabview(from, to) {
     }
     // user
     else if (from === 3) {
+        let review_view = document.getElementById('written-review-view');
+        let history_view = document.getElementById('history-view');
+
+        let review_btn = document.getElementById('profile_review_btn');
+        let history_btn = document.getElementById('profile_history_btn');
+        
         if (to === 0) {
-        } else if (to === 1) {
+            review_view.setAttribute('class', 'main-page dummy');
+            history_view.setAttribute('class', 'main-page disabled');
+
+            review_btn.setAttribute('class', 'btn-active');
+            history_btn.setAttribute('class', 'btn');
+        } 
+        else if (to === 1) {
+            review_view.setAttribute('class', 'main-page dummy disabled');
+            history_view.setAttribute('class', 'main-page');
+
+            review_btn.setAttribute('class', 'btn');
+            history_btn.setAttribute('class', 'btn-active');
         }
     }
 }
@@ -636,9 +653,25 @@ function init_review_page() {
 
 function set_data(data) {
     let main_view = document.getElementById('review-detail-main-view');
-    console.log(data);
+
     var content = data.content;
     content = content.replaceAll('&gt;', '>').replaceAll('&lt;', '<').replaceAll('&amp;', '&').replaceAll('&nbsp;', ' ').replaceAll('<br>', '\n');
 
     main_view.innerHTML = content;
+}
+
+function open_user_setting(o) {
+    let setting_btn = document.getElementById('setting-btn');
+    let setting_view = document.getElementById('setting-popup-view');
+
+    if (o === false) {
+        setting_view.setAttribute('class', 'setting-popup-view hide');
+        setting_btn.setAttribute('onclick', 'open_user_setting(true);');
+    }
+
+    else if (o === true) {
+        setting_view.setAttribute('class', 'setting-popup-view');
+        setting_btn.setAttribute('onclick', 'open_user_setting(false);');
+    }
+    
 }

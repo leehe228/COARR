@@ -37,7 +37,7 @@ def review_tab(request):
 @csrf_exempt
 def review_detail(request):
 
-    print(request.POST.get('cid'))
+    print(request.GET['cid'])
 
     return render(request, 'page/review_detail.html', {})
 

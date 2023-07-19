@@ -50,8 +50,8 @@
     bottom: 90px;
     right: 16px;
     background: #A21E31;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 40px;
     box-shadow: 1px 1px 5px 1px #79797980;
     display: flex;
@@ -61,7 +61,7 @@
 }
 
 .floating-button > img {
-    width: 36px;
+    width: 30px;
 }
 
 .bar-block-center {

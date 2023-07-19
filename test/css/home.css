@@ -258,6 +258,7 @@
     border: 1px solid #f000;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 
 .new-review-block > .grad {

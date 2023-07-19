@@ -207,7 +207,7 @@
     height: 100px;
     display: flex;
     align-items: center;
-    column-gap: 2px;
+    column-gap: 4px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
@@ -232,6 +232,7 @@
     width: 64px;
     height: 64px;
     object-fit: cover;
+    border-radius: 32px;
 }
 
 .follower-icon > a {
@@ -452,6 +453,7 @@
     align-items: stretch;
     justify-content: space-between;
     margin-bottom: 12px;
+    cursor: default;
 }
 
 #follow-page-review {
@@ -493,6 +495,13 @@
     color: #fff;
     font-family: AppleSDGothicNeoR, serif;
     font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.to-review-btn > img {
+    margin-bottom: 2px;
+    margin-left: 6px;
 }
 
 .review-img-wrapper > .review-title {
@@ -584,6 +593,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .review-footer > .btn-block {
@@ -617,6 +627,7 @@
     margin-right: 20px;
     font-family: AppleSDGothicNeoR, serif;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .saved {
@@ -625,6 +636,7 @@
     align-items: center;
     font-family: AppleSDGothicNeoR, serif;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .share-btn {
@@ -634,6 +646,7 @@
     justify-content: center;
     align-items: center;
     margin-right: 16px;
+    cursor: pointer;
 }
 
 .share-btn > img {

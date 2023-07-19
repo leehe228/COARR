@@ -252,6 +252,7 @@
 .title-img-wrapper > img {
     height: 600px;
     object-fit: cover;
+    width: 100%;
 }
 
 .dummy {

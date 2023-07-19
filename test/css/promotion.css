@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'FuturaMediumBt';
+    src: url('./FuturaMediumBt.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FuturaBook';
+    src: url('./FuturaBook.woff') format('woff');
+}
+
 .bar-block-center {
     height: 56px;
     flex-shrink: 0;
@@ -58,7 +68,22 @@
     position: absolute;
     top: 200px;
     left: 20px;
-    width: 160px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 1px;
+    height: 24px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.badge-img > a {
+    font-family: FuturaBook, serif !important;
+    color: #fff;
+    font-size: 15px;
 }
 
 .promotion-block > .title {
@@ -69,6 +94,14 @@
     font-family: AppleSDGothicNeoR, serif;
     font-size: 23px;
     font-weight: bold;
+}
+
+.promotion-block > .grad {
+    position: absolute;
+    bottom: 140px;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 
 .promotion-block > .text-block {

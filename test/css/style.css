@@ -13,6 +13,12 @@
     src: url('./AppleSDGothicNeoEB.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'FuturaMediumBt';
+    src: url('./FuturaMediumBt.woff') format('woff');
+}
+
+
 * {
     font-family: AppleSDGothicNeoR, serif;
 }

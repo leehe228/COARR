@@ -4,6 +4,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.safestring import mark_safe
 from django.shortcuts import redirect
 
+from api.models import Content, User, Restaurant
+
 import os
 import random
 # import bcrypt
@@ -38,6 +40,13 @@ def review_tab(request):
 def review_detail(request):
 
     print(request.GET['cid'])
+    try:
+        cid = int(request.GET['cid'])
+    except:
+        cid = 0
+
+    bp = Content.objects.get(CID=cid)
+    print(bp)
 
     return render(request, 'page/review_detail.html', {})
 

@@ -30,32 +30,41 @@
 
         <div class="trans-view"></div>
 
-        <div class="main-view">
-            <div class="dummy">
-                <a>{{ content1 }}</a>
-            </div>
-
-            <div class="dummy"></div>
-
-            <div class="dummy"></div>
-
-            <div class="dummy"></div>
+        <div id="review-detail-main-view" class="main-view">
         </div>
         
+    </div>
+
+    <!-- Loading Page -->
+    <div id="loading-page" class="loading-page hide">
+        <img src="http://beta.coarr.kro.kr:8080/media/websrc/loading.gif" alt="">
     </div>
 
     <div class="bar-block-center" id="review-title-bar">
         <div class="back_btn" onclick="backto('restaurant?tab=review');">
             <img id="review-title-back-icon" src="http://beta.coarr.kro.kr:8080/media/websrc/back_arrow_white.png" alt="">
         </div>
-        <a onclick="refresh();">{{ title }}</a>
+        <a onclick="refresh();">
+            {{ rname }}
+        </a>
         <div class="back_btn"></div>
     </div>
 
     <div class="spread-footer-bar">
-        <img src="http://beta.coarr.kro.kr:8080/media/websrc/like_btn_gray.png" onclick="switch_tab(1, 0);">
-        <img src="http://beta.coarr.kro.kr:8080/media/websrc/bookmark_btn_gray.png" onclick="switch_tab(1, 0);">
+        <img src="http://beta.coarr.kro.kr:8080/media/websrc/like_btn_gray.png" onclick="return false;">
+        <img src="http://beta.coarr.kro.kr:8080/media/websrc/bookmark_btn_gray.png" onclick="return false;">
     </div>
+
+    <script>
+	window.addEventListener('DOMContentLoaded', function()
+    {
+        var jlist = new Array();
+        var data = new Object();
+        data.content = "{{ content }}";
+        jlist.push(data);
+        set_data(JSON.stringify(jlist));
+    });
+    </script>
         
 </body>
 </html>

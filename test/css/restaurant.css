@@ -304,3 +304,60 @@
 .main-review-page > .main-view {
     background: #fff;
 }
+
+.hide {
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+.hide > img {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-page > img {
+    width: 30px;
+    height: 30px;
+}
+
+.main-view {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;  
+    color: #1B5E20;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 18px;
+    line-height: 24px; 
+    letter-spacing: -0.24px;
+    text-transform: capitalize;
+}
+
+.main-view > * {
+    color: #1B5E20;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 18px;
+    line-height: 24px; 
+    letter-spacing: -0.24px;
+    text-transform: capitalize;
+}
+
+.main-view > img {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}

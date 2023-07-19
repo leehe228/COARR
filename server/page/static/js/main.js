@@ -633,3 +633,8 @@ function init_review_page() {
         }
     });  
 }
+
+function set_data(data) {
+    let main_view = document.getElementById('review-detail-main-view');
+    main_view.innerHTML = data.content;
+}

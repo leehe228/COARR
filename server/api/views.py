@@ -82,11 +82,11 @@ def save_review(jdata):
 def coarr_en(review_en):
     prompt1 = """\
     Evaluate the professionalism of the following restaurant review based on two criteria.
-    If the review lacks of information or is not related about the restaurant, you must implement evaluations.
+    Even if the review lacks information or is not related to the restaurant, you should implement evaluations.
     criteria1:
-    including detailed and illustrative description of the flavors, textures, ingredients, and overall taste experience of the food (score out of 20)
+    including various detailed and illustrative description of the flavors, textures, ingredients of the food (score out of 20)
     criteria2:
-    including detailed and illustrative description of the dining experience, service quality, the atmosphere of the restaurant (score out of 10)
+    including various detailed and illustrative description of the dining experience, service quality, the atmosphere of the restaurant (score out of 10)
     Review:
     """ + review_en
 

@@ -44,7 +44,7 @@ def review_tab(request):
         
         temp = json.loads(content.CONTENT)
 
-        datas.append({'cid': content.CID, 'title': temp['title']})
+        datas.append([str(content.CID), temp['title']])
 
     return render(request, 'page/review_tab.html', {'datas' : datas})
 

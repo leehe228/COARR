@@ -10,6 +10,7 @@ import os
 import random
 # import bcrypt
 import sys
+import json
 
 ### HOME ###
 
@@ -48,7 +49,10 @@ def review_detail(request):
     bp = Content.objects.get(CID=cid)
     print(bp.CONTENT)
 
-    return render(request, 'page/review_detail.html', {})
+    datas = json.loads(bp.CONTENT)
+    print(datas)
+
+    return render(request, 'page/review_detail.html', {datas : datas})
 
 
 ### PROMOTION ###

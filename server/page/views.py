@@ -69,8 +69,13 @@ def review_detail(request):
     rname = datas['RNAME']
     uid = datas['UID']
     visit_date = datas['visit_date']
-    num_follows = 217
-    writer_name = "SeungJun Lee"
+
+    if cid <= 52:
+        num_follows = 217
+        writer_name = "SeungJun Lee"
+    else:
+        num_follows = 0
+        writer_name = "Test User"
 
     # image
     content1.replace('<img', '<img class=\"main-view-img\"')

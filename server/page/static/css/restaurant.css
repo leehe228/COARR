@@ -362,6 +362,12 @@
     margin-bottom: 24px;
 }
 
+.main-view > * > img {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
 .review-detail-title {
     color: #FFF;
     text-align: start;

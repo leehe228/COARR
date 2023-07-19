@@ -1,5 +1,94 @@
 .main-page {
+    background: #f4f4f4;
+}
+
+.bar-block-spread {
+    height: 56px;
+    flex-shrink: 0;
+    background: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.bar-block-spread > .logo {
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.bar-block-spread > .setting-btn {
+    width: 32px;
+    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.setting-btn > img {
+    width: 28px;
+}
+
+
+.setting-popup-view {
+    position: fixed;
+    bottom: 72px;
+    left: 0;
+    right: 0;
+    height: 430px;
+    background: #ffffff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.setting-popup-view > .center-bar {
+    margin-top: 16px;
+    width: 48px;
+    height: 6px;
+    border-radius: 3px;
+    background: #E0E0E0;
+    margin-bottom: 32px;
+}
+
+.setting-popup-view > .bar-button {
+    height: 65px;
+    width: 100%;
+    border-bottom: 1px solid #E0E0E0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bar-button > img {
+    margin-left: 24px;
+}
+
+.bar-button > a {
+    margin-left: 20px;
+    font-family: AppleSDGothicNeoR, serif;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+    margin-top: 3px;
+}
+
+.hide {
+    height: 0;
+    width: 0;
+    display: none;
 }

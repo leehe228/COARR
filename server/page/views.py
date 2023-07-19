@@ -46,7 +46,11 @@ def review_detail(request):
         cid = 0
 
     bp = Content.objects.get(CID=cid)
+    print("Content:")
     print(bp)
+    print("=" * 30)
+    print("ALL:")
+    print(Content.objects.all())
 
     return render(request, 'page/review_detail.html', {})
 

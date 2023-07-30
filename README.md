@@ -32,11 +32,13 @@ $ pip install -r requirements.txt
 
 ## 개발 예정
 - iOS (SwiftUI) 개발 예정
+<br>
 
 ## Team
 기획 : 이승준 <br>
 디자인 : 이은제(ejlee2033@icloud.com) <br>
-개발 : 이호은(leehe228@konkuk.ac.kr)
+개발 : 이호은(leehe228@konkuk.ac.kr) <br>
+<br>
 
 ## Credit
 ``` Text
